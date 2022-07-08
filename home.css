@@ -1,0 +1,9 @@
+#nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.navbar{
+    background-image: linear-gradient(to right, #a517ba, #9219ac, #80199e, #6f1990, #5f1782);
+    padding: 0 !important;
+}
