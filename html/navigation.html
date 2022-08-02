@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/navigation.css">
+    <title>Navigation</title>
+</head>
+
+<body>
+    <header>
+        <div class="nav-bar">
+            <a href="" class="logo">Logo</a>
+            <div class="navigation">
+                <div class="nav-items">
+                    <i class="uil uil-times nav-close-btn"></i>
+                    <a href="/index.html"><i class="uil uil-home"></i> Home</a>
+                    <a href=""><i class="uil uil-compass"></i> Explore</a>
+                    <a href=""><i class="uil uil-info-circle"></i> About us</a>
+                    <a href=""><i class="uil uil-document-layout-left"></i> Blog</a>
+                    <a href=""><i class="uil uil-envelope"></i> Contact</a>
+
+
+                </div>
+            </div>
+            <i class="uil uil-apps nav-menu-btn"></i>
+        </div>
+    </header>
+
+    <script>//navigation bar effects on scroll
+
+        window.addEventListener("scroll", function () {
+            const header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        });
+
+        //responsive navigation menu
+        const menuBtn = document.querySelector(".nav-menu-btn");
+        const closeBtn = document.querySelector(".nav-close-btn");
+        const navigation = document.querySelector(".navigation");
+
+        console.log(menuBtn, closeBtn, navigation)
+
+        menuBtn.addEventListener("click", () => {
+            navigation.classList.add("active");
+        });
+        closeBtn.addEventListener("click", () => {
+            navigation.classList.remove("active");
+        });
+    </script>
+</body>
+
+</html>
