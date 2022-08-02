@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/details.css">
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>Details</title>
+</head>
+
+<body>
+    <header>
+        <div class="nav-bar">
+            <a href="" class="logo"><img src="/images/promaniq22.png" alt=""></a>
+            <div class="navigation">
+                <div class="nav-items">
+                    <i class="uil uil-times nav-close-btn"></i>
+                    <a href="/html/home.html"><i class="uil uil-home"></i> Home</a>
+                    <a href="/html/catalog.html"><i class="uil uil-compass"></i> Explore</a>
+                    <a href=""><i class="uil uil-info-circle"></i> About us</a>
+                    <a href=""><i class="uil uil-document-layout-left"></i> Blog</a>
+                    <a href="/html/register-page.html"><i class="uil uil-envelope"></i>Sign in</a>
+
+
+                </div>
+            </div>
+            <i class="uil uil-apps nav-menu-btn"></i>
+        </div>
+    </header>
+
+    <div class="hero">
+
+        <video autoplay loop muted plays-inline>
+            <source src="/images/video3.mp4" type="video/mp4">
+        </video>
+
+        <div class="content">
+            <div class="left">
+                <div class="images">
+                    <img src="../images/home-page/1st.jpg" alt="">
+                    <img src="../images/home-page/2nd.jpg" alt="">
+                </div>
+
+
+                <div class="wrapper">
+                    <h3>Title</h3>
+                    <b>11</b>
+                    <span>2013</span>
+                    <div class="buttons">
+                        <button>Like</button>
+                        <button>Dislike</button>
+
+                        <!-- <button>Edit</button>
+                        <button>Delete</button> -->
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="right">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi maxime vel assumenda consequatur
+                    accusantium fugit, quibusdam alias facilis dolorum reprehenderit eius deserunt at. Eum eveniet
+                    aliquam quos deserunt perspiciatis modi?
+                    A similique tenetur quibusdam dicta alias odit officia accusamus esse quis pariatur delectus, saepe
+                    iusto consequuntur at placeat nisi, adipisci, sint ut aut incidunt quasi est. Temporibus dignissimos
+                    fugit rerum!
+                    Non culpa quibusdam recusandae at quisquam distinctio hic, eius, porro velit optio nisi assumenda,
+                    beatae perferendis ratione? Harum, aliquam quis possimus nostrum saepe aperiam, officia tenetur
+                    tempora ad qui quisquam.
+                    Reprehenderit nihil delectus beatae omnis, nostrum optio ut doloribus suscipit repellendus tenetur
+                    modi quos voluptas aspernatur hic non. Aliquid, minus sapiente. Sit natus quibusdam inventore, dicta
+                    autem cupiditate culpa sunt.
+                    Sequi omnis eaque numquam fugit, doloremque reiciendis ullam exercitationem dolor quibusdam debitis
+                    iure temporibus fugiat iste distinctio soluta natus voluptatum rerum tempora beatae sed officiis
+                    vitae explicabo, quasi hic? Esse!
+                    Repellendus at, alias quos dolorem ullam eius fugiat modi fuga, libero aut ipsam dicta saepe laborum
+                    voluptatibus deserunt sapiente architecto pariatur. Atque earum corrupti sit consequatur dolorem hic
+                    qui numquam?
+                    Perspiciatis maxime, nisi amet sapiente officiis repellendus, placeat ad consequuntur reprehenderit
+                    ipsum numquam saepe labore quos optio sint vero tempora ut! Doloremque, rerum magnam facilis odit
+                    laborum nesciunt saepe sit!
+                    Laborum saepe beatae ad culpa quibusdam ipsa ut ex repellendus adipisci molestias, quisquam harum,
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa molestias dignissimos ipsam vitae
+                    corporis incsapiente nisi impedit nostrum molestiae? Iste impedit nostrum molestiae? Iste.</p>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script>
+        //navigation bar effects on scroll
+
+        window.addEventListener("scroll", function () {
+            const header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        });
+
+        //responsive navigation menu
+        const menuBtn = document.querySelector(".nav-menu-btn");
+        const closeBtn = document.querySelector(".nav-close-btn");
+        const navigation = document.querySelector(".navigation");
+
+        console.log(menuBtn, closeBtn, navigation)
+
+        menuBtn.addEventListener("click", () => {
+            navigation.classList.add("active");
+        });
+        closeBtn.addEventListener("click", () => {
+            navigation.classList.remove("active");
+        });
+    </script>
+
+</body>
+
+</html>
