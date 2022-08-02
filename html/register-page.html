@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/register.css">
+  <link rel="stylesheet" href="/css/register-page.css">
+
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <title>Register</title>
+</head>
+
+<body>
+  <div class="hero">
+
+    <video autoplay loop muted plays-inline>
+      <source src="/images/video3.mp4" type="video/mp4">
+    </video>
+
+    <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-between">
+      <a class="navbar-brand" href="#"><img src="images/demo-logo.png" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse text-right justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/html/home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about-us">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#testimonials">Testimonials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#social-media">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="form-container sign-in-form hide">
+      <div class="form-box sign-in-box">
+        <h2>Sign in</h2>
+        <form action="">
+          <div class="field">
+            <i class="uil uil-at"></i>
+            <input type="email" placeholder="Email ID" required>
+          </div>
+  
+  
+          <div class="field">
+            <i class="uil uil-lock-alt"></i>
+            <input class="password-input" type="password" placeholder="Password" required>
+            <div class="eye-btn"><i class="uil uil-eye-slash"></i></div>
+          </div>
+  
+          <input type="submit" class="submit-btn" value="Login">
+        </form>
+      </div>
+      <div class="imgBox sign-in-imgBox">
+        <div class="sliding-link">
+          <p>Don't have an account?</p>
+          <span class="sign-up-btn">Sign up</span>
+        </div>
+        <img src="/images/signin-img.png" alt="">
+      </div>
+    </div>
+  
+  
+    <div class="form-container sign-up-form show">
+      <div class="imgBox sign-up-imgBox">
+        <div class="sliding-link">
+          <p>Already a member?</p>
+          <span class="sign-in-btn">Sign in</span>
+        </div>
+        <img src="/images/signup-img.png" alt="">
+      </div>
+      <div class="form-box sign-up-box">
+        <h2>Sign up</h2>
+        
+        <form action="">
+          <div class="field">
+            <i class="uil uil-at"></i>
+            <input type="email" placeholder="Email ID" required>
+          </div>
+  
+          <div class="field">
+            <i class="uil uil-user"></i>
+            <input type="text" placeholder="Full name" required>
+          </div>
+          <div class="field">
+            <i class="uil uil-lock-access"></i>
+            <input type="password" placeholder="Confirm password" required>
+          </div>
+  
+          <input type="submit" class="submit-btn" value="Sign up">
+        </form>
+      </div>
+  
+    </div>
+  </div>
+
+ 
+
+  <script>
+    const textInputs = document.querySelectorAll('input');
+
+    textInputs.forEach(textInput => {
+      textInput.addEventListener('focus', () => {
+        let parent = textInput.parentNode;
+        parent.classList.add("active");
+      });
+      textInput.addEventListener('blur', () => {
+        let parent = textInput.parentNode;
+        parent.classList.remove("active");
+      });
+    });
+
+    const passwordInput = document.querySelector(".password-input");
+    const eyeBtn = document.querySelector(".eye-btn");
+    console.log(passwordInput, eyeBtn);
+
+    eyeBtn.addEventListener("click", () => {
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        eyeBtn.innerHTML = "<i class='uil uil-eye'></i>";
+      } else {
+        passwordInput.type = "password";
+        eyeBtn.innerHTML = "<i class='uil uil-eye-slash'></i>";
+      }
+    });
+
+
+    //sliding between sign in and sign up
+    const signUpBtn = document.querySelector(".sign-up-btn");
+    const signInBtn = document.querySelector(".sign-in-btn");
+    const signUpForm = document.querySelector(".sign-up-form");
+    const signInForm = document.querySelector(".sign-in-form");
+
+    signUpBtn.addEventListener("click", () => {
+      signUpForm.classList.add("show");
+      signInForm.classList.add("hide");
+      signUpForm.classList.remove("hide");
+      signInForm.classList.remove("show");
+
+    });
+
+    signInBtn.addEventListener("click", () => {
+      signInForm.classList.add("show");
+      signUpForm.classList.add("hide");
+      signInForm.classList.remove("hide");
+      signUpForm.classList.remove("show");
+    });
+
+  </script>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
