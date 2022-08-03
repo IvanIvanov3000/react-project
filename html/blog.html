@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/blog.css">
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>Blog</title>
+</head>
+
+<body>
+    <header>
+        <div class="nav-bar">
+            <a href="" class="logo"><img src="/images/promaniq22.png" alt=""></a>
+            <div class="navigation">
+                <div class="nav-items">
+                    <i class="uil uil-times nav-close-btn"></i>
+                    <a href="/html/home.html"><i class="uil uil-home"></i> Home</a>
+                    <a href="/html/catalog.html"><i class="uil uil-compass"></i> Explore</a>
+                    <a href=""><i class="uil uil-info-circle"></i> About us</a>
+                    <a href="/html/blog.html"><i class="uil uil-document-layout-left"></i> Blog</a>
+                    <a href="/html/register-page.html"><i class="uil uil-envelope"></i>Sign in</a>
+
+
+                </div>
+            </div>
+            <i class="uil uil-apps nav-menu-btn"></i>
+        </div>
+    </header>
+
+    <div class="hero">
+
+        <video autoplay loop muted plays-inline>
+            <source src="/images/video3.mp4" type="video/mp4">
+        </video>
+
+        <div class="content">
+            <div class="left">
+                <div class="field">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, repellat ipsam. Saepe, nihil?
+                        Vitae est odio veniam exercitationem voluptates minus! Ut voluptates fugiat illum voluptatem
+                        doloribus accusantium harum quasi non excepturi architecto, quo, placeat consequatur nihil atque
+                        illo hic inventore modi quos id assumenda. Dolore aliquid vero ea, modi dignissimos laborum
+                        debitis sit iure iste optio quas voluptates eos corporis cupiditate! Voluptates vero iste atque
+                        ipsa voluptate eveniet optio quis dolorem laudantium sapiente at itaque architecto molestias
+                        placeat dolor maxime suscipit ea, doloremque recusandae earum cum officia magni? Aspernatur a
+                        ape consequatur modi nisi similique est fugit ab? Eveniet ullam voluptate
+                        sequi iste expedita eum placeat minus ad libero corporis?</p>
+                    <span>Author SecondName</span>
+                </div>
+                <div class="field">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, repellat ipsam. Saepe, nihil?
+                        Vitae est odio veniam exercitationem voluptates minus! Ut voluptates fugiat illum voluptatem
+                        doloribus accusantium harum quasi non excepturi architecto, quo, placeat consequatur nihil atque
+                        illo hic inventore modi quos id assumenda. Dolore aliquid vero ea, modi dignissimos laborum
+                        debitis sit iure iste optio quas voluptates eos corporis cupiditate! Voluptates vero iste atque
+                        ipsa voluptate eveniet optio quis dolorem laudantium sapiente at itaque architecto molestias
+                        placeat dolor maxime suscipit ea, doloremque recusandae earum cum officia magni? Aspernatur a
+                        ape consequatur modi nisi similique est fugit ab? Eveniet ullam voluptate
+                        sequi iste expedita eum placeat minus ad libero corporis?</p>
+                    <span>Author SecondName</span>
+                </div>
+                <div class="field">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, repellat ipsam. Saepe, nihil?
+                        Vitae est odio veniam exercitationem voluptates minus! Ut voluptates fugiat illum voluptatem
+                        doloribus accusantium harum quasi non excepturi architecto, quo, placeat consequatur nihil atque
+                        illo hic inventore modi quos id assumenda. Dolore aliquid vero ea, modi dignissimos laborum
+                        debitis sit iure iste optio quas voluptates eos corporis cupiditate! Voluptates vero iste atque
+                        ipsa voluptate eveniet optio quis dolorem laudantium sapiente at itaque architecto molestias
+                        placeat dolor maxime suscipit ea, doloremque recusandae earum cum officia magni? Aspernatur a
+                        ape consequatur modi nisi similique est fugit ab? Eveniet ullam voluptate
+                        sequi iste expedita eum placeat minus ad libero corporis?</p>
+                    <span>Author SecondName</span>
+                </div>
+            </div>
+
+            <div class="right">
+                <form action="POST">
+                    <div class="field top">
+                        <i class="uil uil-align-justify"></i>
+                        <textarea type="text" placeholder="Write a comment" value=""></textarea>
+                    </div>
+                    <div class="field bottom">
+                        <i class="uil uil-rocket"></i>
+                        <p>Rate us from 1 to 10</p>
+                        <input type="number" placeholder="1-10" required min="1" max="10">
+                    </div>
+                    <input type="submit" class="submit-btn" value="Add a comment">
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script>
+        //navigation bar effects on scroll
+
+        window.addEventListener("scroll", function () {
+            const header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        });
+
+        //responsive navigation menu
+        const menuBtn = document.querySelector(".nav-menu-btn");
+        const closeBtn = document.querySelector(".nav-close-btn");
+        const navigation = document.querySelector(".navigation");
+
+        console.log(menuBtn, closeBtn, navigation)
+
+        menuBtn.addEventListener("click", () => {
+            navigation.classList.add("active");
+        });
+        closeBtn.addEventListener("click", () => {
+            navigation.classList.remove("active");
+        });
+    </script>
+
+</body>
+
+</html>
