@@ -1,3 +1,66 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* css variables */
+:root {
+    --white-color: #fff;
+    --dark-color: #222;
+    --section-bg-color: #202834;
+    --navigation-item-hover-color: #3b5378;
+
+    --text-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    --box-shadow: 0 5px 25px rgba(0 0 0 / 20%);
+
+    --scroll-bar-color: #fff;
+    --scroll-thumb-color: #282f4e;
+    --scroll-thumb-hover-color: #454f6b;
+}
+
+/* scroll bar */
+::-webkit-scrollbar {
+    width: 11.5px;
+    background: var(--scroll-bar-color);
+}
+
+::-webkit-scrollbar-thumb {
+    width: 100%;
+    background: var(--scroll-thumb-color);
+    border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scroll-thumb-hover-color)
+}
+
+
+/* main css */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--section-bg-color);
+}
+
+section {
+    position: relative;
+}
+
+.section {
+    color: var(--white-color);
+    background: var(--section-bg-color);
+    padding: 85px 200px;
+    transition: 0.3s ease;
+}
+
+.home {
+    min-height: 100vh;
+}
+
 .bg-slider {
     z-index: 7;
     position: relative;
@@ -177,15 +240,33 @@
     font-size: 1.7em;
 }
 
+/* about */
 
 
+.about h2 {
+    font-size: 3em;
+    font-weight: 600;
+}
+
+.about p {
+    margin: 25px 0px;
+}
 
 /*======= Media queries (max-width: 785px) =======*/
-
+@media screen and (max-width: 980px) {
+    header .nav-bar {
+        padding: 25px 20px;
+    }
+}
 
 @media screen and (max-width: 850px) {
-   
-    
+    header .nav-bar {
+        padding: 25px 20px;
+    }
+
+    .section {
+        padding: 30px 20px;
+    }
 
     .media-icons {
         right: 0;

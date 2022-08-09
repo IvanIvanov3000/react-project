@@ -101,3 +101,46 @@ div#catalog #items #all {
     margin-top: 30%;
     background: var(--section-bg-color);
 }
+
+
+@media screen and (max-width: 1300px) {
+    .card {
+        width: 43%;
+    }
+
+    #items #top, #items #all {
+        padding: 0px;
+        padding-top: 150px;
+        justify-content: space-around;
+        gap: unset;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .card {
+        width: 45%;
+    }
+
+    #items #top, #items #all {
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .card {
+        width: 70%;
+    }
+
+    #items #top, #items #all {
+        justify-content: space-around;
+    }
+
+    #items #top {
+        padding-top: 150px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .card {
+        width: 100%;
+    }
+}
