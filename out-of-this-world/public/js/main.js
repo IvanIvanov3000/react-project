@@ -30,6 +30,26 @@ window.addEventListener('load', ()=>{
     // closeBtn.addEventListener("click", () => {
     //     navigation.classList.remove("active");
     // });
+
+    const signUpBtn = document.querySelector(".sign-up-btn");
+    const signInBtn = document.querySelector(".sign-in-btn");
+    const signUpForm = document.querySelector(".sign-up-form");
+    const signInForm = document.querySelector(".sign-in-form");
+
+    signUpBtn.addEventListener("click", () => {
+      signUpForm.classList.add("show");
+      signInForm.classList.add("hide");
+      signUpForm.classList.remove("hide");
+      signInForm.classList.remove("show");
+
+    });
+
+    signInBtn.addEventListener("click", () => {
+      signInForm.classList.add("show");
+      signUpForm.classList.add("hide");
+      signInForm.classList.remove("hide");
+      signUpForm.classList.remove("show");
+    });
 });
 
 
