@@ -18,6 +18,8 @@ function App() {
 
             <main id="main-content">
                 <Switch>
+                    <Route path="/" exact component={Home} />
+
                     <Route path="/home" exact component={Home} />
                     <Route path="/catalog" exact component={Catalog} />
                     {/*<Route path="/create-game" component={CreateGame} />
