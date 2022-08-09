@@ -6,7 +6,7 @@ const SignIn = () => {
 
         <div className="hero signin">
 
-            <video autoplay loop muted plays-inline>
+            <video autoPlay={true} >
                 <source src="/images/video3.mp4" type="video/mp4" />
             </video>
 
@@ -28,7 +28,7 @@ const SignIn = () => {
                             <div className="eye-btn"><i className="uil uil-eye-slash"></i></div>
                         </div>
 
-                        <input type="submit" className="submit-btn" />
+                        <input type="submit" className="submit-btn" value="Sign in" />
                     </form>
                 </div>
                 <div className="imgBox sign-in-imgBox">
@@ -68,6 +68,8 @@ const SignIn = () => {
                         </div>
 
                         <input type="submit" className="submit-btn" value="Sign up" />
+                        
+
                     </form>
                 </div>
 
