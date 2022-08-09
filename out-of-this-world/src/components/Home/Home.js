@@ -51,7 +51,6 @@ const Home = () => {
                 </p>
             </section>
 
-
             <section id="banner">
                 <div className="line"></div>
                 <div className="container">
