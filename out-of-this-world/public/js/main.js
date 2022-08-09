@@ -1,11 +1,4 @@
 window.addEventListener('load', () => {
-  //swiper
-
-
-
-
-  //navigation bar effects on scroll
-
   window.addEventListener("scroll", function () {
     const header = document.querySelector("header");
     header.classList.toggle("sticky", window.scrollY > 0);
@@ -48,29 +41,29 @@ window.addEventListener('load', () => {
 
 
   // Catalog js
-  const catalog = document.querySelector('div#catalog');
-  if (catalog) {
+  // const catalog = document.querySelector('div#catalog');
+  // if (catalog) {
 
 
-    let moon = document.querySelector(".moon");
-    let star = document.querySelector(".star")
-    let title = document.querySelector("#title");
+  //   let moon = document.querySelector(".moon");
+  //   let star = document.querySelector(".star")
+  //   let title = document.querySelector("#title");
 
-    console.log(moon, star);
-    window.addEventListener("scroll", function () {
-      let value = window.scrollY;
+  //   console.log(moon, star);
+  //   window.addEventListener("scroll", function () {
+  //     let value = window.scrollY;
 
-      star.style.left = value * 0.2 + "px";
-      moon.style.top = 50 + value * 1.05 + "px";
-
-
-      title.style.marginRight = value * 5 + "px";
-      title.style.top = 300 + value * 0.9 + "px";
+  //     star.style.left = value * 0.2 + "px";
+  //     moon.style.top = 50 + value * 1.05 + "px";
 
 
+  //     title.style.marginRight = value * 5 + "px";
+  //     title.style.top = 300 + value * 0.9 + "px";
 
-    });
-  }
+
+
+  //   });
+  // }
 });
 
 
