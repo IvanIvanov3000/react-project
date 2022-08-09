@@ -1,4 +1,5 @@
 import './Catalog.css';
+import Card from '../Card/Card'
 
 const Catalog = () => {
 
@@ -27,6 +28,12 @@ const Catalog = () => {
             <img src="/images/wavetop.png" alt="" class="top-img"/>
             
         </div>
+
+        <Card/>
+        <Card/>
+        <Card/>
+        <Card/>
+
     </section>
        </>
     );

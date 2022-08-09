@@ -88,3 +88,16 @@ img.moon {
     padding: 100px;
     padding-top: 10%;
 }
+#items #all {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 3%;
+    align-content: space-between;
+    align-items: center;
+
+    position: relative;
+    padding: 100px;
+    margin-top: 30%;
+    background: var(--section-bg-color);
+}
