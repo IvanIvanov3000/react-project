@@ -3,6 +3,8 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Catalog from './components/Catalog/Catalog';
+import SignIn from './components/SignIn/SignIn';
+
 
 // import GameCatalog from './components/GameCatalog/GameCatalog';
 // import CreateGame from './components/CreateGame';
@@ -22,8 +24,8 @@ function App() {
 
                     <Route path="/home" exact component={Home} />
                     <Route path="/catalog" exact component={Catalog} />
+                    <Route path="/login" component={SignIn} />
                     {/*<Route path="/create-game" component={CreateGame} />
-                    <Route path="/login" component={Login} />
                     <Route path="/register" component={Register} />
                     <Route path="/games/:gameId" component={GameDetails} />
                     <Route path="/custom">
