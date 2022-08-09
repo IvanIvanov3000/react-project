@@ -50,7 +50,7 @@ const SignIn = () => {
 
         <div className="hero signin">
 
-            <video autoPlay={true} >
+            <video autoPlay={true} loop>
                 <source src="/images/video3.mp4" type="video/mp4" />
             </video>
 

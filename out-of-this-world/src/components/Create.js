@@ -3,8 +3,8 @@ const Create = () => {
     return (
         <div className="hero create">
 
-            <video autoplay loop muted plays-inline>
-                <source src="/images/video3.mp4" type="video/mp4" />
+            <video autoPlay={true} >
+               <source src="/images/video3.mp4" type="video/mp4" /> 
             </video>
 
 
@@ -25,9 +25,9 @@ const Create = () => {
                         <div className="field float-right radio">
                             <i className="uil uil-star"></i>
                             <p>Public: </p>
-                            <input type="radio" id="yes" name="radio" value="yes" />
+                            <input type="radio" id="yes" name="radio"  />
                             <label htmlFor="yes">Yes</label><br />
-                            <input type="radio" id="no" name="radio" value="no" />
+                            <input type="radio" id="no" name="radio" />
                             <label htmlFor="no">No</label><br />
                         </div>
 
