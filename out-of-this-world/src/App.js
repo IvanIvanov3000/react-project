@@ -7,7 +7,8 @@ import Catalog from './components/Catalog';
 import SignIn from './components/SignIn';
 import Create from './components/Create';
 import Details from './components/Details';
-import SwiperDemo from './components/SwiperDemo';
+import Blog from './components/Blog/Blog';
+
 
 import './App.css'
 // import GameCatalog from './components/GameCatalog/GameCatalog';
@@ -34,7 +35,7 @@ function App() {
                         <Route path="/create" component={Create} />
 
                         <Route path="/details" component={Details} />
-                        <Route path="/swiperDemo" component={SwiperDemo} />
+                        <Route path="/blog" component={Blog} />
 
                         {/*<Route path="/custom">
                         <h2>Custom Page</h2>
