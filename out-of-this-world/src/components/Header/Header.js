@@ -7,18 +7,18 @@ import './Header.css';
 const Header = () => {
     return (
         <header>
-        <div class="nav-bar">
+        <div className="nav-bar">
         <Link to='/home'><img src="/images/promaniq22.png" alt="logo"/></Link>
-            <div class="navigation">
-                <div class="nav-items">
-                    {/* <i class="uil uil-times nav-close-btn"></i> */}
+            <div className="navigation">
+                <div className="nav-items">
+                    {/* <i className="uil uil-times nav-close-btn"></i> */}
                     <Link to="/home"><FaHome ></FaHome> Home</Link>
-                    <Link to="/catalog"><FaSearch class="uil"></FaSearch> Explore</Link>
+                    <Link to="/catalog"><FaSearch></FaSearch> Explore</Link>
                     <Link to="/blog"><FaRegStar></FaRegStar> Blog</Link>
                     <Link to="/login"><FaEnvelope ></FaEnvelope> Login</Link>
                 </div>
             </div>
-            {/* <i class="uil uil-apps nav-menu-btn"></i> */}
+            {/* <i className="uil uil-apps nav-menu-btn"></i> */}
         </div>
     </header>
     );
