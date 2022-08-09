@@ -7,7 +7,7 @@ const Home = () => {
     return (
         <>
             <HomeHero />
-            <section class="about section">
+            <section className="about section">
                 <h2>About section</h2>
 
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus minima, doloremque minus maxime neque fugit
@@ -53,56 +53,55 @@ const Home = () => {
 
 
             <section id="banner">
-                <div class="line"></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p class="promo-title">BEST DIGITAL AGENCY</p>
+                <div className="line"></div>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-6">
+                            <p className="promo-title">BEST DIGITAL AGENCY</p>
                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus dolores dolorem eos
                                 ipsum consequatur totam maxime praesentium voluptatum laborum.</p>
-                            <a href="#"><img class="play-btn" src="/images/play.png" alt="" />Watch tutorials</a>
+                            <a href="#"><img className="play-btn" src="/images/play.png" alt="" />Watch tutorials</a>
                         </div>
-                        <div class="col-md-6 text-center">
-                            <img src="/images/home2.png" class="image-fluid" alt="" />
+                        <div className="col-md-6 text-center">
+                            <img src="/images/home2.png" className="image-fluid" alt="" />
                         </div>
                     </div>
                 </div>
-                <img src="/images/wavebottom.png" alt="" class="bottom-img" />
+                <img src="/images/wavebottom.png" alt="" className="bottom-img" />
             </section>
 
             <section id="services">
-                <div class="container text-center">
-                    <h1 class="title">WHAT WE DO?</h1>
-                    <div class="row text-center">
-                        <div class="col-md-4 services">
-                            <img src="/images/service1.png" class="service-img" alt="" />
+                <div className="container text-center">
+                    <h1 className="title">WHAT WE DO?</h1>
+                    <div className="row text-center">
+                        <div className="col-md-4 services">
+                            <img src="/images/service1.png" className="service-img" alt="" />
                             <h4>Growth Marketing</h4>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, saepe!</p>
                         </div>
-                        <div class="col-md-4 services">
-                            <img src="/images/service2.png" class="service-img" alt="" />
+                        <div className="col-md-4 services">
+                            <img src="/images/service2.png" className="service-img" alt="" />
                             <h4>Online Branding</h4>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, saepe!</p>
                         </div>
-                        <div class="col-md-4 services">
-                            <img src="/images/service3dark.png" class="service-img" alt="" />
+                        <div className="col-md-4 services">
+                            <img src="/images/service3dark.png" className="service-img" alt="" />
                             <h4>Animated Ads</h4>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, saepe!</p>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-primary">All services</button>
+                    <button type="button" className="btn btn-primary">All services</button>
                 </div>
 
             </section>
 
-
             <section id="about-us">
-                <img src="/images/wavetop.png" alt="" class="top-img" />
-                <div class="container">
-                    <h1 class="title text-center">Why choose us?</h1>
-                    <div class="row">
-                        <div class="col-md-6 about-us">
-                            <p class="about-title">Why we are different</p>
+                <img src="/images/wavetop.png" alt="" className="top-img" />
+                <div className="container">
+                    <h1 className="title text-center">Why choose us?</h1>
+                    <div className="row">
+                        <div className="col-md-6 about-us">
+                            <p className="about-title">Why we are different</p>
                             <ul>
                                 <li>Believe in doing business with honesty</li>
                                 <li>Believe in doing business with honesty</li>
@@ -113,39 +112,39 @@ const Home = () => {
 
                             </ul>
                         </div>
-                        <div class="col-md-6">
-                            <img src="/images/network.png" class='img-fluid' alt="" />
+                        <div className="col-md-6">
+                            <img src="/images/network.png" className='img-fluid' alt="" />
                         </div>
                     </div>
                 </div>
-                <img src="/images/wavebottom.png" alt="" class="bottom-img" />
+                <img src="/images/wavebottom.png" alt="" className="bottom-img" />
 
             </section>
 
             <section id="testimonials">
 
-                <div class="container">
-                    <h1 class="title text-center">What clients say?</h1>
+                <div className="container">
+                    <h1 className="title text-center">What clients say?</h1>
 
 
-                    <div class="row offset-1">
-                        <div class="col-md-5 testimonials">
+                    <div className="row offset-1">
+                        <div className="col-md-5 testimonials">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, saepe! Lorem ipsum dolor
                                 sit,
                                 amet consectetur adipisicing elit. Nulla consequuntur aperiam dolorum placeat possimus fugiat,
                                 ipsam
                                 iure non! Quis, odit?</p>
                             <img src="/images/user1.jpg" alt="" />
-                            <p class="user-details"><b>Angelina</b> <br /> Co-founder at xyz</p>
+                            <p className="user-details"><b>Angelina</b> <br /> Co-founder at xyz</p>
                         </div>
-                        <div class="col-md-5 testimonials">
+                        <div className="col-md-5 testimonials">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, saepe! Lorem ipsum dolor
                                 sit,
                                 amet consectetur adipisicing elit. Nulla consequuntur aperiam dolorum placeat possimus fugiat,
                                 ipsam
                                 iure non! Quis, odit?</p>
                             <img src="/images/user2.jpg" alt="" />
-                            <p class="user-details"><b>Jhon Doe</b> <br /> Director at xyz</p>
+                            <p className="user-details"><b>Jhon Doe</b> <br /> Director at xyz</p>
                         </div>
 
                     </div>
@@ -154,12 +153,12 @@ const Home = () => {
             </section>
 
             <section id="social-media">
-                <img src="/images/wavetop.png" alt="" class="top-img" />
+                <img src="/images/wavetop.png" alt="" className="top-img" />
 
-                <div class="container text-center">
+                <div className="container text-center">
                     <p>Find us on social media</p>
 
-                    <div class="social-icons">
+                    <div className="social-icons">
                         <a href="#"><img src="/images/icons/facebook-icon.png" alt="" /></a>
                         <a href="#"><img src="/images/icons/instagram-icon.png" alt="" /></a>
                         <a href="#"><img src="/images/icons/twitter-icon.png" alt="" /></a>
@@ -169,35 +168,35 @@ const Home = () => {
 
                     </div>
                 </div>
-                <img src="/images/wavebottom.png" class="footer-img" alt="" />
+                <img src="/images/wavebottom.png" className="footer-img" alt="" />
 
 
             </section>
 
             <footer>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4 footer-box">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-4 footer-box">
                             <img src="/images/demo-logo.png" alt="" />
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam nulla perspiciatis numquam
                                 assumenda ea, vero sunt blanditiis enim maiores exercitationem, iusto porro?
                             </p>
                         </div>
-                        <div class="col-md-4 footer-box">
+                        <div className="col-md-4 footer-box">
                             <p><b>Contact us</b></p>
-                            <p><i class="fa fa-map-marker" aria-hidden="true"></i> World Trade Center, Sofia</p>
-                            <p><i class="fa fa-phone" aria-hidden="true"></i> +1 01233435667</p>
-                            <p><i class="fa fa-envelope-o" aria-hidden="true"></i> xyz@gmail.com</p>
+                            <p><i className="fa fa-map-marker" aria-hidden="true"></i> World Trade Center, Sofia</p>
+                            <p><i className="fa fa-phone" aria-hidden="true"></i> +1 01233435667</p>
+                            <p><i className="fa fa-envelope-o" aria-hidden="true"></i> xyz@gmail.com</p>
 
                         </div>
-                        <div class="col-md-4 footer-box">
+                        <div className="col-md-4 footer-box">
                             <p><b>Subscribe Newsletter</b></p>
-                            <input type="email" class="form-control" placeholder="Your email" />
-                            <button type="button" class="btn btn-primary">Subscribe</button>
+                            <input type="email" className="form-control" placeholder="Your email" />
+                            <button type="button" className="btn btn-primary">Subscribe</button>
                         </div>
                         <div>
                             <hr />
-                            <p class="copyright">Website crafted by Ivan Ivanov</p>
+                            <p className="copyright">Website crafted by Ivan Ivanov</p>
                         </div>
                     </div>
                 </div>
