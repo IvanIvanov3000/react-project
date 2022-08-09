@@ -1,4 +1,50 @@
+import { useEffect } from 'react';
+
+
+
 const SignIn = () => {
+    // useEffect(() => {
+    //     let script = document.createElement('script');
+
+    //     let signUpBtn;
+    //     let signInBtn;
+    //     let signUpForm;
+    //     let signInForm;
+
+
+    //     script.async = true;
+    //     script.innerHTML = `
+    //     signUpBtn = document.querySelector(".sign-up-btn");
+    //     signInBtn = document.querySelector(".sign-in-btn");
+    //     signUpForm = document.querySelector(".sign-up-form");
+    //     signInForm = document.querySelector(".sign-in-form");
+    //     if (signUpBtn && signInBtn) {
+    //       signUpBtn.addEventListener("click", () => {
+    //         signUpForm.classList.add("show");
+    //         signInForm.classList.add("hide");
+    //         signUpForm.classList.remove("hide");
+    //         signInForm.classList.remove("show");
+      
+    //       });
+      
+    //       signInBtn.addEventListener("click", () => {
+    //         signInForm.classList.add("show");
+    //         signUpForm.classList.add("hide");
+    //         signInForm.classList.remove("hide");
+    //         signUpForm.classList.remove("show");
+    //       });
+    //     }`;
+
+    //     document.body.appendChild(script);
+
+    //     return () => {
+    //         document.body.removeChild(signUpBtn);
+    //         document.body.removeChild(signInBtn);
+    //         document.body.removeChild(signUpForm);
+    //         document.body.removeChild(signInForm);
+    //         document.body.removeChild(script);
+    //     }
+    // }, []);
 
     return (
 
@@ -66,7 +112,7 @@ const SignIn = () => {
                         </div>
 
                         <input type="submit" className="submit-btn" value="Sign up" />
-                        
+
 
                     </form>
                 </div>
