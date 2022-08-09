@@ -1,5 +1,3 @@
-import './HomeHero.css';
-
 const HomeHero = () => {
 
     return (

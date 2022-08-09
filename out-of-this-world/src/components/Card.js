@@ -1,9 +1,7 @@
-import './Card.css';
-
 const Card = () => {
 
     return (
-        <div className="card">
+        <div id="card-catalog">
                 <img src="/images/home-page/2nd.jpg" alt=""/>
 
                 <div className="card-wrapper">

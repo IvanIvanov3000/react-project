@@ -33,7 +33,7 @@ header .nav-bar {
     display: none;
 }
 
-.nav-bar .logo img {
+.nav-bar img {
     width: 100px;
     height: auto;
 }

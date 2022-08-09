@@ -1,3 +1,18 @@
+:root {
+    --white-color: #fff;
+    --dark-color: #222;
+    --section-bg-color: #202834;
+    --navigation-item-hover-color: #3b5378;
+  
+    --text-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    --box-shadow: 0 5px 25px rgba(0 0 0 / 20%);
+  
+    --scroll-bar-color: #fff;
+    --scroll-thumb-color: #282f4e;
+    --scroll-thumb-hover-color: #454f6b;
+}
+
+
 .about h2 {
     font-size: 3em;
     font-weight: 600;
@@ -19,7 +34,7 @@ div.line {
 
 #banner {
     background: #202834;
-    background-image: url(../../../public/images/home-page/back1.jpg);
+    background-image: url(../images/home-page/back1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0 270px;
@@ -52,9 +67,11 @@ div.line {
 .bottom-img {
     width: 100%;
 }
+
 .top-img {
     width: 100%;
 }
+
 #services {
     color: #fff;
     background-color: #202834;
@@ -113,7 +130,7 @@ h1.title::after {
 } */
 
 #about-us {
-    background-image: url(../../../public/images/home-page/back2.jpg);
+    background-image: url(../images/home-page/back2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     /* background-attachment: fixed;
@@ -145,7 +162,8 @@ h1.title::after {
     color: #fff;
     padding: 100px 0px;
 }
-#testimonials .offset-1{
+
+#testimonials .offset-1 {
     margin-left: 0px;
 }
 
@@ -173,7 +191,7 @@ h1.title::after {
     flex-direction: column;
     justify-content: space-between;
 
-    background-image: url(../../../public/images/home-page/back3.jpeg);
+    background-image: url(../images/home-page/back3.jpeg);
     min-height: 680px;
 
     /* background-attachment: fixed;
@@ -195,7 +213,8 @@ h1.title::after {
     width: 60px;
     transition: 0.5s;
 }
-.social-icons{
+
+.social-icons {
     padding: 0px 50px;
 }
 
@@ -260,13 +279,15 @@ footer {
 
 
 
-@media screen and (max-width: 985px)  {
-    h1.title::after{
+@media screen and (max-width: 985px) {
+    h1.title::after {
         display: none;
     }
+
     .promo-title {
         margin-top: 40px;
     }
+
     .col-md-6.text-center img {
         margin-top: 50px;
     }
@@ -278,10 +299,12 @@ footer {
     }
 
 }
-@media screen and (max-width: 785px)  {
+
+@media screen and (max-width: 785px) {
     .col-md-6.text-center img {
         margin-top: 0px;
     }
+
     #testimonials .testimonials {
         margin-top: 20px;
         margin-bottom: 20px;

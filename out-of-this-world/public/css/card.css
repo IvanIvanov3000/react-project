@@ -1,4 +1,4 @@
-.card {
+#card-catalog {
     width: 30%;
     height: 700px;
     background-color: #2C2C34;
@@ -11,7 +11,7 @@
     margin: 15px 5px;
 }
 
-.card img {
+div#card-catalog img {
     z-index: 1;
     position: relative;
     width: 100%;
@@ -19,7 +19,7 @@
     object-fit: cover;
 }
 
-.card .card-wrapper {
+#card-catalog #card-catalog-wrapper {
     margin: 20px;
     margin-top: 20px;
 
@@ -30,12 +30,12 @@
     align-self: bottom;
 }
 
-.card h3 {
+#card-catalog h3 {
     font-size: 3rem;
     text-align: center;
 }
 
-.card .year {
+#card-catalog .year {
     padding: 2px 8px;
     border: 1px solid #2C2C34;
     border-radius: 5px;
@@ -47,13 +47,13 @@
     font-size: 19px;
 }
 
-.card p {
+#card-catalog p {
     margin-top: 15px;
     font-size: 16px;
     text-align: justify;
 }
 
-.card .details.btn {
+#card-catalog .details.btn {
     display: block;
 
     margin: 15px 0;
@@ -69,7 +69,7 @@
 
 }
 
-.card .details.btn:hover {
+#card-catalog .details.btn:hover {
     color: #fff;
     background-color: #2C2C34;
     border: 1px solid #fff;

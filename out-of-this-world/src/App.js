@@ -1,9 +1,9 @@
 import { Route, Switch, Redirect } from 'react-router-dom';
 
-import Header from './components/Header/Header';
+import Header from './components/Header';
 import Home from './components/Home/Home';
-import Catalog from './components/Catalog/Catalog';
-import SignIn from './components/SignIn/SignIn';
+import Catalog from './components/Catalog';
+import SignIn from './components/SignIn';
 import Create from './components/Create';
 import Details from './components/Details';
 

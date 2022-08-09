@@ -2,7 +2,6 @@ import React from 'react';
 import { FaHome, FaSearch, FaEnvelope, FaRegStar } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
-import './Header.css';
 
 const Header = () => {
     return (

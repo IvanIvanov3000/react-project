@@ -1,5 +1,4 @@
-import './Catalog.css';
-import Card from '../Card/Card'
+import Card from './Card'
 
 const Catalog = () => {
 
