@@ -215,19 +215,9 @@ div textarea {
 
 
 
-@media (min-aspect-ratio: 16/9) {
-    .back-video {
-        width: 100%;
-        height: auto;
-    }
-}
 
-@media (max-aspect-ratio: 16/9) {
-    .back-video {
-        width: auto;
-        height: 100%;
-    }
-}
+
+
 
 @media screen and (max-width: 1700px) {
     .content {
