@@ -49,6 +49,9 @@ section {
     padding: 85px 200px;
     transition: 0.3s ease;
 }
+div#home-hero{
+    position: relative;
+}
 
 .home {
     min-height: 100vh;
