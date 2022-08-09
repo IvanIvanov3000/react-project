@@ -1,5 +1,5 @@
 import { Route, Switch, Redirect } from 'react-router-dom';
-
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 import Header from './components/Header';
 import Home from './components/Home/Home';
@@ -21,20 +21,22 @@ function App() {
     return (
         <div id="box">
             <Header />
+            
 
-            <main id="main-content">
-                <Switch>
-                    <Route path="/" exact component={Home} />
+            <ParallaxProvider>
+                <main id="main-content">
+                    <Switch>
+                        <Route path="/" exact component={Home} />
 
-                    <Route path="/home" exact component={Home} />
-                    <Route path="/catalog" exact component={Catalog} />
-                    <Route path="/login" component={SignIn} />
-                    <Route path="/create" component={Create} />
-                    
-                    <Route path="/details" component={Details} />
-                    <Route path="/swiperDemo" component={SwiperDemo} />
+                        <Route path="/home" exact component={Home} />
+                        <Route path="/catalog" exact component={Catalog} />
+                        <Route path="/login" component={SignIn} />
+                        <Route path="/create" component={Create} />
 
-                    {/*<Route path="/custom">
+                        <Route path="/details" component={Details} />
+                        <Route path="/swiperDemo" component={SwiperDemo} />
+
+                        {/*<Route path="/custom">
                         <h2>Custom Page</h2>
                         <p>dasklfjasldf </p>
                     </Route>
@@ -43,9 +45,9 @@ function App() {
 
                         return <Redirect to="/" />
                     }} /> */}
-                </Switch>
-            </main>
-
+                    </Switch>
+                </main>
+                </ParallaxProvider>
         </div>
     );
 }
