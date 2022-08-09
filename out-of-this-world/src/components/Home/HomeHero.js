@@ -1,4 +1,19 @@
+import { useState, useEffect } from 'react';
+
 const HomeHero = () => {
+
+    useEffect(() => {
+        const script = document.createElement('script');
+      
+        script.src = "https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js";
+        script.async = true;
+      
+        document.body.appendChild(script);
+      
+        return () => {
+          document.body.removeChild(script);
+        }
+      }, []);
 
     return (
         <>

@@ -1,19 +1,30 @@
-// swiper
-// var swiper = new Swiper(".bg-slider-thumbs", {
-//     loop: true,
-//     spaceBetween: 0,
-//     slidesPerView: 0
-// });
-// var swiper2 = new Swiper(".bg-slider", {
-//     loop: true,
-//     spaceBetween: 0,
-//     thumbs: {
-//         swiper: swiper,
-//     },
-// });
-
-//navigation bar effects on scroll
 window.addEventListener('load', () => {
+  //swiper
+
+  const homeHero = document.querySelector('section.home');
+  console.log(homeHero);
+  if (homeHero) {
+    
+    var swiper = new Swiper(".bg-slider-thumbs", {
+      loop: true,
+      spaceBetween: 0,
+      slidesPerView: 0
+    });
+    
+    var swiper2 = new Swiper(".bg-slider", {
+      loop: true,
+      spaceBetween: 0,
+      thumbs: {
+        swiper: swiper,
+      },
+    });
+    console.log(swiper2);
+  }
+
+
+
+  //navigation bar effects on scroll
+
   window.addEventListener("scroll", function () {
     const header = document.querySelector("header");
     header.classList.toggle("sticky", window.scrollY > 0);
@@ -31,19 +42,21 @@ window.addEventListener('load', () => {
   //     navigation.classList.remove("active");
   // });
 
+
+
   const signUpBtn = document.querySelector(".sign-up-btn");
   const signInBtn = document.querySelector(".sign-in-btn");
   const signUpForm = document.querySelector(".sign-up-form");
   const signInForm = document.querySelector(".sign-in-form");
-  if(signUpBtn && signInBtn){
+  if (signUpBtn && signInBtn) {
     signUpBtn.addEventListener("click", () => {
       signUpForm.classList.add("show");
       signInForm.classList.add("hide");
       signUpForm.classList.remove("hide");
       signInForm.classList.remove("show");
-  
+
     });
-  
+
     signInBtn.addEventListener("click", () => {
       signInForm.classList.add("show");
       signUpForm.classList.add("hide");
@@ -54,26 +67,29 @@ window.addEventListener('load', () => {
 
 
   // Catalog js
-
-  let moon = document.querySelector(".moon");
-  let star = document.querySelector(".star")
-  let title = document.querySelector("#title");
-  
-  console.log(moon, star);
-  window.addEventListener("scroll", function () {
-    let value = window.scrollY;
-
-    star.style.left = value * 0.2 + "px";
-    moon.style.top = 50 + value * 1.05 + "px";
+  const catalog = document.querySelector('div#catalog');
+  if (catalog) {
 
 
-    title.style.marginRight = value * 5 + "px";
-    title.style.top = 300 + value * 0.9 + "px";
+    let moon = document.querySelector(".moon");
+    let star = document.querySelector(".star")
+    let title = document.querySelector("#title");
+
+    console.log(moon, star);
+    window.addEventListener("scroll", function () {
+      let value = window.scrollY;
+
+      star.style.left = value * 0.2 + "px";
+      moon.style.top = 50 + value * 1.05 + "px";
+
+
+      title.style.marginRight = value * 5 + "px";
+      title.style.top = 300 + value * 0.9 + "px";
 
 
 
-  });
-
+    });
+  }
 });
 
 
