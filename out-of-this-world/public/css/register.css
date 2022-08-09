@@ -84,13 +84,14 @@
   color: #fff;
   border: none;
   outline: none;
-  width: 120px;
+
   padding: 10px 30px;
   border-radius: 5px;
   font-size: 1em;
   font-weight: 500;
   margin-top: 5px;
   cursor: pointer;
+  transition: 0s;
 }
 
 
@@ -102,7 +103,7 @@
   margin-left: 20px;
 }
 
-.hero.signin.sliding-link span {
+.hero.signin .sliding-link span {
   color: #0065ff;
   font-weight: 600;
   margin-left: 5px;
