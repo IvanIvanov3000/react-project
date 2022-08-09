@@ -4,6 +4,8 @@ import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Catalog from './components/Catalog/Catalog';
 import SignIn from './components/SignIn/SignIn';
+import Create from './components/Create';
+import Details from './components/Details';
 
 
 // import GameCatalog from './components/GameCatalog/GameCatalog';
@@ -25,10 +27,10 @@ function App() {
                     <Route path="/home" exact component={Home} />
                     <Route path="/catalog" exact component={Catalog} />
                     <Route path="/login" component={SignIn} />
-                    {/*<Route path="/create-game" component={CreateGame} />
-                    <Route path="/register" component={Register} />
-                    <Route path="/games/:gameId" component={GameDetails} />
-                    <Route path="/custom">
+                    <Route path="/create" component={Create} />
+                    
+                    <Route path="/details" component={Details} />
+                    {/*<Route path="/custom">
                         <h2>Custom Page</h2>
                         <p>dasklfjasldf </p>
                     </Route>
