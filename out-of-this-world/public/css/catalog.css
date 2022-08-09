@@ -1,3 +1,5 @@
+
+
 div#catalog section#catalog {
     overflow: hidden;
     position: relative;
@@ -7,6 +9,7 @@ div#catalog section#catalog {
 
     display: flex;
     justify-content: center;
+
 }
 
 div#catalog section#catalog .back-img {
@@ -88,6 +91,7 @@ div#catalog #items #top {
     padding: 100px;
     padding-top: 10%;
 }
+
 div#catalog #items #all {
     width: 100%;
     display: flex;
@@ -139,6 +143,7 @@ div#catalog #items #all {
         padding-top: 150px;
     }
 }
+
 @media screen and (max-width: 550px) {
     .card {
         width: 100%;

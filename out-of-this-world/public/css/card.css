@@ -19,10 +19,10 @@ div#card-catalog img {
     object-fit: cover;
 }
 
-#card-catalog #card-catalog-wrapper {
+#card-catalog .card-wrapper {
     margin: 20px;
     margin-top: 20px;
-
+   
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
