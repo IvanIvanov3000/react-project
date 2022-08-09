@@ -1,7 +1,7 @@
-div.left,
-div.right {
+.hero.details div.left,
+.hero.details div.right {
     width: 48%;
-    height: 70vh;
+    height: 80vh;
     background-color: #202834;
     border-radius: 23px;
     border-left: 1px solid #fefefe;
@@ -9,11 +9,11 @@ div.right {
     position: relative;
     overflow: hidden;
 }
-div.images{
+.hero.details div.images{
     position: relative;
     width: 100%;
 }
-div.images::before{
+.hero.details div.images::before{
     content: "";
     width: 100%;
     height: 40px;
@@ -24,7 +24,7 @@ div.images::before{
     z-index: 70;
 }
 
-div.left img {
+.hero.details div.left img {
     width: 100%;
     object-fit: cover;
     max-height: 250px;
@@ -32,13 +32,13 @@ div.left img {
 
 
 
-div.left div.wrapper h3 {
+.hero.details .hero .detailsdiv.left div.wrapper h3 {
     margin-top: 10px;
     font-size: 2.5rem;
     text-align: center;
 }
 
-div.left div.wrapper span {
+.hero.details div.left div.wrapper span {
     padding: 2px 8px;
     border: 1px solid #2C2C34;
     border-radius: 5px;
@@ -50,7 +50,7 @@ div.left div.wrapper span {
     font-size: 19px;
 }
 
-div.left div.wrapper b {
+.hero.details div.left div.wrapper b {
     font-weight: normal;
     font-size: 1.5rem;
     padding: 2px 8px;
@@ -63,7 +63,7 @@ div.left div.wrapper b {
     background-color: #2C2C34;
 }
 
-div.left div.wrapper button {
+.hero.details div.left div.wrapper button {
     display: inline-block;
 
     margin: 15px 0;
@@ -78,40 +78,40 @@ div.left div.wrapper button {
     transition: ease 0.3s;
 }
 
-div.left div.wrapper button:hover {
+.hero.details div.left div.wrapper button:hover {
     color: #fff;
     background-color: #2C2C34;
     border: 1px solid #fff;
 }
 
 
-div.right {
+.hero.details div.right {
     padding: 10px;
     padding-top: 15px;
 }
 
-div.right p {
-    font-size: 16px;
+.hero.details div.right p {
+    font-size: 15px;
     text-align: justify;
 }
 
 
 @media (min-aspect-ratio: 16/9) {
-    .back-video {
+    .hero.details .back-video {
         width: 100%;
         height: auto;
     }
 }
 
 @media (max-aspect-ratio: 16/9) {
-    .back-video {
+    .hero.details .back-video {
         width: auto;
         height: 100%;
     }
 }
 
 @media screen and (max-width: 1700px) {
-    .content {
+    .hero.details .content {
         width: 80%;
     }
 }
