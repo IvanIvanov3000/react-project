@@ -1,25 +1,6 @@
 window.addEventListener('load', () => {
   //swiper
 
-  const homeHero = document.querySelector('section.home');
-  console.log(homeHero);
-  if (homeHero) {
-    
-    var swiper = new Swiper(".bg-slider-thumbs", {
-      loop: true,
-      spaceBetween: 0,
-      slidesPerView: 0
-    });
-    
-    var swiper2 = new Swiper(".bg-slider", {
-      loop: true,
-      spaceBetween: 0,
-      thumbs: {
-        swiper: swiper,
-      },
-    });
-    console.log(swiper2);
-  }
 
 
 
