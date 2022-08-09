@@ -1,21 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-/* * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
 
-body {
-  min-height: 100vh;
-  background: #fff;
-   display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 
-.form-container {
+.hero.signin .form-container {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -23,7 +10,7 @@ body {
   font-size: 1rem;
 }
 
-.form-box {
+.hero.signin .form-box {
   z-index: 9;
   background: #fff;
   box-shadow: 0 5px 25px rgb(0 0 0 / 15%);
@@ -36,13 +23,13 @@ body {
   overflow: hidden;
 }
 
-.form-box h2 {
+.hero.signin .form-box h2 {
   font-size: 3.5em;
   margin-bottom: 70px;
   font-weight: 700;
 }
 
-.form-box .field {
+.hero.signin .hero.signin.form-box .field {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,48 +37,49 @@ body {
   margin-bottom: 25px;
 }
 
-.form-box .field.active {
+.hero.signin .form-box .field.active {
   border-bottom: 2px solid #0065ff;
   transition: 0.3s ease;
 }
 
 
-.form-box .field input {
+.hero.signin .form-box .field input {
   border: none;
   outline: none;
   background: none;
   width: 100%;
   font-size: 1.25em;
   padding-bottom: 5px;
+  color: #fff;
 }
 
-.form-box .field i {
+.hero.signin .form-box .field i {
   color: #828da0;
   font-size: 1.5em;
   margin-right: 10px;
   padding-bottom: 5px;
 }
 
-.form-box .field.active i {
+.hero.signin .form-box .field.active i {
   color: #0065ff;
   transition: 0.3s ease;
 }
 
-::placeholder {
+.hero.signin ::placeholder {
   color: #828da0;
   font-size: 0.85em;
 }
 
-.eye-btn {
+.hero.signin .eye-btn {
   cursor: pointer;
 }
 
-.eye-btn i:hover {
+.hero.signin .eye-btn i:hover {
   color: #0065ff;
   transition: 0.3s ease;
 }
 
-.submit-btn {
+.hero.signin .submit-btn {
   background: #0065ff;
   color: #fff;
   border: none;
@@ -106,7 +94,7 @@ body {
 }
 
 
-.sliding-link {
+.hero.signin .sliding-link {
   display: flex;
   font-size: 1.2em;
   margin-bottom: 25px;
@@ -114,14 +102,14 @@ body {
   margin-left: 20px;
 }
 
-.sliding-link span {
+.hero.signin.sliding-link span {
   color: #0065ff;
   font-weight: 600;
   margin-left: 5px;
   cursor: pointer;
 }
 
-.imgBox {
+.hero.signin .imgBox {
   z-index: 8;
   display: flex;
   justify-content: center;
@@ -134,57 +122,57 @@ body {
   padding: 15px 35px;
 }
 
-.imgBox img {
+.hero.signin .imgBox img {
   max-width: 350px;
 }
 
 
-.sign-in-imgBox {
+.hero.signin .sign-in-imgBox {
   border-radius: 0 5px 5px 0;
 }
 
-.sign-up-imgBox {
+.hero.signin .sign-up-imgBox {
   border-radius: 5px 0 0 5px;
 }
 
 
-.sign-in-form.hide .sign-in-box {
+.hero.signin .sign-in-form.hide .sign-in-box {
   transform: translate(100%);
   visibility: hidden;
 
 }
 
-.sign-in-form.hide .sign-in-imgBox {
+.hero.signin .sign-in-form.hide .sign-in-imgBox {
   transform: translate(-100%);
   visibility: hidden;
 
 }
 
-.sign-in-form.show .sign-in-box,
-.sign-in-form.show .sign-in-imgBox {
+.hero.signin .sign-in-form.show .sign-in-box,
+.hero.signin .sign-in-form.show .sign-in-imgBox {
   transform: translateX(0);
   visibility: visible;
 
 }
 
-.sign-up-form .sign-up-imgBox,
-.sign-in-form .sign-in-imgBox {
+.hero.signin .sign-up-form .sign-up-imgBox,
+.hero.signin .sign-in-form .sign-in-imgBox {
   transform: translate(100%);
   visibility: hidden;
 
 }
 
-.sign-up-form .sign-up-box,
-.sign-in-form .sign-in-box {
+.hero.signin .sign-up-form .sign-up-box,
+.hero.signin .sign-in-form .sign-in-box {
   transform: translate(-100%);
   visibility: hidden;
 }
 
 
-.sign-up-form.show .sign-up-imgBox,
-.sign-up-form.show .sign-up-box,
-.sign-in-form.show .sign-in-imgBox,
-.sign-in-form.show .sign-in-box {
+.hero.signin .sign-up-form.show .sign-up-imgBox,
+.hero.signin .sign-up-form.show .sign-up-box,
+.hero.signin .sign-in-form.show .sign-in-imgBox,
+.hero.signin .sign-in-form.show .sign-in-box {
   transform: translateX(0);
   visibility: visible;
   transition-delay: 3s;
@@ -194,30 +182,30 @@ body {
 
 @media screen and (max-width: 850px) {
 
-  .form-container {
+  .hero.signin .form-container {
     font-size: 0.9rem;
   }
 
-  .form-box {
+  .hero.signin .form-box {
     width: 50%;
   }
 
-  .imgBox {
+  .hero.signin .imgBox {
     width: 50%;
   }
 }
 
 @media screen and (max-width: 690px) {
-  .form-container {
+  .hero.signin .form-container {
     width: 100%
   }
 
-  .form-box {
+  .hero.signin .form-box {
     font-size: 0.8rem;
     height: 90%;
   }
 
-  .imgBox {
+  .hero.signin .imgBox {
     font-size: 0.7rem;
 
     height: 80%;
@@ -226,22 +214,22 @@ body {
 }
 
 @media screen and (max-width: 500px) {
-  .form-container {
+  .hero.signin .form-container {
     width: 100%
   }
 
-  .form-box {
+  .hero.signin .form-box {
     font-size: 0.7rem;
     border: none;
   }
 
-  .imgBox {
+  .hero.signin .imgBox {
     font-size: 0.6rem;
     border: none;
   }
 }
 @media screen and (max-width: 455px){
-  .form-container {
+  .hero.signin .form-container {
     display: flex;
     flex-direction: column;
   }
