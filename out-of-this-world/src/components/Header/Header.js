@@ -12,7 +12,7 @@ const Header = () => {
             <div class="navigation">
                 <div class="nav-items">
                     {/* <i class="uil uil-times nav-close-btn"></i> */}
-                    <Link href="/home"><FaHome ></FaHome> Home</Link>
+                    <Link to="/home"><FaHome ></FaHome> Home</Link>
                     <Link to="/catalog"><FaSearch class="uil"></FaSearch> Explore</Link>
                     <Link to="/blog"><FaRegStar></FaRegStar> Blog</Link>
                     <Link to="/login"><FaEnvelope ></FaEnvelope> Login</Link>
