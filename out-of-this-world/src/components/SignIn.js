@@ -1,50 +1,14 @@
+import { FaUserTie, FaUserSecret, FaEye, FaEyeSlash, FaGlasses } from "react-icons/fa";
+
 import { useEffect } from 'react';
 
 
 
 const SignIn = () => {
-    // useEffect(() => {
-    //     let script = document.createElement('script');
-
-    //     let signUpBtn;
-    //     let signInBtn;
-    //     let signUpForm;
-    //     let signInForm;
-
-
-    //     script.async = true;
-    //     script.innerHTML = `
-    //     signUpBtn = document.querySelector(".sign-up-btn");
-    //     signInBtn = document.querySelector(".sign-in-btn");
-    //     signUpForm = document.querySelector(".sign-up-form");
-    //     signInForm = document.querySelector(".sign-in-form");
-    //     if (signUpBtn && signInBtn) {
-    //       signUpBtn.addEventListener("click", () => {
-    //         signUpForm.classList.add("show");
-    //         signInForm.classList.add("hide");
-    //         signUpForm.classList.remove("hide");
-    //         signInForm.classList.remove("show");
-      
-    //       });
-      
-    //       signInBtn.addEventListener("click", () => {
-    //         signInForm.classList.add("show");
-    //         signUpForm.classList.add("hide");
-    //         signInForm.classList.remove("hide");
-    //         signUpForm.classList.remove("show");
-    //       });
-    //     }`;
-
-    //     document.body.appendChild(script);
-
-    //     return () => {
-    //         document.body.removeChild(signUpBtn);
-    //         document.body.removeChild(signInBtn);
-    //         document.body.removeChild(signUpForm);
-    //         document.body.removeChild(signInForm);
-    //         document.body.removeChild(script);
-    //     }
-    // }, []);
+    function handleLoginSubmit(e) {
+        e.preventDefault();
+        console.log('You clicked submit.');
+      }
 
     return (
 
@@ -59,17 +23,18 @@ const SignIn = () => {
             <div className="form-container sign-in-form hide">
                 <div className="form-box sign-in-box">
                     <h2>Sign in</h2>
-                    <form action="">
+                    <form onSubmit={handleLoginSubmit}>
                         <div className="field">
-                            <i className="uil uil-at"></i>
+                            <FaUserTie className="icon" />
                             <input type="email" placeholder="Email ID" required />
                         </div>
-
+                       
 
                         <div className="field">
-                            <i className="uil uil-lock-alt"></i>
+                            <FaGlasses className="icon" />
+
                             <input className="password-input" type="password" placeholder="Password" required />
-                            <div className="eye-btn"><i className="uil uil-eye-slash"></i></div>
+                            <div className="eye-btn"><FaEye className="icon" /></div>
                         </div>
 
                         <input type="submit" className="submit-btn" value="Sign in" />
@@ -98,17 +63,24 @@ const SignIn = () => {
 
                     <form action="">
                         <div className="field">
-                            <i className="uil uil-at"></i>
+                            <FaUserTie className="icon" />
                             <input type="email" placeholder="Email ID" required />
+                        </div>
+                        <div className="field">
+                            <FaUserSecret className="icon" />
+                            <input type="text" placeholder="Username" required />
                         </div>
 
                         <div className="field">
-                            <i className="uil uil-user"></i>
-                            <input type="text" placeholder="Full name" required />
+                            <FaGlasses className="icon" />
+                            <input type="password" placeholder="Password" required />
+                            
                         </div>
                         <div className="field">
-                            <i className="uil uil-lock-access"></i>
-                            <input type="password" placeholder="Confirm password" required />
+                            <FaGlasses className="icon" />
+
+                            <input className="password-input" type="password" placeholder="Confirm Password" required />
+                            
                         </div>
 
                         <input type="submit" className="submit-btn" value="Sign up" />
