@@ -40,11 +40,15 @@ header .nav-bar {
 
 .navigation .nav-items a {
     color: var(--white-color);
-    font-size: 1em;
+    font-size: 1.2em;
     text-decoration: none;
     text-align: right;
     width: calc(auto + 5px);
     text-shadow: var(--text-shadow);
+}
+
+.navigation .nav-items a .icon {
+    margin-right: 5px;
 }
 
 .navigation .nav-items a:not(:last-child) {

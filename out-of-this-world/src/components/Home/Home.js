@@ -1,5 +1,8 @@
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+
 import { useState, useEffect } from 'react';
 import HomeHero from './HomeHero';
+
 
 const Home = () => {
 
@@ -182,9 +185,9 @@ const Home = () => {
                         </div>
                         <div className="col-md-4 footer-box">
                             <p><b>Contact us</b></p>
-                            <p><i className="fa fa-map-marker" aria-hidden="true"></i> World Trade Center, Sofia</p>
-                            <p><i className="fa fa-phone" aria-hidden="true"></i> +1 01233435667</p>
-                            <p><i className="fa fa-envelope-o" aria-hidden="true"></i> xyz@gmail.com</p>
+                            <p><FaMapMarkerAlt className="icon"/> World Trade Center, Sofia</p>
+                            <p><FaPhoneAlt className="icon"/> +1 01233435667</p>
+                            <p><FaEnvelope className="icon"/> xyz@gmail.com</p>
 
                         </div>
                         <div className="col-md-4 footer-box">

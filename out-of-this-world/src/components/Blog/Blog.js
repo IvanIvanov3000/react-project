@@ -1,34 +1,36 @@
+import { FaPepperHot, FaBalanceScale } from "react-icons/fa";
 import Comment from './Comments';
+
 
 const Blog = () => {
 
     return (
-        <div class="hero">
+        <div className="hero">
 
-            <video loop autoPlay={true}>
+            <video autoPlay={true} loop >
                 <source src="/images/video1.mp4" type="video/mp4" />
             </video>
 
-            <div class="content">
-                <div class="left">
+            <div className="content">
+                <div className="left">
                     <Comment />
                     <Comment />
                     <Comment />
 
                 </div>
 
-                <div class="right">
+                <div className="right">
                     <form action="POST">
-                        <div class="field top">
-                            <i class="uil uil-align-justify"></i>
+                        <div className="field top">
+                            <FaPepperHot className='icon' />
                             <textarea type="text" placeholder="Write a comment" value=""></textarea>
                         </div>
-                        <div class="field bottom">
-                            <i class="uil uil-rocket"></i>
+                        <div className="field bottom">
+                            <FaBalanceScale className='icon' />
                             <p>Rate us from 1 to 10</p>
                             <input type="number" placeholder="1-10" required min="1" max="10" />
                         </div>
-                        <input type="submit" class="submit-btn" value="Add a comment" />
+                        <input type="submit" className="submit-btn" value="Add a comment" />
                     </form>
                 </div>
             </div>

@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { FaArrowRight, FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import SwiperCore, { Navigation, Pagination, Controller, Thumbs } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import React, { useState } from 'react';
+
 import 'swiper/css';
 
 
@@ -24,7 +27,7 @@ const HomeHero = () => {
                         McConaughey), a former NASA pilot who is tasked with leading a mission through a wormhole to
                         find a habitable planet in another galaxy.
                     </p>
-                    <button className="read-btn">Read More <i className="uil uil-arrow-right"></i></button>
+                    <button className="read-btn">Read More <FaArrowRight className='icon' /></button>
                 </div>
             </div>
         </SwiperSlide>,
@@ -38,7 +41,7 @@ const HomeHero = () => {
                         the hostile planet. With only meager supplies, he must draw upon his ingenuity, wit and
                         spirit to subsist and find a way to signal to Earth that he is alive.
                     </p>
-                    <button className="read-btn">Read More <i className="uil uil-arrow-right"></i></button>
+                    <button className="read-btn">Read More <FaArrowRight className='icon' /></button>
                 </div>
             </div>
         </SwiperSlide>,
@@ -55,7 +58,7 @@ const HomeHero = () => {
                         calculating the momentous launch of astronaut John Glenn into orbit, and guaranteeing his
                         safe return.
                     </p>
-                    <button className="read-btn">Read More <i className="uil uil-arrow-right"></i></button>
+                    <button className="read-btn">Read More <FaArrowRight className='icon' /></button>
                 </div>
             </div>
         </SwiperSlide>,
@@ -69,7 +72,7 @@ const HomeHero = () => {
                         chambers. As a result one hibernation pod opens prematurely and the one person that awakes,
                         Jim Preston (Chris Pratt) is stranded on the spaceship, still 90 years from his destination
                     </p>
-                    <button className="read-btn">Read More <i className="uil uil-arrow-right"></i></button>
+                    <button className="read-btn">Read More <FaArrowRight className='icon' /></button>
                 </div>
             </div>
         </SwiperSlide>
@@ -101,6 +104,13 @@ const HomeHero = () => {
 
     return (
         <div id='home-hero'>
+            <div className="media-icons">
+                <a href="https://www.facebook.com/"><FaFacebookF className='icon'/></a>
+                <a href="https://www.instagram.com/"><FaInstagram className='icon'/></a>
+                <a href="https://twitter.com/?lang=bg"><FaTwitter className='icon'/></a>
+
+            </div>
+
             <Swiper
                 id="main"
                 thumbs={{ swiper: thumbsSwiper }}

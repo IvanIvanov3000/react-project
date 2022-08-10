@@ -175,12 +175,13 @@ div#home-hero{
     transition-property: transform, opacity;
 }
 
-.swiper-slide .text-content .read-btn i {
-    font-size: 1.6em;
+.swiper-slide .text-content .read-btn .icon {
+    font-size: 1.4em;
     transition: 0.3s ease;
+    margin-left: 10px;
 }
 
-.swiper-slide .text-content .read-btn:hover i {
+.swiper-slide .text-content .read-btn:hover .icon {
     transform: translateX(5px);
 }
 
@@ -295,6 +296,7 @@ div#home-hero{
     }
 
     .media-icons {
+        position: absolute;
         right: 0;
         margin-left: 0px;
         margin-right: 30px;

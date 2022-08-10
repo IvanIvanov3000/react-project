@@ -1,10 +1,11 @@
+import { FaRocket, FaMagic, FaMoon, FaPen } from "react-icons/fa";
 const Create = () => {
 
     return (
         <div className="hero create">
 
             <video autoPlay={true} loop>
-               <source src="/images/video2.mp4" type="video/mp4" /> 
+                <source src="/images/video2.mp4" type="video/mp4" />
             </video>
 
 
@@ -14,18 +15,18 @@ const Create = () => {
                 <form action="">
                     <div className="left">
                         <div className="field">
-                            <i className="uil uil-circle"></i>
+                            <FaRocket className='icon' />
                             <input type="text" placeholder="Title" required />
                         </div>
 
                         <div className="field">
-                            <i className="uil uil-rocket"></i>
+                            <FaMagic className='icon' />
                             <input type="number" placeholder="Year" required />
                         </div>
                         <div className="field radio">
-                            <i className="uil uil-star"></i>
+                            <FaMoon className='icon' />
                             <p>Public: </p>
-                            <input type="radio" id="yes" name="radio"  />
+                            <input type="radio" id="yes" name="radio" />
                             <label htmlFor="yes">Yes</label><br />
                             <input type="radio" id="no" name="radio" />
                             <label htmlFor="no">No</label><br />
@@ -34,7 +35,7 @@ const Create = () => {
                     </div>
                     <div className="right">
                         <div className="field ">
-                            <i className="uil uil-align-justify"></i>
+                            <FaPen className='icon' />
                             <textarea type="text" placeholder="Description"></textarea>
                         </div>
 

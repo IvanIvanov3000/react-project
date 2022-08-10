@@ -71,20 +71,20 @@
     border: none;
     outline: none;
     background: none;
-    width: 80%;
+    width: 70%;
     font-size: 1.25em;
     padding-bottom: 5px;
     color: #fff;
 }
 
-.hero.create .hero.create.form-box .field i {
+.hero.create .field .icon {
     color: #fefefe;
     font-size: 1.5em;
     margin-right: 10px;
     padding-bottom: 5px;
 }
 
-.hero.create .form-box .field:focus-within i {
+.hero.create .form-box .field:focus-within .icon {
     color: #0065ff;
     transition: 0.3s ease;
 }
@@ -94,7 +94,7 @@
     font-size: 0.85em;
 }
 .hero.create div.radio.field input{
-    width: 10%;
+    width: 15%;
     border-radius: 50%;
     width: 20px;
     height: 20px;
