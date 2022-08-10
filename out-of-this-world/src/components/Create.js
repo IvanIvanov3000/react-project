@@ -3,8 +3,8 @@ const Create = () => {
     return (
         <div className="hero create">
 
-            <video autoPlay={true} >
-               <source src="/images/video3.mp4" type="video/mp4" /> 
+            <video autoPlay={true} loop>
+               <source src="/images/video2.mp4" type="video/mp4" /> 
             </video>
 
 
@@ -13,7 +13,7 @@ const Create = () => {
 
                 <form action="">
                     <div className="left">
-                        <div className="field float-left">
+                        <div className="field">
                             <i className="uil uil-circle"></i>
                             <input type="text" placeholder="Title" required />
                         </div>
@@ -22,7 +22,7 @@ const Create = () => {
                             <i className="uil uil-rocket"></i>
                             <input type="number" placeholder="Year" required />
                         </div>
-                        <div className="field float-right radio">
+                        <div className="field radio">
                             <i className="uil uil-star"></i>
                             <p>Public: </p>
                             <input type="radio" id="yes" name="radio"  />

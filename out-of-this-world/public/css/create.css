@@ -1,15 +1,12 @@
-
-
 .hero.create .form-box {
     z-index: 9;
     position: relative;
-    width: 100%;
+    width: 80%;
     height: 80vh;
-    border: 3px solid #000;
+    border: 10px solid #202834;
     border-radius: 5px;
     overflow: hidden;
 }
-
 
 .hero.create .form-box h2 {
     width: 100%;
@@ -29,29 +26,25 @@
 }
 
 .hero.create div.left,
-.hero.create .hero.creatediv.right {
+.hero.create div.right {
     width: 40%;
     height: 60vh;
-    position: relative;
+    position: unset;
     overflow: hidden;
 
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 19px;
 
-    background-color: transparent;
-    border: 2px solid #eee;
-    border-radius: 23px;
+    /* border: 5px solid #202834;
+    border-radius: 5px; */
+    border: unset;
+    border-radius: unset;
 }
 
-.hero.create .field.float-left {
-    align-self: flex-start;
-}
-
-.hero.create .field.float-right {
-    align-self: flex-end;
-}
 
 .hero.create .form-box .field {
     background-color: #202834;
@@ -65,7 +58,7 @@
     padding: 10px;
     border-bottom: 2px solid #eee;
     border-radius: 23px;
-    margin-bottom: 25px;
+    margin-bottom: 0px;
 }
 
 .hero.create .form-box .field.active {
@@ -123,9 +116,9 @@
 }
 
 .hero.create div.right .field{
-    height: 45vh;
+    height: calc(2*20px + 60%);
     width: 70%;
-    margin-top: 5%;
+    
 }
 
 .hero.create div textarea{
@@ -137,6 +130,9 @@
 }
 
 .hero.create .submit-btn {
+    position: absolute;
+    left: 50%;
+    transform :translateX(-50%);
     display: inline-block;
 
     margin: 15px 0;

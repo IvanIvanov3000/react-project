@@ -6,7 +6,7 @@ const Blog = () => {
         <div class="hero">
 
             <video loop autoPlay={true}>
-                <source src="/images/video3.mp4" type="video/mp4" />
+                <source src="/images/video1.mp4" type="video/mp4" />
             </video>
 
             <div class="content">
