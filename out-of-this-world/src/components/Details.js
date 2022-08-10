@@ -1,25 +1,25 @@
 const Details = () => {
 
     return (
-        <div class="hero details">
+        <div className="hero details">
 
             <video  loop autoPlay={true}>
                 <source src="/images/video3.mp4" type="video/mp4" />
             </video>
 
-            <div class="content">
-                <div class="left">
-                    <div class="images">
+            <div className="content">
+                <div className="left">
+                    <div className="images">
                         <img src="../images/home-page/1st.jpg" alt="" />
                         <img src="../images/home-page/2nd.jpg" alt="" />
                     </div>
 
 
-                    <div class="wrapper">
+                    <div className="wrapper">
                         <h3>Title</h3>
                         <b>11</b>
                         <span>2013</span>
-                        <div class="buttons">
+                        <div className="buttons">
                             <button>Like</button>
                             <button>Dislike</button>
 
@@ -30,7 +30,7 @@ const Details = () => {
                     </div>
                 </div>
 
-                <div class="right">
+                <div className="right">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi maxime vel assumenda consequatur
                         accusantium fugit, quibusdam alias facilis dolorum reprehenderit eius deserunt at. Eum eveniet
                         aliquam quos deserunt perspiciatis modi?

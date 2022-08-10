@@ -1,7 +1,7 @@
 const Comment = () => {
 
     return (
-        <div class="field">
+        <div className="field">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, repellat ipsam. Saepe, nihil?
             Vitae est odio veniam exercitationem voluptates minus! Ut voluptates fugiat illum voluptatem
             doloribus accusantium harum quasi non excepturi architecto, quo, placeat consequatur nihil atque
