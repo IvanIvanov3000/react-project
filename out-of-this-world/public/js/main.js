@@ -18,26 +18,26 @@ window.addEventListener('load', () => {
 
 
 
-  const signUpBtn = document.querySelector(".sign-up-btn");
-  const signInBtn = document.querySelector(".sign-in-btn");
-  const signUpForm = document.querySelector(".sign-up-form");
-  const signInForm = document.querySelector(".sign-in-form");
-  if (signUpBtn && signInBtn) {
-    signUpBtn.addEventListener("click", () => {
-      signUpForm.classList.add("show");
-      signInForm.classList.add("hide");
-      signUpForm.classList.remove("hide");
-      signInForm.classList.remove("show");
+  // let signUpBtn = document.querySelector(".sign-up-btn");
+  // let signInBtn = document.querySelector(".sign-in-btn");
+  // let signUpForm = document.querySelector(".sign-up-form");
+  // let signInForm = document.querySelector(".sign-in-form");
+  // if (signUpBtn && signInBtn) {
+  //   signUpBtn.addEventListener("click", () => {
+  //     signUpForm.classList.add("show");
+  //     signInForm.classList.add("hide");
+  //     signUpForm.classList.remove("hide");
+  //     signInForm.classList.remove("show");
 
-    });
+  //   });
 
-    signInBtn.addEventListener("click", () => {
-      signInForm.classList.add("show");
-      signUpForm.classList.add("hide");
-      signInForm.classList.remove("hide");
-      signUpForm.classList.remove("show");
-    });
-  }
+  //   signInBtn.addEventListener("click", () => {
+  //     signInForm.classList.add("show");
+  //     signUpForm.classList.add("hide");
+  //     signInForm.classList.remove("hide");
+  //     signUpForm.classList.remove("show");
+  //   });
+  // }
 
 
   // Catalog js
