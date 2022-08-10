@@ -8,6 +8,7 @@ export const request = async (method, url, data) => {
             method,
             headers: {
                 'content-type': 'application/json',
+                "credetials" : "true",
                 'X-Authorization': getToken()
             },
             body: JSON.stringify(data)
