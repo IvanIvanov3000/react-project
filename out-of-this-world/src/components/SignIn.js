@@ -1,13 +1,32 @@
 import { FaUserTie, FaUserSecret, FaEye, FaEyeSlash, FaGlasses } from "react-icons/fa";
+import { useAuthContext } from '../contexts/AuthContext';
 
 import { useState } from 'react';
-
+import * as authService from '../services/authService';
 
 
 const SignIn = () => {
-    function handleLoginSubmit(e) {
+    const { login } = useAuthContext();
+
+
+    const handleLoginSubmit = (e) => {
         e.preventDefault();
-        console.log('You clicked submit on login from.');
+
+        let formData = new FormData(e.currentTarget);
+
+        let email = formData.get('email');
+        let password = formData.get('password');
+
+        authService.login(email, password)
+            .then((authData) => {
+                console.log(authData);
+                login(authData);
+            })
+            .catch(err => {
+                // TODO: show notification
+                console.log("error in sign in")
+                console.log(err);
+            });
     }
     function handleRegisterSubmit(e) {
         e.preventDefault();
@@ -31,14 +50,14 @@ const SignIn = () => {
                     <form onSubmit={handleLoginSubmit}>
                         <div className="field">
                             <FaUserTie className="icon" />
-                            <input type="email" placeholder="Email ID" required />
+                            <input type="email" name="email" placeholder="Email ID" required />
                         </div>
 
 
                         <div className="field">
                             <FaGlasses className="icon" />
 
-                            <input className="password-input" type="password" placeholder="Password" required />
+                            <input className="password-input" name="password" type="password" placeholder="Password" required />
                             <div className="eye-btn"><FaEye className="icon" /></div>
                         </div>
 
