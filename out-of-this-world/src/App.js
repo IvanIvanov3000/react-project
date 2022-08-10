@@ -1,6 +1,8 @@
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { ParallaxProvider } from 'react-scroll-parallax';
 
+import { AuthProvider } from './contexts/AuthContext';
+
 import Header from './components/Header';
 import Home from './components/Home/Home';
 import Catalog from './components/Catalog';
@@ -22,22 +24,22 @@ function App() {
     return (
         <div id="box">
             <Header />
-            
 
-            <ParallaxProvider>
-                <main id="main-content">
-                    <Switch>
-                        <Route path="/" exact component={Home} />
+            <AuthProvider>
+                <ParallaxProvider>
+                    <main id="main-content">
+                        <Switch>
+                            <Route path="/" exact component={Home} />
 
-                        <Route path="/home" exact component={Home} />
-                        <Route path="/catalog" exact component={Catalog} />
-                        <Route path="/login" component={SignIn} />
-                        <Route path="/create" component={Create} />
+                            <Route path="/home" exact component={Home} />
+                            <Route path="/catalog" exact component={Catalog} />
+                            <Route path="/login" component={SignIn} />
+                            <Route path="/create" component={Create} />
 
-                        <Route path="/details" component={Details} />
-                        <Route path="/blog" component={Blog} />
+                            <Route path="/details" component={Details} />
+                            <Route path="/blog" component={Blog} />
 
-                        {/*<Route path="/custom">
+                            {/*<Route path="/custom">
                         <h2>Custom Page</h2>
                         <p>dasklfjasldf </p>
                     </Route>
@@ -46,9 +48,10 @@ function App() {
 
                         return <Redirect to="/" />
                     }} /> */}
-                    </Switch>
-                </main>
+                        </Switch>
+                    </main>
                 </ParallaxProvider>
+            </AuthProvider>
         </div>
     );
 }
