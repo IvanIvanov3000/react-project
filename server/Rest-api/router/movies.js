@@ -5,7 +5,7 @@ const movieController = require('../controllers/movieController');
 
 // middleware that is specific to this router
 
-router.get('/latestMovies', movieController.getLatestMovies);
+// router.get('/latestMovies', movieController.getLatestMovies);
 // router.post('/search', movieController.searchMovie);
 
 router.get('/details/:movieId', movieController.getMovie);

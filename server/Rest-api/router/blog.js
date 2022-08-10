@@ -4,6 +4,6 @@ const { blogController } = require('../controllers');
 const { auth } = require('../utils');
 
 router.get('/comments', blogController.getComments);
-router.post('/comments', auth(), blogController.postComment);
+router.post('/comments', auth(), blogController.createComment);
 
 module.exports = router
