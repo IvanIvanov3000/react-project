@@ -24,7 +24,7 @@ const movieSchema = new mongoose.Schema({
         type: String,
         required: true,
         minlength: [100, 'Description should be at least 100 characters'],
-        maxlength: [220, 'Description should be at max 220 characters'],
+        maxlength: [2220, 'Description should be at max 2220 characters'],
     },
     likes: [{
         type: ObjectId,

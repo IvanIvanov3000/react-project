@@ -53,22 +53,23 @@ function createMovie(req, res, next) {
     const _id = req.user._id;
 
     movieModel.create({ title, tag, isPublic, image, description, author: _id })
-        .then(Movie => {
-            console.log("created Movie----", Movie);
+        .then(movie => {
             userModel
-                .findByIdAndUpdate({ _id }, { $addToSet: { movies: Movie._id } }, { new: true })
+                .findByIdAndUpdate({ _id }, { $addToSet: { movies: movie._id } }, { new: true })
                 .then(updatedUser => {
-                    res.status(200).json(updatedUser)
+                    // res.status(200).json(updatedUser)
                 })
                 .catch(err => {
 
                     console.log(err);
                 })
-
-            res.json(Movie)
+            console.log({movie})
+            res.send(movie)
 
         })
         .catch(next);
+
+    return;
 }
 
 function likeMovie(req, res, next) {

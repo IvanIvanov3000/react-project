@@ -1,4 +1,5 @@
 function errorHandler(err, req, res, next) {
+    console.log(req.body);
     console.log("error in error handler")
     if (err.status === 333) {
         res.status(333)

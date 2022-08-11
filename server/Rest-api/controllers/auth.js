@@ -1,9 +1,7 @@
-const {
-    userModel,
-} = require('../models');
+const { userModel } = require('../models');
 
 const utils = require('../utils');
-const { authCookieName } = require('../app-config');
+// const { authCookieName } = require('../app-config');
 
 const bsonToJson = (data) => { return JSON.parse(JSON.stringify(data)) };
 const removePassword = (data) => {
