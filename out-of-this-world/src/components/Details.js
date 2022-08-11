@@ -6,27 +6,24 @@ import { useAuthContext } from '../contexts/AuthContext';
 
 
 const Details = ({ match }) => {
-    // const navigate = useNavigate();
+    let historyHook = useHistory();
+
     const { user } = useAuthContext();
     const [movie, setMovie] = useState({
-        image : "",
+        image: "",
         title: "",
         year: "",
         tag: "",
         description: "",
-        likes: []
+        likes: [],
+        author : {_id : ""}
     });
     const { movieId } = match.params;
-    // const [showDeleteDialog, setShowDeleteDialog] = useState(false);
-    console.log(movieId);
-    let movieLikes = 0;
+
     useEffect(() => {
         movieService.getOne(movieId)
             .then(result => {
-                console.log(result)
-                movieLikes = result.likes.length;
                 setMovie(result);
-                // setMovies(result);
             })
             .catch(err => {
                 console.log(err);
@@ -38,51 +35,49 @@ const Details = ({ match }) => {
         //     })
     }, [movieId]);
 
-    // const deleteHandler = (e) => {
-    //     e.preventDefault();
+    const deleteHandler = (e) => {
+        // e.preventDefault();
 
-    //     petService.destroy(petId, user.accessToken)
-    //         .then(() => {
-    //             // navigate('/dashboard');
-    //         })
-    //         .finally(() => {
-    //             setShowDeleteDialog(false);
-    //         });
-    // };
+        // petService.destroy(petId, user.accessToken)
+        //     .then(() => {
+        //         // navigate('/dashboard');
+        //     })
+    };
 
-    // const deleteClickHandler = (e) => {
-    //     e.preventDefault();
-    //     console.log(process.env.NODE_ENV);
-    //     setShowDeleteDialog(true);
-    // }
-    // const likeButtonClick = () => {
-    //     if (user._id === pet._ownerId) {
-    //         return;
-    //     }
+    const likeButtonClick = () => {
+        // if (user._id === movie._ownerId) {
+        //     return;
+        // }
 
-    //     if (pet.likes.includes(user._id)) {
-    //         addNotification('You cannot like again')
-    //         return;
-    //     }
+        // if (movie.likes.includes(user._id)) {
+        //     addNotification('You cannot like again')
+        //     return;
+        // }
 
-    //     likeService.like(user._id, petId)
-    //         .then(() => {
-    //             setPet(state => ({ ...state, likes: [...state.likes, user._id] }));
+        // likeService.like(user._id, petId)
+        //     .then(() => {
+        //         setPet(state => ({ ...state, likes: [...state.likes, user._id] }));
 
-    //             addNotification('Successfuly liked a cat :)', types.success);
-    //         });
-    // };
+        //         addNotification('Successfuly liked a cat :)', types.success);
+        //     });
+    };
 
-    // const ownerButtons = (
-    //     <>
-    //         <Link className="button" to={`/edit/${pet._id}`}>Edit</Link>
-    //         <a className="button" href="#" onClick={deleteClickHandler}>Delete</a>
-    //     </>
-    // );
-    // const userButtons = <Button onClick={likeButtonClick} disabled={pet.likes?.includes(user._id)}>Like</Button>;
-
-
-
+    const ownerButtons = (
+        <>
+            {/* <Link className="button" to={`/edit/${movie._id}`}>Edit</Link>
+            <a className="button" href="#" onClick={deleteClickHandler}>Delete</a> */}
+            <button>Edit</button>
+            <button>Delete</button>
+        </>
+    );
+    const userButtons =(
+            <>
+                <button>Like</button>
+                <button>Dislike</button>
+                {/* <Button onClick={likeButtonClick} disabled={movie.likes?.includes(user._id)}>Like</Button>; */}
+            </>)
+    console.log(user.id, "user");
+    console.log(movie.author._id, "movie author");
 
 
     return (
@@ -119,11 +114,16 @@ const Details = ({ match }) => {
                         </b>
                         <span>{movie.year}</span>
                         <div className="buttons">
-                            <button>Like</button>
-                            <button>Dislike</button>
+                            {/* <button>Like</button>
+                            <button>Dislike</button> */}
 
                             {/* <button>Edit</button>
                         <button>Delete</button>  */}
+
+                            {user.id && (user.id == movie.author._id
+                                ? ownerButtons
+                                : userButtons
+                            )}
                         </div>
 
                     </div>
