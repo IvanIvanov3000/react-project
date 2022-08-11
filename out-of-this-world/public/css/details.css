@@ -63,7 +63,7 @@
     background-color: #2C2C34;
 }
 
-.hero.details div.left div.wrapper button {
+.hero.details div.left div.wrapper .details.btn {
     display: inline-block;
 
     margin: 15px 0;
@@ -74,11 +74,23 @@
     border-radius: 17px;
 
     font-size: 20px;
+    font-weight: normal;
     text-align: justify;
     transition: ease 0.3s;
+
+    /* display: inline-block;
+    margin: 15px 0;
+    padding: 5px 10px;
+    color: #2C2C34;
+    background-color: #fff;
+    border: 3px solid #2C2C34;
+    border-radius: 17px;
+    font-size: 20px;
+    text-align: justify;
+    transition: ease 0.3s; */
 }
 
-.hero.details div.left div.wrapper button:hover {
+.hero.details div.left div.wrapper .details.btn:hover {
     color: #fff;
     background-color: #2C2C34;
     border: 1px solid #fff;

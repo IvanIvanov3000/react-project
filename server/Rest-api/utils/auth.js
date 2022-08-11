@@ -2,7 +2,7 @@ const jwt = require('./jwt');
 const { authCookieName } = require('../app-config');
 const {
     userModel,
-    fanArtModel
+    movieModel
 } = require('../models');
 
 function auth(redirectUnauthenticated = true) {
@@ -48,11 +48,11 @@ function isOwner() {
 
     return function (req, res, next) {
         const userId = req.user._id;
-        const fanArtId = req.params.fanArtId;
+        const movieId = req.params.movieId;
 
         userModel.findById(userId)
             .then(user => {
-                if (user.fanArts.includes(fanArtId)) {
+                if (user.movies.includes(movieId)) {
                     next();
                 }
                 else {
@@ -70,11 +70,11 @@ function isNotOwner() {
 
     return function (req, res, next) {
         const userId = req.user._id;
-        const fanArtId = req.params.fanArtId;
+        const movieId = req.params.movieId;
 
         userModel.findById(userId)
             .then(user => {
-                if (!user.fanArts.includes(fanArtId)) {
+                if (!user.movies.includes(movieId)) {
                     next();
                 }
                 else {
@@ -97,12 +97,12 @@ function isNotOwner() {
 function isNotLiked() {
     return function (req, res, next) {
         const userId = req.user._id;
-        const fanArtId = req.params.fanArtId;
+        const movieId = req.params.movieId;
         console.log("userID", userId);
-        fanArtModel.findById(fanArtId)
-            .then(fanArt => {
-                console.log("fan art likes", fanArt.likes);
-                if (!fanArt.likes.includes(userId)) {
+        movieModel.findById(movieId)
+            .then(movie => {
+                console.log("movie likes", movie.likes);
+                if (!movie.likes.includes(userId)) {
 
                     next();
                 }
@@ -124,11 +124,11 @@ function isNotLiked() {
 function isLiked() {
     return function (req, res, next) {
         const userId = req.user._id;
-        const fanArtId = req.params.fanArtId;
+        const movieId = req.params.movieId;
 
-        fanArtModel.findById(fanArtId)
-            .then(fanArt => {
-                if (fanArt.likes.includes(userId)) {
+        movieModel.findById(movieId)
+            .then(movie => {
+                if (movie.likes.includes(userId)) {
 
                     next();
                 }

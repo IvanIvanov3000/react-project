@@ -1,8 +1,15 @@
 export const request = async (method, url, data) => {
     let result = null;
     // console.log(data);
-    if (method === 'GET') {
-        result = fetch(url);
+    if (method === 'GET' || method === 'DELETE') {
+        result = fetch(url, {
+            method : 'GET',
+            headers: {
+                'content-type': 'application/json',
+                "credetials" : "true",
+                'auth-token': getToken()
+            },
+        });
     } else {
         result = fetch(url, {
             method,
@@ -38,7 +45,6 @@ function getToken() {
         }
 
         let user = JSON.parse(userItem);
-        console.log(user, "token");
         return user.accessToken;
     } catch(err) {
         console.log(err);
@@ -46,5 +52,7 @@ function getToken() {
 }
 
 export const get = request.bind(null, 'GET');
+export const del = request.bind(null, 'DELETE');
+
 export const put = request.bind(null, 'PUT');
 export const post = request.bind(null, 'POST');

@@ -63,7 +63,7 @@ function createMovie(req, res, next) {
 
                     console.log(err);
                 })
-            console.log({movie})
+            console.log({ movie })
             res.send(movie)
 
         })
@@ -82,6 +82,7 @@ function likeMovie(req, res, next) {
         })
         .catch(next);
 }
+
 function dislikeMovie(req, res, next) {
     console.log("dislike---------");
     const movieId = req.params.movieId;

@@ -16,7 +16,7 @@ const Details = ({ match }) => {
         tag: "",
         description: "",
         likes: [],
-        author : {_id : ""}
+        author: { _id: "" }
     });
     const { movieId } = match.params;
 
@@ -24,60 +24,90 @@ const Details = ({ match }) => {
         movieService.getOne(movieId)
             .then(result => {
                 setMovie(result);
+                console.log(user.id, "user");
+                console.log(result.author._id, "movie author");
+                return;
             })
             .catch(err => {
                 console.log(err);
             })
 
-        // likeService.getPetLikes(petId)
-        //     .then(likes => {
-        //         setPet(state => ({ ...state, likes }))
-        //     })
+
     }, [movieId]);
 
     const deleteHandler = (e) => {
-        // e.preventDefault();
+        e.preventDefault();
 
-        // petService.destroy(petId, user.accessToken)
-        //     .then(() => {
-        //         // navigate('/dashboard');
-        //     })
+        movieService.destroy(movieId)
+            .then()
     };
 
-    const likeButtonClick = () => {
-        // if (user._id === movie._ownerId) {
-        //     return;
-        // }
+    const likeButtonClick = (e) => {
+        e.preventDefault();
+        if (user.id === movie.author._id) {
+            console.log("The author can't like or dislike their own movie")
+            return;
+        }
 
-        // if (movie.likes.includes(user._id)) {
-        //     addNotification('You cannot like again')
-        //     return;
-        // }
+        if (movie.likes.includes(user.id)) {
+            console.log("You can't like again!")
+            return;
+        }
 
-        // likeService.like(user._id, petId)
-        //     .then(() => {
-        //         setPet(state => ({ ...state, likes: [...state.likes, user._id] }));
+        movieService.likeMovie(movieId)
+            .then(updatedMovie => {
+                setMovie(updatedMovie);
+                console.log(updatedMovie);
+                return;
+            })
+            .catch(error => {
+                console.log("error in details like");
+                throw error;
+            })
 
-        //         addNotification('Successfuly liked a cat :)', types.success);
-        //     });
+
+    };
+    const dislikeButtonClick = (e) => {
+        e.preventDefault();
+        if (user.id === movie.author._id) {
+            console.log("The author can't like or dislike their own movie")
+            return;
+        }
+
+        if (!movie.likes.includes(user.id)) {
+            console.log("You can't dislike again!")
+            return;
+        }
+
+        movieService.dislikeMovie(movieId)
+            .then(updatedMovie => {
+                setMovie(updatedMovie);
+                console.log(updatedMovie);
+                return;
+            })
+            .catch(error => {
+                console.log("error in details like");
+                throw error;
+            })
+
+
     };
 
     const ownerButtons = (
         <>
             {/* <Link className="button" to={`/edit/${movie._id}`}>Edit</Link>
             <a className="button" href="#" onClick={deleteClickHandler}>Delete</a> */}
-            <button>Edit</button>
-            <button>Delete</button>
+            <Link to={`/edit/${movie._id}`}><button className="details btn"  >Edit</button></Link>
+            <button className="details btn" onClick={deleteHandler}>Delete</button>
         </>
     );
-    const userButtons =(
-            <>
-                <button>Like</button>
-                <button>Dislike</button>
-                {/* <Button onClick={likeButtonClick} disabled={movie.likes?.includes(user._id)}>Like</Button>; */}
-            </>)
-    console.log(user.id, "user");
-    console.log(movie.author._id, "movie author");
+    const userButtons = (
+        <>
+            <button className="details btn" onClick={likeButtonClick} disabled={movie.likes.includes(user.id)}>Like</button>
+            <button className="details btn" onClick={dislikeButtonClick} disabled={!movie.likes.includes(user.id)}>Dislike</button>
+            {/* <Button onClick={likeButtonClick} disabled={movie.likes?.includes(user._id)}>Like</Button>; */}
+        </>)
+
 
 
     return (
@@ -114,11 +144,6 @@ const Details = ({ match }) => {
                         </b>
                         <span>{movie.year}</span>
                         <div className="buttons">
-                            {/* <button>Like</button>
-                            <button>Dislike</button> */}
-
-                            {/* <button>Edit</button>
-                        <button>Delete</button>  */}
 
                             {user.id && (user.id == movie.author._id
                                 ? ownerButtons
