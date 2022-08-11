@@ -1,10 +1,23 @@
-// import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 // import { useParallax } from 'react-scroll-parallax';
 import { Parallax } from 'react-scroll-parallax';
+import * as movieService from '../services/movieService';
 
-import Card from './Card';
+import CardList from './Card/CardList';
 
 const Catalog = () => {
+    const [movies, setMovies] = useState([]);
+
+    useEffect(() => {
+        movieService.getAll()
+            .then(result => {
+                console.log(result)
+                setMovies(result);
+            })
+            .catch(err => {
+                console.log(err);
+            })
+    }, []);
 
     return (
         <div id="catalog">
@@ -29,30 +42,14 @@ const Catalog = () => {
 
 
                 <div id="top">
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
+                    <CardList movies={movies} />
                 </div>
+
                 <h2 className="flating-title">All</h2>
 
                 <div id="all">
                     <img src="/images/wavebottom.png" alt="" className="bottom-img" />
                     <img src="/images/wavetop.png" alt="" className="top-img" />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
                 </div>
 
 
