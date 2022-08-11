@@ -49,10 +49,10 @@ function getMyMovies(req, res, next) {
 }
 
 function createMovie(req, res, next) {
-    const { title, tag, isPublic, image, description } = req.body;
+    const { title, tag, isPublic, year, image, description } = req.body;
     const _id = req.user._id;
 
-    movieModel.create({ title, tag, isPublic, image, description, author: _id })
+    movieModel.create({ title, tag, isPublic, image, year, description, author: _id })
         .then(movie => {
             userModel
                 .findByIdAndUpdate({ _id }, { $addToSet: { movies: movie._id } }, { new: true })
@@ -98,12 +98,12 @@ function dislikeMovie(req, res, next) {
 
 function editMovie(req, res, next) {
     const { movieId } = req.params;
-    const { title, tag, isPublic, image, description } = req.body;
-    console.log("edit", title, tag, isPublic, image, description);
+    const { title, tag, year, isPublic, image, description } = req.body;
+    console.log("edit", title, tag, year, isPublic, image, description);
     //const { _id: userId } = req.user;
 
     // if the userId is not the same as this one of the post, the post will not be updated
-    movieModel.findOneAndUpdate({ _id: movieId }, { title, tag, isPublic, image, description }, { runValidators: true, new: true })
+    movieModel.findOneAndUpdate({ _id: movieId }, { title, tag, isPublic, year, image, description }, { runValidators: true, new: true })
         .then(updatedPost => {
             if (updatedPost) {
                 res.status(200).json(updatedPost);
