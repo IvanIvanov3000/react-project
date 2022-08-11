@@ -39,7 +39,14 @@ const Details = ({ match }) => {
         e.preventDefault();
 
         movieService.destroy(movieId)
-            .then()
+            .then(data => {
+                console.log(data);
+                historyHook.push('/catalog');
+            })
+            .catch(err => {
+                console.log(err);
+                throw err;
+            })
     };
 
     const likeButtonClick = (e) => {

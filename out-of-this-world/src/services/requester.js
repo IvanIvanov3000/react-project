@@ -1,7 +1,7 @@
 export const request = async (method, url, data) => {
     let result = null;
     // console.log(data);
-    if (method === 'GET' || method === 'DELETE') {
+    if (method === 'GET') {
         result = fetch(url, {
             method : 'GET',
             headers: {
