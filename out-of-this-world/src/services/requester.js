@@ -1,7 +1,7 @@
 export const request = async (method, url, data) => {
     let result = null;
-
-    if (method == 'GET') {
+    console.log(data);
+    if (method === 'GET') {
         result = fetch(url);
     } else {
         result = fetch(url, {
@@ -9,9 +9,9 @@ export const request = async (method, url, data) => {
             headers: {
                 'content-type': 'application/json',
                 "credetials" : "true",
-                'X-Authorization': getToken()
+                'auth-token': getToken()
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify({...data})
         });
     }
     
@@ -33,11 +33,12 @@ function getToken() {
         let userItem = localStorage.getItem('user');
 
         if (!userItem) {
-            throw {message: 'You must be authenticated'};
+            const error = new Error('You must be authenticated')
+            throw error;
         }
 
         let user = JSON.parse(userItem);
-
+        console.log(user, "token");
         return user.accessToken;
     } catch(err) {
         console.log(err);
