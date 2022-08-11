@@ -38,7 +38,7 @@ function App() {
                             <Route path="/login" component={SignIn} />
                             <Route path="/create" component={Create} />
 
-                            <Route path="/details" component={Details} />
+                            <Route path="/details/:movieId" component={Details} />
                             <Route path="/blog" component={Blog} />
                             <Route path="/logout" component={Logout} />
 

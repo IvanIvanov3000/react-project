@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 // import { useParallax } from 'react-scroll-parallax';
 import { Parallax } from 'react-scroll-parallax';
+
 import * as movieService from '../services/movieService';
 
 import CardList from './Card/CardList';
@@ -11,7 +12,6 @@ const Catalog = () => {
     useEffect(() => {
         movieService.getAll()
             .then(result => {
-                console.log(result)
                 setMovies(result);
             })
             .catch(err => {

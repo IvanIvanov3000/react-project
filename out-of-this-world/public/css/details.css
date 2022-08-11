@@ -27,7 +27,7 @@
 .hero.details div.left img {
     width: 100%;
     object-fit: cover;
-    max-height: 250px;
+    height: 250px;
 }
 
 

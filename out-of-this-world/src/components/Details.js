@@ -1,24 +1,123 @@
-const Details = () => {
+import { useState, useEffect } from 'react';
+import { useParams, useHistory, Link } from 'react-router-dom';
+
+import * as movieService from '../services/movieService';
+import { useAuthContext } from '../contexts/AuthContext';
+
+
+const Details = ({ match }) => {
+    // const navigate = useNavigate();
+    const { user } = useAuthContext();
+    const [movie, setMovie] = useState({
+        image : "",
+        title: "",
+        year: "",
+        tag: "",
+        description: "",
+        likes: []
+    });
+    const { movieId } = match.params;
+    // const [showDeleteDialog, setShowDeleteDialog] = useState(false);
+    console.log(movieId);
+    let movieLikes = 0;
+    useEffect(() => {
+        movieService.getOne(movieId)
+            .then(result => {
+                console.log(result)
+                movieLikes = result.likes.length;
+                setMovie(result);
+                // setMovies(result);
+            })
+            .catch(err => {
+                console.log(err);
+            })
+
+        // likeService.getPetLikes(petId)
+        //     .then(likes => {
+        //         setPet(state => ({ ...state, likes }))
+        //     })
+    }, [movieId]);
+
+    // const deleteHandler = (e) => {
+    //     e.preventDefault();
+
+    //     petService.destroy(petId, user.accessToken)
+    //         .then(() => {
+    //             // navigate('/dashboard');
+    //         })
+    //         .finally(() => {
+    //             setShowDeleteDialog(false);
+    //         });
+    // };
+
+    // const deleteClickHandler = (e) => {
+    //     e.preventDefault();
+    //     console.log(process.env.NODE_ENV);
+    //     setShowDeleteDialog(true);
+    // }
+    // const likeButtonClick = () => {
+    //     if (user._id === pet._ownerId) {
+    //         return;
+    //     }
+
+    //     if (pet.likes.includes(user._id)) {
+    //         addNotification('You cannot like again')
+    //         return;
+    //     }
+
+    //     likeService.like(user._id, petId)
+    //         .then(() => {
+    //             setPet(state => ({ ...state, likes: [...state.likes, user._id] }));
+
+    //             addNotification('Successfuly liked a cat :)', types.success);
+    //         });
+    // };
+
+    // const ownerButtons = (
+    //     <>
+    //         <Link className="button" to={`/edit/${pet._id}`}>Edit</Link>
+    //         <a className="button" href="#" onClick={deleteClickHandler}>Delete</a>
+    //     </>
+    // );
+    // const userButtons = <Button onClick={likeButtonClick} disabled={pet.likes?.includes(user._id)}>Like</Button>;
+
+
+
+
 
     return (
         <div className="hero details">
 
-            <video  loop autoPlay={true}>
+            <video loop autoPlay={true}>
                 <source src="/images/video3.mp4" type="video/mp4" />
             </video>
 
             <div className="content">
                 <div className="left">
                     <div className="images">
-                        <img src="../images/home-page/1st.jpg" alt="" />
-                        <img src="../images/home-page/2nd.jpg" alt="" />
+
+                        {movie.image2
+                            ? (
+                                <>
+                                    <img src={movie.image2} alt="" />
+                                    <img src={movie.image} alt="" />
+                                </>
+                            )
+                            : <img src={movie.image} style={{ height: '60vh', background: "#30303b", objectFit: 'contain' }} alt="" />
+                        }
                     </div>
 
 
                     <div className="wrapper">
-                        <h3>Title</h3>
-                        <b>11</b>
-                        <span>2013</span>
+                        <h3>{movie.title}</h3>
+                        <b className=
+                            {`tag ${movie.likes.length > 10
+                                ? "popular"
+                                : (movie.likes.length > 5 ? "interesting" : "ordinary")}`
+                            }>
+                            {movie.likes.length}
+                        </b>
+                        <span>{movie.year}</span>
                         <div className="buttons">
                             <button>Like</button>
                             <button>Dislike</button>
@@ -31,28 +130,7 @@ const Details = () => {
                 </div>
 
                 <div className="right">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi maxime vel assumenda consequatur
-                        accusantium fugit, quibusdam alias facilis dolorum reprehenderit eius deserunt at. Eum eveniet
-                        aliquam quos deserunt perspiciatis modi?
-                        A similique tenetur quibusdam dicta alias odit officia accusamus esse quis pariatur delectus, saepe
-                        iusto consequuntur at placeat nisi, adipisci, sint ut aut incidunt quasi est. Temporibus dignissimos
-                        fugit rerum!
-                        Non culpa quibusdam recusandae at quisquam distinctio hic, eius, porro velit optio nisi assumenda,
-                        beatae perferendis ratione? Harum, aliquam quis possimus nostrum saepe aperiam, officia tenetur
-                        tempora ad qui quisquam.
-                        Reprehenderit nihil delectus beatae omnis, nostrum optio ut doloribus suscipit repellendus tenetur
-                        modi quos voluptas aspernatur hic non. Aliquid, minus sapiente. Sit natus quibusdam inventore, dicta
-                        autem cupiditate culpa sunt.
-                        Sequi omnis eaque numquam fugit, doloremque reiciendis ullam exercitationem dolor quibusdam debitis
-                        iure temporibus fugiat iste distinctio soluta natus voluptatum rerum tempora beatae sed officiis
-                        vitae explicabo, quasi hic? Esse!
-                        Repellendus at, alias quos dolorem ullam eius fugiat modi fuga, libero aut ipsam dicta saepe laborum
-                        voluptatibus deserunt sapiente architecto pariatur. Atque earum corrupti sit consequatur dolorem hic
-                        qui numquam?
-                        Perspiciatis maxime, nisi amet sapiente officiis repellendus, placeat ad consequuntur reprehenderit
-                        ipsum numquam saepe labore quos optio sint vero tempora ut! Doloremque, rerum magnam facilis odit
-                        laborum nesciunt saepe sit!
-                        Laborum corporis incsapiente nisi impedit nostrum molestiae? Iste impedit nostrum molestiae? Iste.</p>
+                    <p>{movie.description}</p>
                 </div>
             </div>
 
