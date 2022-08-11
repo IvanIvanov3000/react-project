@@ -16,7 +16,7 @@ const Header = () => {
 
     let userNavigation = (
         <>
-            <Link to="/my-pets"><FaEnvelope className='icon' /> My Movies</Link>
+            <Link to="/my-pets"><FaEnvelope className='icon' /> Profile</Link>
             <Link to="/create"><FaEnvelope className='icon' /> Create Movie</Link>
             <Link to="/logout"><FaEnvelope className='icon' /> Logout</Link>
         </>

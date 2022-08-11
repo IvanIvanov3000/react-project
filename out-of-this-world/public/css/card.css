@@ -40,11 +40,39 @@ div#card-catalog img {
     border: 1px solid #2C2C34;
     border-radius: 5px;
     position: absolute;
+    z-index: 5;
     top: 6px;
     right: 13px;
 
     background-color: #2C2C34;
     font-size: 19px;
+}
+#card-catalog .likes {
+    padding: 2px 8px;
+    border: 1px solid #2C2C34;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 5;
+    top: 6px;
+    left: 13px;
+
+    background-color: #2C2C34;
+    font-size: 21px;
+}
+#card-catalog .likes.ordinary{
+    color: #fff;
+    font-weight: 400;
+    font-size: 21px;
+}
+#card-catalog .likes.interesting{
+    color: #148214;
+    font-weight: 500;
+    font-size: 25px;
+}
+#card-catalog .likes.popular{
+    color: #d13636;
+    font-weight: 600;
+    font-size: 28px;
 }
 
 #card-catalog p {
