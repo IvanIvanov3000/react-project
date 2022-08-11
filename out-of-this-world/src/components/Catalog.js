@@ -6,42 +6,6 @@ import Card from './Card';
 
 const Catalog = () => {
 
-
-    //     const script = document.createElement('script');
-
-
-    //     script.async = true;
-    //     script.innerHTML = `
-    //     const catalog = document.querySelector('div#catalog');
-    //     if (catalog) {
-
-
-    //       let moon = document.querySelector(".moon");
-    //       let star = document.querySelector(".star")
-    //       let title = document.querySelector("#title");
-
-    //       console.log(moon, star);
-    //       window.addEventListener("scroll", function () {
-    //         let value = window.scrollY;
-
-    //         star.style.left = value * 0.2 + "px";
-    //         moon.style.top = 50 + value * 1.05 + "px";
-
-
-    //         title.style.marginRight = value * 5 + "px";
-    //         title.style.top = 300 + value * 0.9 + "px";
-
-
-
-    //       });
-    //     }`;
-
-    //     document.body.appendChild(script);
-
-    //     return () => {
-    //         document.body.removeChild(script);
-    //     }
-    // }, []);
     return (
         <div id="catalog">
             <section id="catalog">
