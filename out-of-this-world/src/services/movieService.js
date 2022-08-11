@@ -4,6 +4,9 @@ const baseUrl = 'http://localhost:3030/movies/';
 
 export const getAll = () => request.get(`${baseUrl}catalog`);
 
+export const getOne= (movieId) => request.get(`${baseUrl}details/${movieId}`);
+
+
 // export const getMyPets = (ownerId) => {
 //     let query = encodeURIComponent(`_ownerId="${ownerId}"`);
 
