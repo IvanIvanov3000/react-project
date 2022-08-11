@@ -10,6 +10,13 @@ const movieSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    year: {
+        type: Number,
+        required: true,
+        min : [1800, "Dude, films weren't envented before 1800. Are u crazy?"],
+        max : [2023, "Dude, are u from the future. Are u a time traveler?"]
+
+    },
     isPublic: {
         type: Boolean,
         required: true
