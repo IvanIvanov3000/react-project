@@ -1,6 +1,6 @@
 export const request = async (method, url, data) => {
     let result = null;
-    console.log(data);
+    // console.log(data);
     if (method === 'GET') {
         result = fetch(url);
     } else {
