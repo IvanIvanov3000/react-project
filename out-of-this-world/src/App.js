@@ -10,6 +10,7 @@ import SignIn from './components/SignIn';
 import Create from './components/Create';
 import Details from './components/Details';
 import Blog from './components/Blog/Blog';
+import Logout from './components/Logout';
 
 
 import './App.css'
@@ -39,6 +40,7 @@ function App() {
 
                             <Route path="/details" component={Details} />
                             <Route path="/blog" component={Blog} />
+                            <Route path="/logout" component={Logout} />
 
                             {/*<Route path="/custom">
                         <h2>Custom Page</h2>
