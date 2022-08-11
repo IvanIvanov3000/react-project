@@ -23,9 +23,10 @@ import './App.css'
 function App() {
     return (
         <div id="box">
+            <AuthProvider>
             <Header />
 
-            <AuthProvider>
+            
                 <ParallaxProvider>
                     <main id="main-content">
                         <Switch>
