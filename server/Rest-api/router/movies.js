@@ -10,6 +10,8 @@ const movieController = require('../controllers/movieController');
 
 router.get('/details/:movieId', movieController.getMovie);
 router.get('/catalog', movieController.getMovies);
+router.get('/catalog/top', movieController.getTopMovies);
+
 
 router.get('/myMovies', auth(), movieController.getMyMovies);
 router.post('/create', auth(), movieController.createMovie);

@@ -6,6 +6,12 @@ function getMovies(req, res, next) {
         .then(Movies => res.json(Movies))
         .catch(next);
 }
+function getTopMovies(req, res, next) {
+    movieModel.find({ isPublic: true, "likes.0": { "$exists": true } })
+        // .populate('userId')
+        .then(Movies => res.json(Movies))
+        .catch(next);
+}
 function getMovie(req, res, next) {
     const { movieId } = req.params;
 
@@ -137,6 +143,7 @@ module.exports = {
     // getLatestMovies,
     // searchMovie,
     getMovies,
+    getTopMovies,
     getMovie,
     createMovie,
     likeMovie,

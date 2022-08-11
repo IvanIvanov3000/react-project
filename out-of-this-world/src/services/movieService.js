@@ -3,6 +3,8 @@ import * as request from './requester';
 const baseUrl = 'http://localhost:3030/movies/';
 
 export const getAll = () => request.get(`${baseUrl}catalog`);
+export const getTopMovies = () => request.get(`${baseUrl}catalog/top`);
+
 
 export const getOne = (movieId) => request.get(`${baseUrl}details/${movieId}`);
 

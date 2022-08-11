@@ -8,11 +8,21 @@ import CardList from './Card/CardList';
 
 const Catalog = () => {
     const [movies, setMovies] = useState([]);
+    const [topMovies, setTopMovies] = useState([]);
+
 
     useEffect(() => {
         movieService.getAll()
             .then(result => {
                 setMovies(result);
+            })
+            .catch(err => {
+                console.log(err);
+            })
+
+        movieService.getTopMovies()
+            .then(result => {
+                setTopMovies(result);
             })
             .catch(err => {
                 console.log(err);
@@ -42,13 +52,23 @@ const Catalog = () => {
 
 
                 <div id="top">
-                    <CardList movies={movies} />
+                    {topMovies
+                        ? <CardList movies={topMovies} />
+                        : <p className="flating-title basic">There are popular movies yet.</p>
+                    }
+
                 </div>
 
                 <h2 className="flating-title">All</h2>
 
                 <div id="all">
                     <img src="/images/wavebottom.png" alt="" className="bottom-img" />
+
+                    {movies
+                        ? <CardList movies={movies} />
+                        : <p className="flating-title basic">There are no movies in the database.</p>
+                    }
+
                     <img src="/images/wavetop.png" alt="" className="top-img" />
                 </div>
 
