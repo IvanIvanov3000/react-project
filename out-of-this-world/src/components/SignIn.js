@@ -65,7 +65,7 @@ const SignIn = () => {
 
 
 
-            <div className={`form-container sign-in-form ${show === "hide" ? "show" : "hide"}`}>
+            <div className={`form-container sign-in-form ${show === "show" ? "show" : "hide"}`}>
                 <div className="form-box sign-in-box">
                     <h2>Sign in</h2>
                     <form onSubmit={handleLoginSubmit}>
@@ -88,18 +88,18 @@ const SignIn = () => {
                 <div className="imgBox sign-in-imgBox">
                     <div className="sliding-link">
                         <p>Don't have an account?</p>
-                        <span className="sign-up-btn" onClick={() => setShow("show")}>Sign up</span>
+                        <span className="sign-up-btn" onClick={() => setShow("hide")}>Sign up</span>
                     </div>
                     <img src="/images/signin-img.png" alt="" />
                 </div>
             </div>
 
 
-            <div className={`form-container sign-up-form  ${show === "hide" ? "hide" : "show"}`}>
+            <div className={`form-container sign-up-form  ${show === "show" ? "hide" : "show"}`}>
                 <div className="imgBox sign-up-imgBox">
                     <div className="sliding-link">
                         <p>Already a member?</p>
-                        <span className="sign-in-btn" onClick={() => setShow("hide")}>Sign in</span>
+                        <span className="sign-in-btn" onClick={() => setShow("show")}>Sign in</span>
                     </div>
                     <img src="/images/signup-img.png" alt="" />
                 </div>
