@@ -9,8 +9,10 @@ import Catalog from './components/Catalog';
 import SignIn from './components/SignIn';
 import Create from './components/Create';
 import Details from './components/Details';
+import EditMovie from './components/EditMovie';
 import Blog from './components/Blog/Blog';
 import Logout from './components/Logout';
+
 
 
 import './App.css'
@@ -39,6 +41,8 @@ function App() {
                             <Route path="/create" component={Create} />
 
                             <Route path="/details/:movieId" component={Details} />
+                            <Route path="/edit/:movieId" component={EditMovie} />
+
                             <Route path="/blog" component={Blog} />
                             <Route path="/logout" component={Logout} />
 
