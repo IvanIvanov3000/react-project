@@ -24,8 +24,7 @@ const Details = ({ match }) => {
         movieService.getOne(movieId)
             .then(result => {
                 setMovie(result);
-                console.log(user.id, "user");
-                console.log(result.author._id, "movie author");
+                console.log(result);
                 return;
             })
             .catch(err => {
