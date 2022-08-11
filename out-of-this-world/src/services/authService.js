@@ -4,8 +4,8 @@ export const login = async (email, password) => {
     console.log(email, password);
     let res = await fetch(`${baseUrl}login`, {
         method: 'POST',
-        headers : {
-            "Content-Type" : "application/json"
+        headers: {
+            'content-type': 'application/json'
         },
         body: JSON.stringify({ email, password })
     });
@@ -19,19 +19,19 @@ export const login = async (email, password) => {
     }
 };
 
-export const register = (email, password) => {
-    return fetch(`${baseUrl}users/register`, {
+export const register = (email, username, password, repeatPassword) => {
+    return fetch(`${baseUrl}register`, {
         method: 'POST',
         headers: {
             'content-type': 'application/json'
         },
-        body: JSON.stringify({ email, password })
+        body: JSON.stringify({ email, username, password, repeatPassword })
     })
-        .then(res => res.json()); 
+        .then(res => res.json());
 };
 
 export const logout = (token) => {
-    return fetch(`${baseUrl}users/logout`, {
+    return fetch(`${baseUrl}logout`, {
         headers: {
             'X-Authorization': token,
         }

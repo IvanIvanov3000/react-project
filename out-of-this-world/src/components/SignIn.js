@@ -1,12 +1,16 @@
 import { FaUserTie, FaUserSecret, FaEye, FaEyeSlash, FaGlasses } from "react-icons/fa";
-import { useAuthContext } from '../contexts/AuthContext';
+import { useHistory } from 'react-router-dom';
 
+import { useAuthContext } from '../contexts/AuthContext';
 import { useState } from 'react';
+
 import * as authService from '../services/authService';
 
 
 const SignIn = () => {
     const { login } = useAuthContext();
+    let historyHook = useHistory();
+
 
 
     const handleLoginSubmit = (e) => {
@@ -21,6 +25,8 @@ const SignIn = () => {
             .then((authData) => {
                 console.log(authData);
                 login(authData);
+                historyHook.push('/home')
+
             })
             .catch(err => {
                 // TODO: show notification
@@ -28,10 +34,20 @@ const SignIn = () => {
                 console.log(err);
             });
     }
-    function handleRegisterSubmit(e) {
+    const handleRegisterSubmit = (e) => {
         e.preventDefault();
-        console.log('You clicked submit on register from.');
+
+        let { email, username, password, repeatPassword } = Object.fromEntries(new FormData(e.currentTarget));
+
+        authService.register(email, username, password, repeatPassword)
+            .then(authData => {
+                console.log(authData);
+                login(authData);
+                historyHook.push('/home')
+
+            });
     }
+
     const [show, setShow] = useState("show");
 
     return (
@@ -88,22 +104,22 @@ const SignIn = () => {
                     <form onSubmit={handleRegisterSubmit}>
                         <div className="field">
                             <FaUserTie className="icon" />
-                            <input type="email" placeholder="Email ID" required />
+                            <input type="email" name="email" placeholder="Email ID" required />
                         </div>
                         <div className="field">
                             <FaUserSecret className="icon" />
-                            <input type="text" placeholder="Username" required />
+                            <input type="text" name="username" placeholder="Username" required />
                         </div>
 
                         <div className="field">
                             <FaGlasses className="icon" />
-                            <input type="password" placeholder="Password" required />
+                            <input type="password" name="password" placeholder="Password" required />
 
                         </div>
                         <div className="field">
                             <FaGlasses className="icon" />
 
-                            <input className="password-input" type="password" placeholder="Confirm Password" required />
+                            <input className="password-input" name="repeatPassword" type="password" placeholder="Confirm Password" required />
 
                         </div>
 
