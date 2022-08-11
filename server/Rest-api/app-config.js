@@ -1,4 +1,4 @@
-const authCookieName = 'auth-token';
+const authCookieName = 'X-Authorization';
 
 module.exports = {
     authCookieName,
