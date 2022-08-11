@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
-import { useParallax } from 'react-scroll-parallax';
+// import { useEffect } from 'react';
+// import { useParallax } from 'react-scroll-parallax';
 import { Parallax } from 'react-scroll-parallax';
 
 import Card from './Card';

@@ -10,7 +10,7 @@ const Logout = () => {
     useEffect(() => {
         logout();
         historyHook.push('/home');
-    }, [])
+    }, [logout, historyHook])
 
     return null;
 };

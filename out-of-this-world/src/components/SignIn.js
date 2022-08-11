@@ -1,4 +1,10 @@
-import { FaUserTie, FaUserSecret, FaEye, FaEyeSlash, FaGlasses } from "react-icons/fa";
+import {
+    FaUserTie,
+    FaUserSecret,
+    FaEye,
+    // FaEyeSlash,
+    FaGlasses
+} from "react-icons/fa";
 import { useHistory } from 'react-router-dom';
 
 import { useAuthContext } from '../contexts/AuthContext';
@@ -59,7 +65,7 @@ const SignIn = () => {
 
 
 
-            <div className={`form-container sign-in-form ${show == "hide" ? "show" : "hide"}`}>
+            <div className={`form-container sign-in-form ${show === "hide" ? "show" : "hide"}`}>
                 <div className="form-box sign-in-box">
                     <h2>Sign in</h2>
                     <form onSubmit={handleLoginSubmit}>
@@ -89,7 +95,7 @@ const SignIn = () => {
             </div>
 
 
-            <div className={`form-container sign-up-form  ${show == "hide" ? "hide" : "show"}`}>
+            <div className={`form-container sign-up-form  ${show === "hide" ? "hide" : "show"}`}>
                 <div className="imgBox sign-up-imgBox">
                     <div className="sliding-link">
                         <p>Already a member?</p>
