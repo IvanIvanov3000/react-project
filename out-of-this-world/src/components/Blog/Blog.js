@@ -20,9 +20,28 @@ const Blog = () => {
             .catch(err => {
                 console.log(err);
             })
+    }, []);
 
+    const createHandler = (e) => {
+        e.preventDefault();
 
-    }, [comments]);
+        let formData = new FormData(e.currentTarget);
+
+        let text = formData.get('text');
+        let rating = formData.get('rating');
+
+        console.log(text, rating);
+        blogService.createComment({ text, rating })
+            .then((result) => {
+                console.log(result);
+
+            })
+            .catch(err => {
+                // TODO: show notification
+                console.log("error in blog")
+                console.log(err);
+            });
+    }
 
     return (
         <div className="hero blog">
@@ -32,21 +51,21 @@ const Blog = () => {
             </video>
 
             <div className="content">
-                <div className="left" style={{backgroundColor: comments.length > 0 ? 'transparent' : '#202834'}}>
-                    <CommentsList comments={comments}/>
+                <div className="left" style={{ backgroundColor: comments.length > 0 ? 'transparent' : '#202834' }}>
+                    <CommentsList comments={comments} />
                 </div>
-                <div className="right" style={{backgroundColor: user.email ? 'transparent' : '#202834'}}>
+                <div className="right" style={{ backgroundColor: user.email ? 'transparent' : '#202834' }}>
                     {user.email
                         ? (
-                            <form action="POST">
+                            <form onSubmit={createHandler}>
                                 <div className="field top">
                                     <FaPepperHot className='icon' />
-                                    <textarea type="text" placeholder="Write a comment"></textarea>
+                                    <textarea type="text" name="text" placeholder="Write a comment"></textarea>
                                 </div>
                                 <div className="field bottom">
                                     <FaBalanceScale className='icon' />
                                     <p>Rate us from 1 to 10</p>
-                                    <input type="number" placeholder="1-10" required min="1" max="10" />
+                                    <input type="number" name="rating" placeholder="1-10" required min="1" max="10" />
                                 </div>
                                 <input type="submit" className="submit-btn" value="Add a comment" />
                             </form>
