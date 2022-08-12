@@ -13,7 +13,6 @@ SwiperCore.use([Navigation, Pagination, Controller, Thumbs]);
 const HomeHero = () => {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
-    console.log(movies);
     const slides = [];
     for (let i = 0; i < movies.length; i++) {
         slides.push(
