@@ -8,8 +8,8 @@ export const login = (userData) => request.post(`${baseUrl}login`, userData);
 
 export const register = (userData) => request.post(`${baseUrl}register`, userData);
 
-export const getProfile = () => request.get(`${baseUrl}/profile`);
-export const editProfile = (updatedUser) => request.post(`${baseUrl}/profile`, updatedUser);
+export const getProfile = () => request.get(`${baseUrl}users/profile`);
+export const editProfile = (updatedUser) => request.post(`${baseUrl}users/profile`, updatedUser);
 
 
 export const getUser = () => {
