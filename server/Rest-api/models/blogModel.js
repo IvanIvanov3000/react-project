@@ -2,15 +2,11 @@ const mongoose = require('mongoose');
 const { ObjectId } = mongoose.Schema.Types;
 
 const blogSchema = new mongoose.Schema({
-    // likes: [{
-    //     type: ObjectId,
-    //     ref: "User"
-    // }],
-    comment: {
+    text: {
         type: String,
         required: true,
-        minlength: [100, 'Description should be at least 100 characters'],
-        maxlength: [220, 'Description should be at max 220 characters'],
+        minlength: [10, 'Description should be at least 10 characters'],
+        maxlength: [250, 'Description should be at max 250 characters'],
     },
     rating: {
         type: Number,
