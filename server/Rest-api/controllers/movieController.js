@@ -7,7 +7,8 @@ function getMovies(req, res, next) {
         .catch(next);
 }
 function getTopMovies(req, res, next) {
-    movieModel.find({ isPublic: true, "likes.0": { "$exists": true } })
+    movieModel.find({ isPublic: true, "likes.1": { "$exists": true } })
+        .sort({'likes.length': -1})
         // .populate('userId')
         .then(Movies => res.json(Movies))
         .catch(next);

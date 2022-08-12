@@ -29,7 +29,8 @@
   font-weight: 700;
 }
 
-.hero.signin .hero.signin.form-box .field {
+.hero.signin .form-box .field {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,7 +52,7 @@
   width: 80%;
   font-size: 1.25em;
   padding-bottom: 5px;
-  color: #fff;
+  color: #2C2C34;
 }
 
 .hero.signin .form-box .field .icon {
@@ -74,6 +75,9 @@
 
 .hero.signin .eye-btn {
   cursor: pointer;
+  position: absolute;
+  right: 5px;
+  top: 0
 }
 
 .hero.signin .eye-btn .icon:hover {

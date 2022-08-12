@@ -52,7 +52,7 @@ form {
     border: 2px solid #eee;
     border-radius: 23px;
 }
-div.left{
+.hero.blog div.left{
     width: 65%;
     overflow-y:scroll;
     display: block;
@@ -60,38 +60,36 @@ div.left{
     border-bottom-right-radius: 0px;
 
 }
-div.left::-webkit-scrollbar {
+.hero.blog div.left::-webkit-scrollbar {
     width: 11.5px;
     background: #fff;
 }
 
-div.left::-webkit-scrollbar-thumb {
+.hero.blog div.left::-webkit-scrollbar-thumb {
     width: 100%;
     background: #282f4e;
     border-radius: 2em;
 }
 
-div.left::-webkit-scrollbar-thumb:hover {
+.hero.blog div.left::-webkit-scrollbar-thumb:hover {
     background: #454f6b;
 }
 
-.field {
-    background-color: #202834;
-
-   
+.hero.blog .field {
+    background-color: #202834;   
     width: 98%;
     padding: 10px;
     border-bottom: 2px solid #eee;
     border-radius: 23px;
     margin-bottom: 25px;
 }
-div.right form{
+.hero.blog div.right form{
     width: 100%;
     height: 60vh;
     padding: 5px 10px;
 }
 
-div.right .field.top{
+.hero.blog div.right .field.top{
     height: 35vh;
     width: 100%;
     margin-bottom: 10px;
@@ -99,15 +97,15 @@ div.right .field.top{
     justify-content: center;
     align-items: center;
 }
-div.right .field.bottom{
+.hero.blog div.right .field.bottom{
     height: 15vh;
     margin-bottom: 10px;
 }
-div.right .field.bottom p{
+.hero.blog div.right .field.bottom p{
     display: inline-block;
 }
 
-div.right .field.bottom input{
+.hero.blog div.right .field.bottom input{
     display: block;
     width: 50%;
     margin: 5px auto;
@@ -116,7 +114,7 @@ div.right .field.bottom input{
     text-align: center;
     outline: none;
 }
-.field .icon {
+.hero.blog .field .icon {
     color: #fefefe;
     font-size: 1.5em;
     margin-right: 10px;
@@ -124,14 +122,14 @@ div.right .field.bottom input{
 }
 
 
-div textarea {
+.hero.blog div textarea {
     width: 80%;
     height: 100%;
     padding: 5px 20px;
     border-radius: 23px;
     resize: none;
 }
-.submit-btn {
+.hero.blog .submit-btn {
     display: inline-block;
 
     padding: 5px 10px;
@@ -145,7 +143,7 @@ div textarea {
     transition: ease 0.3s;
 }
 
-.submit-btn:hover{
+.hero.blog .submit-btn:hover{
     color: #fff;
     background-color: #2C2C34;
     border: 1px solid #fff;

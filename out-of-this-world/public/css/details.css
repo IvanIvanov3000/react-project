@@ -50,9 +50,8 @@
     font-size: 19px;
 }
 
-.hero.details div.left div.wrapper b {
+.hero.details div.left div.wrapper .likes {
     font-weight: normal;
-    font-size: 1.5rem;
     padding: 2px 8px;
     border: 1px solid #2C2C34;
     border-radius: 10px;
@@ -61,6 +60,21 @@
     left: 13px;
 
     background-color: #2C2C34;
+}
+.hero.details div.left div.wrapper .likes.ordinary{
+    color: #fff;
+    font-weight: 400;
+    font-size: 21px;
+}
+.hero.details div.left div.wrapper .likes.interesting{
+    color: #148214;
+    font-weight: 500;
+    font-size: 25px;
+}
+.hero.details div.left div.wrapper .likes.popular{
+    color: #d13636;
+    font-weight: 600;
+    font-size: 28px;
 }
 
 .hero.details div.left div.wrapper .details.btn {
@@ -112,17 +126,17 @@
     text-align: justify;
 }
 
-div.right::-webkit-scrollbar {
+.hero.details div.right::-webkit-scrollbar {
     width: 11.5px;
     background: #fff;
 }
- div.right::-webkit-scrollbar-thumb {
+.hero.details div.right::-webkit-scrollbar-thumb {
     width: 100%;
     background: #282f4e;
     border-radius: 2em;
 }
 
-div.right::-webkit-scrollbar-thumb:hover {
+.hero.details div.right::-webkit-scrollbar-thumb:hover {
     background: #454f6b;
 }
 

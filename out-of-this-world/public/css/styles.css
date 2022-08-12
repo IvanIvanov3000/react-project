@@ -9,6 +9,6 @@
 @import "details.css";
 
 @import "profile.css";
-/* @import "profile-edit.css"; */
+@import "profile-edit.css";
 
 @import "register.css";
