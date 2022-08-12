@@ -36,8 +36,8 @@ form {
     color: #fff;
 }
 
-div.left,
-div.right {
+.hero.blog div.left,
+.hero.blog div.right {
     width: 30%;
     height: 60vh;
     position: relative;

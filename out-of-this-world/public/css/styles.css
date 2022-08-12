@@ -1,14 +1,14 @@
 @import "home.css";
 @import "hero.css";
 @import "navigation.css";
-
 @import "blog.css";
 @import "catalog.css";
+
 @import "card.css";
 @import "create.css";
 @import "details.css";
 
-
+@import "profile.css";
+/* @import "profile-edit.css"; */
 
 @import "register.css";
-@import "swiper-bundle.css";
