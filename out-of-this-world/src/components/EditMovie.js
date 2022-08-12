@@ -75,7 +75,7 @@ const Create = ({ match }) => {
 
 
             <div className="form-box">
-                <h2>ADD A FILM</h2>
+                <h2>EDIT FILM</h2>
 
                 <form onSubmit={handleEdit}>
                     <div className="left">

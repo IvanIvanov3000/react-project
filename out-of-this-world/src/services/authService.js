@@ -1,33 +1,15 @@
+import * as request from './requester';
+export const create = (movieData) => request.post(`${baseUrl}create`, movieData);
+
+
 const baseUrl = 'http://localhost:3030/';
 
-export const login = async (email, password) => {
-    let res = await fetch(`${baseUrl}login`, {
-        method: 'POST',
-        headers: {
-            'content-type': 'application/json'
-        },
-        body: JSON.stringify({ email, password })
-    });
+export const login = (userData) => request.post(`${baseUrl}login`, userData);
 
-    let jsonResult = await res.json();
+export const register = (userData) => request.post(`${baseUrl}register`, userData);
 
-    if (res.ok) {
-        return jsonResult;
-    } else {
-        throw jsonResult.message;
-    }
-};
-
-export const register = (email, username, password, repeatPassword) => {
-    return fetch(`${baseUrl}register`, {
-        method: 'POST',
-        headers: {
-            'content-type': 'application/json'
-        },
-        body: JSON.stringify({ email, username, password, repeatPassword })
-    })
-        .then(res => res.json());
-};
+export const getProfile = () => request.get(`${baseUrl}/profile`);
+export const editProfile = (updatedUser) => request.post(`${baseUrl}/profile`, updatedUser);
 
 
 export const getUser = () => {

@@ -100,12 +100,30 @@
 .hero.details div.right {
     padding: 10px;
     padding-top: 15px;
+    overflow-y: scroll;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+
 }
 
 .hero.details div.right p {
-    padding: 5px;
+    padding: 10px;
     font-size: 18px;
     text-align: justify;
+}
+
+div.right::-webkit-scrollbar {
+    width: 11.5px;
+    background: #fff;
+}
+ div.right::-webkit-scrollbar-thumb {
+    width: 100%;
+    background: #282f4e;
+    border-radius: 2em;
+}
+
+div.right::-webkit-scrollbar-thumb:hover {
+    background: #454f6b;
 }
 
 
