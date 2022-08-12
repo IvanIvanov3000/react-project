@@ -5,7 +5,7 @@ import Comment from './Comments';
 const Blog = () => {
 
     return (
-        <div className="hero">
+        <div className="hero blog">
 
             <video autoPlay={true} loop >
                 <source src="/images/video1.mp4" type="video/mp4" />
