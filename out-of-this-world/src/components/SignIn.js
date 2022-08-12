@@ -27,7 +27,7 @@ const SignIn = () => {
         let email = formData.get('email');
         let password = formData.get('password');
 
-        authService.login(email, password)
+        authService.login({ email, password })
             .then((authData) => {
                 login(authData);
                 historyHook.push('/home')
@@ -44,7 +44,7 @@ const SignIn = () => {
 
         let { email, username, password, repeatPassword } = Object.fromEntries(new FormData(e.currentTarget));
 
-        authService.register(email, username, password, repeatPassword)
+        authService.register({ email, username, password, repeatPassword })
             .then(authData => {
                 console.log(authData);
                 login(authData);
