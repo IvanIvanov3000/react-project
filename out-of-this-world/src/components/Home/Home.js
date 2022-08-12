@@ -76,17 +76,17 @@ const Home = () => {
                     <h1 className="title">WHAT WE DO?</h1>
                     <div className="row text-center">
                         <div className="col-md-4 services">
-                            <img src="/images/service1.png" className="service-img" alt="" />
+                            <img src="/images/home-page/service1.png" className="service-img" alt="" />
                             <h4>Growth Marketing</h4>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, saepe!</p>
                         </div>
                         <div className="col-md-4 services">
-                            <img src="/images/service2.png" className="service-img" alt="" />
+                            <img src="/images/home-page/service2.png" className="service-img" alt="" />
                             <h4>Online Branding</h4>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, saepe!</p>
                         </div>
                         <div className="col-md-4 services">
-                            <img src="/images/service3dark.png" className="service-img" alt="" />
+                            <img src="/images/home-page/service3.png" className="service-img" alt="" />
                             <h4>Animated Ads</h4>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, saepe!</p>
                         </div>
@@ -185,9 +185,9 @@ const Home = () => {
                         </div>
                         <div className="col-md-4 footer-box">
                             <p><b>Contact us</b></p>
-                            <p><FaMapMarkerAlt className="icon"/> World Trade Center, Sofia</p>
-                            <p><FaPhoneAlt className="icon"/> +1 01233435667</p>
-                            <p><FaEnvelope className="icon"/> xyz@gmail.com</p>
+                            <p><FaMapMarkerAlt className="icon" /> World Trade Center, Sofia</p>
+                            <p><FaPhoneAlt className="icon" /> +1 01233435667</p>
+                            <p><FaEnvelope className="icon" /> xyz@gmail.com</p>
 
                         </div>
                         <div className="col-md-4 footer-box">
