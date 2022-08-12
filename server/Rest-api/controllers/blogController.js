@@ -2,6 +2,7 @@ const { blogModel, userModel } = require('../models');
 
 function getComments(req, res, next) {
     blogModel.find()
+        .populate("author")
         .then(comments => res.json(comments))
         .catch(next);
 }
@@ -14,10 +15,10 @@ function getMyComments(req, res, next) {
 }
 
 function createComment(req, res, next) {
-    const { comment, rating } = req.body;
+    const { text, rating } = req.body;
     const _id = req.user._id;
 
-    blogModel.create({ comment, rating, author: _id })
+    blogModel.create({ text, rating, author: _id })
         .then(comment => {
             console.log("created comment----", comment);
             userModel
