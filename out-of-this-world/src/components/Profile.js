@@ -1,4 +1,4 @@
-import { useHistory, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 import * as authService from '../services/authService';
@@ -6,7 +6,6 @@ import CardList from './Card/CardList';
 
 const Profile = () => {
 
-    let historyHook = useHistory();
     const [userData, setUserData] = useState(
         {
             image: "",

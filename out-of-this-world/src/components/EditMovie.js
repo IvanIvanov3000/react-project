@@ -27,7 +27,7 @@ const Create = ({ match }) => {
         movieService.getOne(movieId)
             .then(result => {
                 setMovie(result);
-                console.log(user.id, "user");
+                console.log(user._id, "user");
                 console.log(result.author._id, "movie author");
                 return;
             })

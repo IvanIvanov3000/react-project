@@ -38,7 +38,7 @@ async function responseHandler(res) {
 function getToken() {
     try {
         let userItem = localStorage.getItem('user');
-
+        
         if (!userItem) {
             const error = new Error('You must be authenticated')
             throw error;
