@@ -15,7 +15,7 @@ function register(req, res, next) {
     if (password != repeatPassword) {
         return res.send("Passwords don't match.");
     }
-    return userModel.create({ email, username, password })
+    return userModel.create({ email, username, password})
         .then((createdUser) => {
             createdUser = bsonToJson(createdUser);
             createdUser = removePassword(createdUser);
@@ -28,7 +28,7 @@ function register(req, res, next) {
             // }
             console.log(createdUser);
             res.status(200).send({
-                id: createdUser._id,
+                _id: createdUser._id,
                 username: createdUser.username,
                 email: createdUser.email,
                 accessToken: token
@@ -74,9 +74,9 @@ function login(req, res, next) {
             // }
             // res.status(200)
             //     .send(user);
-
+            console.log(token , "jwt token");
             res.status(200).send({
-                id: user._id,
+                _id: user._id,
                 username: user.username,
                 email: user.email,
                 accessToken: token
@@ -98,9 +98,9 @@ function getProfileInfo(req, res, next) {
 
 function editProfileInfo(req, res, next) {
     const { _id: userId } = req.user;
-    const { username, email } = req.body;
+    const { username, email, image } = req.body;
     console.log(username, email);
-    userModel.findOneAndUpdate({ _id: userId }, { username, email }, { runValidators: true, new: true })
+    userModel.findOneAndUpdate({ _id: userId }, { username, email, image }, { runValidators: true, new: true })
         .then(x => { res.status(200).json(x) })
         .catch(err => {
             console.log(err.message);
