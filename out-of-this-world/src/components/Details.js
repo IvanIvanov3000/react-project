@@ -30,7 +30,7 @@ const Details = ({ match }) => {
             .catch(err => {
                 console.log(err);
             })
-
+        console.log(user);
 
     }, [movieId]);
 
@@ -50,12 +50,12 @@ const Details = ({ match }) => {
 
     const likeButtonClick = (e) => {
         e.preventDefault();
-        if (user.id === movie.author._id) {
+        if (user._id === movie.author._id) {
             console.log("The author can't like or dislike their own movie")
             return;
         }
 
-        if (movie.likes.includes(user.id)) {
+        if (movie.likes.includes(user._id)) {
             console.log("You can't like again!")
             return;
         }
@@ -75,12 +75,12 @@ const Details = ({ match }) => {
     };
     const dislikeButtonClick = (e) => {
         e.preventDefault();
-        if (user.id === movie.author._id) {
+        if (user._id === movie.author._id) {
             console.log("The author can't like or dislike their own movie")
             return;
         }
 
-        if (!movie.likes.includes(user.id)) {
+        if (!movie.likes.includes(user._id)) {
             console.log("You can't dislike again!")
             return;
         }
@@ -109,8 +109,8 @@ const Details = ({ match }) => {
     );
     const userButtons = (
         <>
-            <button className="details btn" onClick={likeButtonClick} disabled={movie.likes.includes(user.id)}>Like</button>
-            <button className="details btn" onClick={dislikeButtonClick} disabled={!movie.likes.includes(user.id)}>Dislike</button>
+            <button className="details btn" onClick={likeButtonClick} disabled={movie.likes.includes(user._id)}>Like</button>
+            <button className="details btn" onClick={dislikeButtonClick} disabled={!movie.likes.includes(user._id)}>Dislike</button>
             {/* <Button onClick={likeButtonClick} disabled={movie.likes?.includes(user._id)}>Like</Button>; */}
         </>)
 
@@ -141,17 +141,18 @@ const Details = ({ match }) => {
 
                     <div className="wrapper">
                         <h3>{movie.title}</h3>
-                        <b className=
-                            {`tag ${movie.likes.length > 10
+                        <b className={`likes 
+                        ${movie.likes.length > 3
                                 ? "popular"
-                                : (movie.likes.length > 5 ? "interesting" : "ordinary")}`
-                            }>
+                                : movie.likes.length >= 1 ? "interesting" : "ordinary"}`
+                        }>
                             {movie.likes.length}
                         </b>
+
                         <span>{movie.year}</span>
                         <div className="buttons">
 
-                            {user.id && (user.id == movie.author._id
+                            {user._id && (user._id == movie.author._id
                                 ? ownerButtons
                                 : userButtons
                             )}
