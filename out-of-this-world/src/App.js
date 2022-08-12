@@ -14,6 +14,8 @@ import Details from './components/Details';
 import EditMovie from './components/EditMovie';
 
 import Profile from './components/Profile';
+import ProfileEdit from './components/ProfileEdit';
+
 import Logout from './components/Logout';
 
 
@@ -47,7 +49,9 @@ function App() {
                             <Route path="/details/:movieId" component={Details} />
                             <Route path="/edit/:movieId" component={EditMovie} />
 
-                            <Route path="/profile" component={Profile} />
+                            <Route path="/profile" exact component={Profile} />
+                            <Route path="/profile/:id/edit" component={ProfileEdit} />
+
 
                             <Route path="/logout" component={Logout} />
 
