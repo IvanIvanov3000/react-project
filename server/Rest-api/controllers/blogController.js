@@ -20,30 +20,29 @@ function createComment(req, res, next) {
 
     blogModel.create({ text, rating, author: _id })
         .then(comment => {
-            console.log("created comment----", comment);
             userModel
                 .findByIdAndUpdate({ _id }, { $addToSet: { comments: comment._id } }, { new: true })
                 .then(updatedUser => {
-                    res.status(200).json(updatedUser)
+                    comment.author = updatedUser;
+                    res.status(200).json(comment);
                 })
                 .catch(err => {
 
                     console.log(err);
                 })
-
-            res.json(comment)
-
         })
         .catch(next);
 }
 
 function deleteComment(req, res, next) {
-    const { commnetId } = req.params;
+
+    const { commentId } = req.params;
     const { _id: userId } = req.user;
 
+    console.log(commentId, userId);
     Promise.all([
-        blogModel.findOneAndDelete({ _id: commnetId }),
-        userModel.findOneAndUpdate({ _id: userId }, { $pull: { comments: commnetId } }),
+        blogModel.findOneAndDelete({ _id: commentId }),
+        userModel.findOneAndUpdate({ _id: userId }, { $pull: { comments: commentId } }),
 
     ])
         .then(([deletedOne, _]) => {
