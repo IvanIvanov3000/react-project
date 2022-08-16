@@ -1,13 +1,11 @@
 import { FaPepperHot, FaBalanceScale } from "react-icons/fa";
 import { useEffect, useState } from 'react';
+
 import { useAuthContext } from '../../contexts/AuthContext';
-
-
 import CommentsList from './CommentsList';
 import * as blogService from '../../services/blogService';
 
 const Blog = () => {
-
     const { user } = useAuthContext();
     const [comments, setComments] = useState({});
 
@@ -21,6 +19,10 @@ const Blog = () => {
                 console.log(err);
             })
     }, []);
+
+    function removeComment(comment) {
+        setComments(comments.filter(x => x._id !== comment._id));
+    }
 
     const createHandler = (e) => {
         e.preventDefault();
@@ -52,7 +54,7 @@ const Blog = () => {
 
             <div className="content">
                 <div className="left" style={{ backgroundColor: comments.length > 0 ? 'transparent' : '#202834' }}>
-                    <CommentsList comments={comments} />
+                    <CommentsList comments={comments} removeComment={removeComment} />
                 </div>
                 <div className="right" style={{ backgroundColor: user.email ? 'transparent' : '#202834' }}>
                     {user.email
