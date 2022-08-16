@@ -24,14 +24,11 @@ const Details = ({ match }) => {
         movieService.getOne(movieId)
             .then(result => {
                 setMovie(result);
-                console.log(result);
                 return;
             })
             .catch(err => {
                 console.log(err);
             })
-        console.log(user);
-
     }, [movieId]);
 
     const deleteHandler = (e) => {
