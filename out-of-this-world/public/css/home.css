@@ -3,10 +3,10 @@
     --dark-color: #222;
     --section-bg-color: #202834;
     --navigation-item-hover-color: #3b5378;
-  
+
     --text-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
     --box-shadow: 0 5px 25px rgba(0 0 0 / 20%);
-  
+
     --scroll-bar-color: #fff;
     --scroll-thumb-color: #282f4e;
     --scroll-thumb-hover-color: #454f6b;
@@ -20,6 +20,18 @@
 
 .about p {
     margin: 25px 0px;
+}
+
+.about a {
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(206, 188, 188);
+    transition: 0.3s ease;
+}
+
+.about a:hover {
+    color: #fff;
 }
 
 div.line {
@@ -183,8 +195,8 @@ h1.title::after {
     margin: 0px 10px;
 
     background-position: center;
-    background-repeat: no-repeat; 
-    background-size: cover; 
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .user-details {
@@ -192,7 +204,8 @@ h1.title::after {
     font-size: 12px;
     padding-bottom: 5px;
 }
-.testimonials .rating{
+
+.testimonials .rating {
     position: absolute;
     top: 5px;
     right: 55px;
@@ -279,8 +292,15 @@ footer {
     border: none;
     margin-top: 30px;
     background: linear-gradient(90deg, rgba(32, 40, 52, 1) 0%, rgba(175, 175, 175, 1) 100%);
+    transition: 0.8s ease;
+}
+
+.footer-box .btn-primary:hover {
+
+    background: linear-gradient(90deg, rgba(175, 175, 175, 1) 0%, rgba(32, 40, 52, 1) 100%);
 
 }
+
 
 .footer-box hr {
     background-color: #fff
