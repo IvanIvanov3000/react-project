@@ -80,7 +80,9 @@ div#card-catalog img {
     font-size: 16px;
     text-align: justify;
 }
-
+#card-catalog a{
+    text-decoration: none;
+}
 #card-catalog .details.btn {
     display: block;
 

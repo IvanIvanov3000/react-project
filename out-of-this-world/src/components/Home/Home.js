@@ -15,10 +15,10 @@ const Home = () => {
                 <p>Nothing really don't read it if you don't want to. Just explore and scroll.
                 </p>
                 <p>This website is a small project created by one single person. everything you see here is a hard work done for many, many hours.
-                    Please don't be rude. We don't support rude behavior and pople and if you are you will be banned.
+                    Please don't be rude. We don't support rude behavior and people and if you are you will be banned.
                 </p>
                 <p>This website gives you the opportunity to share your own personal films or other that aren't yours.
-                    If you want to comment or to post a movie but you have to be logged in first.
+                    If you want to comment or to post a movie you have to be logged in first.
                 </p>
                 <p>If you want to see more things made by us just go to <a href='https://github.com/IvanIvanov3000'>Github</a> to see more
                     (this is only for people who understand programming, later easier to understand web page will be linked).
