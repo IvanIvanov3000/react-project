@@ -4,6 +4,8 @@ const { blogController } = require('../controllers');
 const { auth } = require('../utils');
 
 router.get('/comments', blogController.getComments);
+router.get('/comments/top', blogController.getTopComments);
+
 router.post('/comments', auth(), blogController.createComment);
 router.delete('/comments/:commentId', auth(), blogController.deleteComment);
 
