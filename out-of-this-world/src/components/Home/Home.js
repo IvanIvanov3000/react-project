@@ -2,7 +2,7 @@ import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 import { useState, useEffect } from 'react';
 import HomeHero from './HomeHero';
-
+import HomeComments from './HomeComments'
 
 const Home = () => {
 
@@ -122,36 +122,7 @@ const Home = () => {
 
             </section>
 
-            <section id="testimonials">
-
-                <div className="container">
-                    <h1 className="title text-center">What clients say?</h1>
-
-
-                    <div className="row offset-1">
-                        <div className="col-md-5 testimonials">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, saepe! Lorem ipsum dolor
-                                sit,
-                                amet consectetur adipisicing elit. Nulla consequuntur aperiam dolorum placeat possimus fugiat,
-                                ipsam
-                                iure non! Quis, odit?</p>
-                            <img src="/images/user1.jpg" alt="" />
-                            <p className="user-details"><b>Angelina</b> <br /> Co-founder at xyz</p>
-                        </div>
-                        <div className="col-md-5 testimonials">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, saepe! Lorem ipsum dolor
-                                sit,
-                                amet consectetur adipisicing elit. Nulla consequuntur aperiam dolorum placeat possimus fugiat,
-                                ipsam
-                                iure non! Quis, odit?</p>
-                            <img src="/images/user2.jpg" alt="" />
-                            <p className="user-details"><b>Jhon Doe</b> <br /> Director at xyz</p>
-                        </div>
-
-                    </div>
-                </div>
-
-            </section>
+            <HomeComments />
 
             <section id="social-media">
                 <img src="/images/wavetop.png" alt="" className="top-img" />
