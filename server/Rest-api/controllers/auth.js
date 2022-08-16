@@ -26,7 +26,6 @@ function register(req, res, next) {
             // } else {
             //     res.cookie(authCookieName, token, { httpOnly: true })
             // }
-            console.log(createdUser);
             res.status(200).send({
                 _id: createdUser._id,
                 username: createdUser.username,
@@ -74,7 +73,7 @@ function login(req, res, next) {
             // }
             // res.status(200)
             //     .send(user);
-            console.log(token , "jwt token");
+
             res.status(200).send({
                 _id: user._id,
                 username: user.username,

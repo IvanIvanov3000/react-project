@@ -6,6 +6,14 @@ function getComments(req, res, next) {
         .then(comments => res.json(comments))
         .catch(next);
 }
+function getTopComments(req, res, next) {
+    blogModel.find({ "rating": { $gte: 9 } })
+        .sort({ 'rating': -1 })
+        .limit(2)
+        .populate('author')
+        .then(comments => res.json(comments))
+        .catch(next);
+}
 
 function getMyComments(req, res, next) {
     blogModel.find({ author: req.user._id })
@@ -39,7 +47,6 @@ function deleteComment(req, res, next) {
     const { commentId } = req.params;
     const { _id: userId } = req.user;
 
-    console.log(commentId, userId);
     Promise.all([
         blogModel.findOneAndDelete({ _id: commentId }),
         userModel.findOneAndUpdate({ _id: userId }, { $pull: { comments: commentId } }),
@@ -58,6 +65,7 @@ function deleteComment(req, res, next) {
 module.exports = {
 
     getComments,
+    getTopComments,
     getMyComments,
     createComment,
     deleteComment,
