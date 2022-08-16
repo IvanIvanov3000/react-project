@@ -32,10 +32,11 @@ const Blog = () => {
         let text = formData.get('text');
         let rating = formData.get('rating');
 
-        console.log(text, rating);
         blogService.createComment({ text, rating })
             .then((result) => {
-                console.log(result);
+                e.target.reset();
+
+                setComments(oldArray => [...oldArray, result]);
 
             })
             .catch(err => {
@@ -44,6 +45,7 @@ const Blog = () => {
                 console.log(err);
             });
     }
+
 
     return (
         <div className="hero blog">
