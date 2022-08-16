@@ -16,11 +16,11 @@ const Card = ({ movie }) => {
                 }>{movie.likes.length}</span>
 
                 <p>{movie.description.length > 150
-                    ? movie.description.slice(0, 150)
+                    ? movie.description.slice(0, 150) + "..."
                     : movie.description
                 }
                 </p>
-                <Link className="details btn" to={`/details/${movie._id}`}>Details</Link>
+                <Link to={`/details/${movie._id}`}><button className="details btn">Details</button></Link>
             </div>
 
         </div>
