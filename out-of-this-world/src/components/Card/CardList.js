@@ -1,5 +1,4 @@
 import Card from "./Card";
-// import { useEffect, useState } from 'react';
 
 
 const CardList = ({ movies }) => {
