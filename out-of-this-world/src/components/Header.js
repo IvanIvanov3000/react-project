@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaHome, FaSearch, FaEnvelope, FaRegStar } from "react-icons/fa";
+import { FaHome, FaSearch, FaEnvelope, FaComments,  FaUserAlt, FaCompactDisc } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
 import { useAuthContext } from '../contexts/AuthContext';
@@ -16,8 +16,8 @@ const Header = () => {
 
     let userNavigation = (
         <>
-            <Link to="/profile"><FaEnvelope className='icon' /> Profile</Link>
-            <Link to="/create"><FaEnvelope className='icon' /> Create Movie</Link>
+            <Link to="/profile"><FaUserAlt className='icon' /> Profile</Link>
+            <Link to="/create"><FaCompactDisc className='icon' /> Create Movie</Link>
             <Link to="/logout"><FaEnvelope className='icon' /> Logout</Link>
         </>
     );
@@ -30,7 +30,7 @@ const Header = () => {
                     <div className="nav-items">
                         <Link to="/home"><FaHome className='icon' /> Home</Link>
                         <Link to="/catalog"><FaSearch className='icon' /> Explore</Link>
-                        <Link to="/blog"><FaRegStar className='icon' /> Blog</Link>
+                        <Link to="/blog"><FaComments className='icon' /> Blog</Link>
                         
                         {user.email
                             ? userNavigation
