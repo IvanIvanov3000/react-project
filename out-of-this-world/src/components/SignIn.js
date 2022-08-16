@@ -2,7 +2,7 @@ import {
     FaUserTie,
     FaUserSecret,
     FaEye,
-    // FaEyeSlash,
+    FaEyeSlash,
     FaGlasses
 } from "react-icons/fa";
 import { useHistory } from 'react-router-dom';
@@ -52,8 +52,16 @@ const SignIn = () => {
 
             });
     }
+    let [eye, setEye] = useState(true);
+
+    const handleEye = (e) => {
+        const eyeInput = e.currentTarget.parentNode.querySelector('input');
+        eyeInput.type = eye ? 'text' : 'password';
+        setEye(prev => eye = !prev)
+    }
 
     const [show, setShow] = useState("show");
+
 
     return (
 
@@ -79,7 +87,13 @@ const SignIn = () => {
                             <FaGlasses className="icon" />
 
                             <input className="password-input" name="password" type="password" placeholder="Password" required />
-                            <div className="eye-btn"><FaEye className="icon" /></div>
+                            <div className="eye-btn" onClick={handleEye}>
+                                {eye == true
+                                    ? <FaEye className="icon eye" />
+                                    : <FaEyeSlash className="icon eyeslash" />
+                                }
+
+                            </div>
                         </div>
 
                         <input type="submit" className="submit-btn" value="Sign in" />
