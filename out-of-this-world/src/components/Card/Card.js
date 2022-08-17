@@ -7,7 +7,10 @@ const Card = ({ movie }) => {
             <img src={movie.image} alt="" />
 
             <div className="card-wrapper">
-                <h3>{movie.title}</h3>
+                <h3>{movie.title.length > 15
+                    ? movie.title.slice(0, 15) + "..."
+                    : movie.title
+                }</h3>
                 <span className="year" >{movie.year}</span>
                 <span className={
                     `likes ${movie.likes.length > 3

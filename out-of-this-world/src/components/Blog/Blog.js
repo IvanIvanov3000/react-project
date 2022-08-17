@@ -65,6 +65,7 @@ const Blog = () => {
                 <source src="/images/video1.mp4" type="video/mp4" />
             </video>
             <ErrorDiv err={{message}}/>
+            
             <div className="content">
                 <div className="left" style={{ backgroundColor: comments.length > 0 ? 'transparent' : '#202834' }}>
                     <CommentsList comments={comments} functions={{removeComment, addError}} />
