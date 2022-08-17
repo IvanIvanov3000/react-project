@@ -110,12 +110,12 @@ const Home = () => {
                     <p>Find us on social media</p>
 
                     <div className="social-icons">
-                        <a href="#"><img src="/images/icons/facebook-icon.png" alt="" /></a>
-                        <a href="#"><img src="/images/icons/instagram-icon.png" alt="" /></a>
-                        <a href="#"><img src="/images/icons/twitter-icon.png" alt="" /></a>
-                        <a href="#"><img src="/images/icons/whatsapp-icon.png" alt="" /></a>
-                        <a href="#"><img src="/images/icons/linkedin-icon.png" alt="" /></a>
-                        <a href="#"><img src="/images/icons/snapchat-icon.png" alt="" /></a>
+                        <a href="https://www.facebook.com/"><img src="/images/icons/facebook-icon.png" alt="" /></a>
+                        <a href="https://www.instagram.com/"><img src="/images/icons/instagram-icon.png" alt="" /></a>
+                        <a href="https://twitter.com/?lang=bg"><img src="/images/icons/twitter-icon.png" alt="" /></a>
+                        <a href="https://www.whatsapp.com/"><img src="/images/icons/whatsapp-icon.png" alt="" /></a>
+                        <a href="https://www.linkedin.com/"><img src="/images/icons/linkedin-icon.png" alt="" /></a>
+                        <a href="https://www.snapchat.com/"><img src="/images/icons/snapchat-icon.png" alt="" /></a>
 
                     </div>
                 </div>
