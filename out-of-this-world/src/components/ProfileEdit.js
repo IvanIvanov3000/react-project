@@ -1,14 +1,13 @@
-import { useHistory, Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { FaRocket, FaMagic, FaMoon, FaPen } from "react-icons/fa";
+import { FaRocket, FaMagic, FaMoon } from "react-icons/fa";
 
 
 import * as authService from '../services/authService';
-import { useAuthContext } from '../contexts/AuthContext';
+import ErrorDiv from './Error/ErrorDiv';
 
 const ProfileEdit = () => {
     const historyHook = useHistory();
-    const { login } = useAuthContext();
 
     const [userData, setUserData] = useState(
         {
@@ -20,13 +19,13 @@ const ProfileEdit = () => {
             comments: [],
         }
     );
+    const [message, setMessage] = useState('')
 
     useEffect(() => {
         authService.getProfile()
             .then(result => {
                 setUserData(result);
 
-                console.log(result, userData.movies.length);
             });
     }, []);
 
@@ -46,6 +45,7 @@ const ProfileEdit = () => {
 
             })
             .catch(err => {
+                setMessage(err.message);
                 console.log("error in profile edit");
                 console.log(err.message);
             });
@@ -57,6 +57,7 @@ const ProfileEdit = () => {
             <video autoPlay={true} loop>
                 <source src="/images/video5.mp4" type="video/mp4" />
             </video>
+            <ErrorDiv err={{ message }} />
 
             <div className="content">
 
@@ -78,7 +79,7 @@ const ProfileEdit = () => {
                         </div>
 
                         <div className="field">
-                            <FaRocket className='icon' />
+                            <FaMoon className='icon' />
                             <input type="text" name="image" placeholder="Image Url" defaultValue={userData.image} />
                         </div>
 

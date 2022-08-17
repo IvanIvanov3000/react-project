@@ -1,6 +1,5 @@
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
-import { Link } from 'react-router-dom'
-import { useState, useEffect } from 'react';
+
 import HomeHero from './HomeHero';
 import HomeComments from './HomeComments'
 

@@ -1,8 +1,4 @@
-import { useState, useEffect } from 'react';
-
 import styles from './ErrorDiv.module.css';
-
-
 
 const ErrorDiv = ({ err }) => {
 

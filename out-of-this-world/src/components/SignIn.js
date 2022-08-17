@@ -96,7 +96,7 @@ const SignIn = () => {
 
                             <input className="password-input" name="password" type="password" placeholder="Password" required />
                             <div className="eye-btn" onClick={handleEye}>
-                                {eye == true
+                                {eye === true
                                     ? <FaEye className="icon eye" />
                                     : <FaEyeSlash className="icon eyeslash" />
                                 }
