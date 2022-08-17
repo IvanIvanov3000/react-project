@@ -1,13 +1,15 @@
 import { FaRocket, FaMagic, FaMoon, FaPen } from "react-icons/fa";
 import { useHistory } from 'react-router-dom';
-
+import {useState} from 'react';
 
 import * as movieService from '../services/movieService';
+import ErrorDiv from './Error/ErrorDiv';
 
 
 const Create = () => {
-    
+
     let historyHook = useHistory();
+    const [message, setMessage] = useState("");
 
 
     const handleCreate = (e) => {
@@ -24,15 +26,17 @@ const Create = () => {
 
         isPublic = isPublic === "true" ? true : false;
 
-        movieService.create({title, year, tag, image, isPublic, description})
+        movieService.create({ title, year, tag, image, isPublic, description })
             .then((movieData) => {
 
                 console.log(movieData);
+                setMessage('');
+
                 historyHook.push('/home')
 
             })
             .catch(err => {
-                // TODO: show notification
+                setMessage(err.message);
                 console.log("error in create")
                 console.log(err);
             });
@@ -44,6 +48,7 @@ const Create = () => {
             <video autoPlay={true} loop>
                 <source src="/images/video2.mp4" type="video/mp4" />
             </video>
+            <ErrorDiv err={{ message }} />
 
 
             <div className="form-box">
@@ -73,9 +78,9 @@ const Create = () => {
                         <div className="field radio">
                             <FaMoon className='icon' />
                             <p>Public: </p>
-                            <input type="radio" id="yes" name="isPublic" defaultValue="true" />
+                            <input type="radio" id="yes" name="isPublic" defaultValue="true" required/>
                             <label htmlFor="yes">Yes</label><br />
-                            <input type="radio" id="no" name="isPublic" defaultValue="false" />
+                            <input type="radio" id="no" name="isPublic" defaultValue="false" required/>
                             <label htmlFor="no">No</label><br />
                         </div>
 
@@ -83,7 +88,7 @@ const Create = () => {
                     <div className="right">
                         <div className="field ">
                             <FaPen className='icon' />
-                            <textarea type="text" name="description" placeholder="Description..."></textarea>
+                            <textarea type="text" name="description"required placeholder="Description..."></textarea>
                         </div>
 
                         <input type="submit" className="submit-btn" value="Create" />

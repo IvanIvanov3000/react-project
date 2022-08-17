@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams, useHistory, Link } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 
 import * as movieService from '../services/movieService';
 import { useAuthContext } from '../contexts/AuthContext';
@@ -131,7 +131,7 @@ const Details = ({ match }) => {
                                     <img src={movie.image} alt="" />
                                 </>
                             )
-                            : <img src={movie.image} style={{ height: '60vh', background: "#30303b", objectFit: 'contain' }} alt="" />
+                            : <img src={movie.image} style={{ height: movie.title.length > 40 ? "50vh" : "60vh", background: "#30303b", objectFit: 'contain' }} alt="" />
                         }
                     </div>
 
@@ -151,7 +151,7 @@ const Details = ({ match }) => {
 
                         <div className="buttons">
 
-                            {user._id && (user._id == movie.author._id
+                            {user._id && (user._id === movie.author._id
                                 ? ownerButtons
                                 : userButtons
                             )}
