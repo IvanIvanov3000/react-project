@@ -34,7 +34,7 @@ function register(req, res, next) {
             });
         })
         .catch(err => {
-            console.log(err.message);
+            // console.log(err.errors.username.message);
             if (err.name === 'MongoError' && err.code === 11000) {
                 let field = err.message.split("index: ")[1];
                 field = field.split(" dup key")[0];

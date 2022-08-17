@@ -8,7 +8,7 @@ function getComments(req, res, next) {
 }
 function getTopComments(req, res, next) {
     blogModel.find({ "rating": { $gte: 9 } })
-        .sort({ 'rating': -1 })
+        .sort({ 'rating': -1, 'created_at' : -1 })
         .limit(2)
         .populate('author')
         .then(comments => res.json(comments))
