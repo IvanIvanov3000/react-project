@@ -4,7 +4,9 @@ const { ObjectId } = mongoose.Schema.Types;
 const movieSchema = new mongoose.Schema({
     title: {
         type: String,
-        required: true
+        required: true,
+        minlength: [5, 'Title should be at least 5 characters'],
+        maxlength: [50, 'Title should be at max 50 characters'],
     },
     image: {
         type: String,

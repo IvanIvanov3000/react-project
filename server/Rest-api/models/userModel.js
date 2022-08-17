@@ -9,7 +9,7 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
         unique: [true, "Email is already in use"],
-        minlength: [5, 'Email should be at least 5 characters'],
+        minlength: [10, 'Email should be at least 5 characters'],
         validate: {
             validator: function (v) {
                 return /^[a-zA-Z0-9_]+@(abv.bg)?(gmail.com)?$/g.test(v);
