@@ -22,6 +22,8 @@ const Catalog = () => {
 
         movieService.getTopMovies()
             .then(result => {
+                result.sort((a, b) => a.likes.length - b.likes.length);
+                result.reverse();
                 setTopMovies(result);
             })
             .catch(err => {

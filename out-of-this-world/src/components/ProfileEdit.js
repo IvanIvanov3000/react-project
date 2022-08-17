@@ -83,7 +83,7 @@ const ProfileEdit = () => {
                         </div>
 
 
-                        <input type="submit" className="btn details" value="Create" />
+                        <input type="submit" className="btn details" value=" Edit " />
 
 
 
