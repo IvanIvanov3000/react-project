@@ -2,20 +2,21 @@ import { useAuthContext } from '../../contexts/AuthContext';
 import * as blogService from '../../services/blogService';
 
 
-const Comment = ({ comment, removeComment}) => {
+const Comment = ({ comment, functions}) => {
     const { user } = useAuthContext();
 
     const deleteHandler = (e) => {
         e.preventDefault();
         blogService.deleteComment(comment._id)
             .then((result) => {
-                removeComment(comment);
+                functions.removeComment(comment);
 
             })
             .catch(err => {
-                // TODO: show notification
                 console.log("error in blog")
                 console.log(err);
+                functions.addError(err);
+                
             });
     }
 

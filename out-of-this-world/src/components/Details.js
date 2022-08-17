@@ -147,6 +147,8 @@ const Details = ({ match }) => {
                         </b>
 
                         <span>{movie.year}</span>
+                        <p>Tag: {movie.tag}</p>
+
                         <div className="buttons">
 
                             {user._id && (user._id == movie.author._id

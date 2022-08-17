@@ -4,24 +4,33 @@ import { useEffect, useState } from 'react';
 import { useAuthContext } from '../../contexts/AuthContext';
 import CommentsList from './CommentsList';
 import * as blogService from '../../services/blogService';
+import ErrorDiv from '../Error/ErrorDiv';
+
 
 const Blog = () => {
     const { user } = useAuthContext();
     const [comments, setComments] = useState({});
+    const [message, setMessage] = useState("");
+
 
     useEffect(() => {
         blogService.getAll()
             .then(result => {
                 setComments(result);
+                setMessage('');
                 return;
             })
             .catch(err => {
+                setMessage(err.message);
                 console.log(err);
             })
     }, []);
 
     function removeComment(comment) {
         setComments(comments.filter(x => x._id !== comment._id));
+    }
+    function addError(err){
+        setMessage(err.message);
     }
 
     const createHandler = (e) => {
@@ -37,10 +46,12 @@ const Blog = () => {
                 e.target.reset();
 
                 setComments(oldArray => [...oldArray, result]);
+                setMessage('');
+
 
             })
             .catch(err => {
-                // TODO: show notification
+                setMessage(err.message);
                 console.log("error in blog")
                 console.log(err);
             });
@@ -53,10 +64,10 @@ const Blog = () => {
             <video autoPlay={true} loop >
                 <source src="/images/video1.mp4" type="video/mp4" />
             </video>
-
+            <ErrorDiv err={{message}}/>
             <div className="content">
                 <div className="left" style={{ backgroundColor: comments.length > 0 ? 'transparent' : '#202834' }}>
-                    <CommentsList comments={comments} removeComment={removeComment} />
+                    <CommentsList comments={comments} functions={{removeComment, addError}} />
                 </div>
                 <div className="right" style={{ backgroundColor: user.email ? 'transparent' : '#202834' }}>
                     {user.email
