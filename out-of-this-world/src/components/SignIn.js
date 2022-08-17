@@ -11,12 +11,12 @@ import { useAuthContext } from '../contexts/AuthContext';
 import { useState } from 'react';
 
 import * as authService from '../services/authService';
-
+import ErrorDiv from './Error/ErrorDiv';
 
 const SignIn = () => {
     const { login } = useAuthContext();
     let historyHook = useHistory();
-
+    let [message, setMessage] = useState("");
 
 
     const handleLoginSubmit = (e) => {
@@ -31,10 +31,11 @@ const SignIn = () => {
             .then((authData) => {
                 login(authData);
                 historyHook.push('/home')
+                setMessage("");
 
             })
             .catch(err => {
-                // TODO: show notification
+                setMessage(err.message);
                 console.log("error in sign in")
                 console.log(err);
             });
@@ -43,14 +44,21 @@ const SignIn = () => {
         e.preventDefault();
 
         let { email, username, password, repeatPassword } = Object.fromEntries(new FormData(e.currentTarget));
-
+        if (password !== repeatPassword) {
+            return setMessage("Passwords don't match");
+        }
         authService.register({ email, username, password, repeatPassword })
             .then(authData => {
                 console.log(authData);
                 login(authData);
+                setMessage("");
                 historyHook.push('/home')
 
-            });
+            })
+            .catch(err => {
+                setMessage(err.message);
+
+            })
     }
     let [eye, setEye] = useState(true);
 
@@ -70,7 +78,7 @@ const SignIn = () => {
             <video autoPlay={true} loop>
                 <source src="/images/video3.mp4" type="video/mp4" />
             </video>
-
+            <ErrorDiv err={{ message, shouldShow : (message.length > 0 ? true : false) }} />
 
 
             <div className={`form-container sign-in-form ${show === "show" ? "show" : "hide"}`}>
