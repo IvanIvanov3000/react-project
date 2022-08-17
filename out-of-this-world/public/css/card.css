@@ -33,6 +33,7 @@ div#card-catalog img {
 #card-catalog h3 {
     font-size: 3rem;
     text-align: center;
+    word-break: break-word;
 }
 
 #card-catalog .year {
@@ -79,6 +80,8 @@ div#card-catalog img {
     margin-top: 15px;
     font-size: 16px;
     text-align: justify;
+    word-break: break-word;
+
 }
 #card-catalog a{
     text-decoration: none;

@@ -32,10 +32,12 @@
 
 
 
-.hero.details .hero .detailsdiv.left div.wrapper h3 {
+.hero.details div.left div.wrapper h3 {
     margin-top: 10px;
     font-size: 2.5rem;
     text-align: center;
+    word-break: break-all;
+
 }
 
 .hero.details div.left div.wrapper span {
@@ -124,6 +126,8 @@
     padding: 10px;
     font-size: 18px;
     text-align: justify;
+    word-break: break-word;
+
 }
 
 .hero.details div.right::-webkit-scrollbar {
