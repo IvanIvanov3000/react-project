@@ -14,7 +14,7 @@ const userSchema = new mongoose.Schema({
             validator: function (v) {
                 return /^[a-zA-Z0-9_]+@(abv.bg)?(gmail.com)?$/g.test(v);
             },
-            message: props => `${props.value} must contains only latin letters and digits!`
+            message: props => `${props.value} must contains only latin letters and digits and must end either with @abv.bg or @gmail.com`
         },
     },
     username: {
