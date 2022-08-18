@@ -1,0 +1,45 @@
+.field {
+    position: relative;
+    background-color: #202834;   
+    width: 98%;
+    padding: 10px;
+    border-bottom: 2px solid #eee;
+    border-radius: 23px;
+    margin-bottom: 25px;
+}
+
+.field p{
+    text-align: center;
+
+}
+.field b{
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+
+}
+
+.btn {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    display: inline;
+
+    margin: 0px 15px;
+    padding: 1px 5px;
+    color: #2C2C34;
+    background-color: #fff;
+    border: 3px solid #2C2C34;
+    border-radius: 17px;
+
+    font-size: 15px;
+    text-align: justify;
+    transition: ease 0.3s;
+
+}
+.btn:hover {
+    color: #fff;
+    background-color: #2C2C34;
+    border: 1px solid #fff;
+
+}

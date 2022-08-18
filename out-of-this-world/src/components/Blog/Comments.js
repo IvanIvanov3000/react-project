@@ -1,6 +1,7 @@
 import { useAuthContext } from '../../contexts/AuthContext';
 import * as blogService from '../../services/blogService';
 
+import styles from './Comments.module.css';
 
 const Comment = ({ comment, functions}) => {
     const { user } = useAuthContext();
@@ -21,12 +22,12 @@ const Comment = ({ comment, functions}) => {
     }
 
     return (
-        <div className="field">
+        <div className={styles.field}>
             <p>{comment.text}</p>
             <b>Rating : {comment.rating}</b>
             <span>{comment.author.username}</span>
             {user._id === comment.author._id
-                ? <button className="delete btn" onClick={deleteHandler}>Delete</button>
+                ? <button className={styles.btn} onClick={deleteHandler}>Delete</button>
                 : <></>
             }
 
