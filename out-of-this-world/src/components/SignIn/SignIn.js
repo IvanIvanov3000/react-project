@@ -87,12 +87,12 @@ const SignIn = () => {
                 <div className={`${styles['form-box']} ${styles["sign-in-box"]}`}>
                     <h2>Sign in</h2>
                     <form onSubmit={handleLoginSubmit} className={styles.form}>
-                        <div className="field">
+                        <div className={styles.field}>
                             <FaUserTie className={styles.icon} />
                             <input type="email" name="email" placeholder="Email ID" required />
                         </div>
 
-                        <div className="field">
+                        <div className={styles.field}>
                             <FaGlasses className={styles.icon} />
 
                             <input className="password-input" name="password" type="password" placeholder="Password" required />
@@ -130,21 +130,21 @@ const SignIn = () => {
                     <h2>Sign up</h2>
 
                     <form onSubmit={handleRegisterSubmit} className={styles.form}>
-                        <div className="field">
+                        <div className={styles.field}>
                             <FaUserTie className={styles.icon} />
                             <input type="email" name="email" placeholder="Email ID" required />
                         </div>
-                        <div className="field">
+                        <div className={styles.field}>
                             <FaUserSecret className={styles.icon} />
                             <input type="text" name="username" placeholder="Username" required />
                         </div>
 
-                        <div className="field">
+                        <div className={styles.field}>
                             <FaGlasses className={styles.icon} />
                             <input type="password" name="password" placeholder="Password" required />
 
                         </div>
-                        <div className="field">
+                        <div className={styles.field}>
                             <FaGlasses className={styles.icon} />
 
                             <input className="password-input" name="repeatPassword" type="password" placeholder="Confirm Password" required />

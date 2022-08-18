@@ -27,7 +27,7 @@
     font-weight: 700;
 }
 
-form>div {
+form .field {
     position: relative;
     display: flex;
     justify-content: center;
@@ -36,12 +36,12 @@ form>div {
     margin-bottom: 25px;
 }
 
-form>div:focus-within {
+form .field:focus-within {
     border-bottom: 2px solid #0065ff;
     transition: 0.3s ease;
 }
 
-form>div input {
+form .field input {
     display: inline-block;
     border: none;
     outline: none;
@@ -60,7 +60,7 @@ form>div input {
     display: inline-block;
 }
 
-form>div:focus-within .icon {
+form .field:focus-within .icon {
     color: #0065ff;
     transition: 0.3s ease;
 }
@@ -268,7 +268,7 @@ form::placeholder {
 
 
 /*
-  .form-box>div {
+  .form-box .field {
     margin-bottom: 5px;
   }
 
