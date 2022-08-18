@@ -52,7 +52,7 @@ const Profile = () => {
                         <div className="email">Email: {userData.email}</div>
                         <div className="buttons">
 
-                            <Link to={`/profile/${userData._id}/edit`}>
+                            <Link to='/profile/edit'>
                                 <button className="profile btn">Edit User Credentials</button>
                             </Link>
                         </div>

@@ -1,5 +1,4 @@
 const CommentCard = ({ comment }) => {
-    console.log(comment);
     return (
         <div className="col-md-5 testimonials">
 

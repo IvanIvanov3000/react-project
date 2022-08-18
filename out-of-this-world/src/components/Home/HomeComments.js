@@ -6,12 +6,10 @@ import CommentCard from './CommentCard';
 
 const HomeComments = () => {
     const [comments, setComments] = useState([]);
-    console.log(comments);
     useEffect(() => {
         blogService.getTopComments()
             .then(result => {
                 setComments(result);
-                console.log(comments);
             })
             .catch(err => {
                 console.error(err);
