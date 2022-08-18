@@ -32,7 +32,8 @@ const Create = () => {
                 console.log(movieData);
                 setMessage('');
 
-                historyHook.push('/home')
+                historyHook.push(`/details/${movieData._id}`)
+
 
             })
             .catch(err => {
