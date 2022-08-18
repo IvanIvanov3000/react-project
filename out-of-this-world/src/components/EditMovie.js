@@ -5,10 +5,11 @@ import { useEffect, useState } from 'react';
 
 import * as movieService from '../services/movieService';
 import { useAuthContext } from '../contexts/AuthContext';
+import ErrorDiv from './Error/ErrorDiv';
 
 
-const Create = ({ match }) => {
-
+const Edit = (props) => {
+    console.log(props);
     let historyHook = useHistory();
     const { user } = useAuthContext();
     const [movie, setMovie] = useState({
@@ -20,6 +21,8 @@ const Create = ({ match }) => {
         likes: [],
         author: { _id: "" }
     });
+    const [message, setMessage] = useState("");
+
     const { movieId } = match.params;
     console.log(movieId);
 
@@ -36,7 +39,7 @@ const Create = ({ match }) => {
             })
 
 
-    }, [movieId]);
+    }, [movieId, user._id]);
 
     const handleEdit = (e) => {
         e.preventDefault();
@@ -56,11 +59,13 @@ const Create = ({ match }) => {
             .then((movieData) => {
 
                 console.log(movieData);
-                historyHook.push('/home')
+                setMessage('');
+
+                historyHook.push(`/details/${movieId}`)
 
             })
             .catch(err => {
-                // TODO: show notification
+                setMessage(err.message);
                 console.log("error in create")
                 console.log(err);
             });
@@ -72,6 +77,7 @@ const Create = ({ match }) => {
             <video autoPlay={true} loop>
                 <source src="/images/video2.mp4" type="video/mp4" />
             </video>
+            <ErrorDiv err={{ message }} />
 
 
             <div className="form-box">
@@ -125,4 +131,4 @@ const Create = ({ match }) => {
     );
 }
 
-export default Create;
+export default Edit;
