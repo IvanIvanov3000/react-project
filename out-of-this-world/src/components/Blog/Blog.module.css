@@ -1,0 +1,257 @@
+.blog {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(12, 3, 51, 0.3);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog .content {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    z-index: 1;
+    width: 80%;
+    text-align: center;
+    text-shadow: 1px 1px 1px #000;
+    color: #fefefe;
+}
+
+.blog video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.blog form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: #fff;
+}
+
+.left, .right {
+    width: 30%;
+    height: 60vh;
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    background-color: transparent;
+    border: 2px solid #eee;
+    border-radius: 23px;
+}
+.left{
+    width: 65%;
+    overflow-y:scroll;
+    display: block;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+}
+
+.left::-webkit-scrollbar {
+    width: 11.5px;
+    background: #fff;
+}
+
+.left::-webkit-scrollbar-thumb {
+    width: 100%;
+    background: #282f4e;
+    border-radius: 2em;
+}
+
+.left::-webkit-scrollbar-thumb:hover {
+    background: #454f6b;
+}
+
+
+.right form{
+    width: 100%;
+    height: 60vh;
+    padding: 5px 10px;
+}
+.field {
+    position: relative;
+    background-color: #202834;   
+    width: 98%;
+    padding: 10px;
+    border-bottom: 2px solid #eee;
+    border-radius: 23px;
+    margin-bottom: 25px;
+}
+
+.right .field.top{
+    height: 35vh;
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right .field.bottom{
+    height: 15vh;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.right .field.bottom p{
+    display: inline-block;
+}
+
+.right .field.bottom input{
+    display: block;
+    
+    width: 50%;
+    margin: 5px auto;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+    outline: none;
+}
+.blog .field .icon {
+    color: #fefefe;
+    font-size: 1.5em;
+    margin-right: 10px;
+    padding-bottom: 5px;
+}
+
+
+.blog textarea {
+    width: 80%;
+    height: 100%;
+    padding: 5px 20px;
+    border-radius: 23px;
+    resize: none;
+}
+.submit-btn {
+    display: inline-block;
+
+    padding: 5px 10px;
+    color: #2C2C34;
+    background-color: #fff;
+    border: 3px solid #2C2C34;
+    border-radius: 17px;
+
+    font-size: 20px;
+    text-align: justify;
+    transition: ease 0.3s;
+}
+
+.submit-btn:hover{
+    color: #fff;
+    background-color: #2C2C34;
+    border: 1px solid #fff;
+}
+
+
+@media screen and (max-width: 1700px) {
+    .content {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .content {
+        width: 100%;
+    }
+}
+/* 
+@media screen and (max-width: 1050px) {
+    .hero {
+        height: 170vh;
+
+    }
+
+    video {
+        height: 170vh;
+    }
+
+    .content {
+        height: 150vh;
+        top: 10%;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        justify-content: unset;
+        flex-flow: column wrap;
+    }
+
+    div.left {
+        height: 65vh;
+        width: 80%;
+    }
+
+    div.right {
+        width: 80%;
+        height: 55vh;
+        padding: 20px;
+        padding-top: 25px;
+    }
+
+
+}
+
+@media screen and (max-width: 850px) {
+    .content {
+        height: 150vh;
+
+    }
+
+    div.right {
+        height: 65vh;
+    }
+
+}
+
+@media screen and (max-width: 750px) {
+    .content {
+        height: 150vh;
+
+    }
+
+    div.right {
+        height: 75vh;
+    }
+
+}
+
+@media screen and (max-width: 620px) {
+    .hero {
+        padding: 0;
+    }
+
+    div.left, div.right {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .hero {
+        height: 200vh
+    }
+
+    video {
+        height: 200vh;
+    }
+
+    .content {
+        height: 180vh;
+
+    }
+
+    div.right {
+        height: 105vh;
+    }
+
+} */

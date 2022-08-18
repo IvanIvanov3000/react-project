@@ -6,6 +6,7 @@ import CommentsList from './CommentsList';
 import * as blogService from '../../services/blogService';
 import ErrorDiv from '../Error/ErrorDiv';
 
+import styles from './Blog.module.css';
 
 const Blog = () => {
     const { user } = useAuthContext();
@@ -29,7 +30,7 @@ const Blog = () => {
     function removeComment(comment) {
         setComments(comments.filter(x => x._id !== comment._id));
     }
-    function addError(err){
+    function addError(err) {
         setMessage(err.message);
     }
 
@@ -59,34 +60,34 @@ const Blog = () => {
 
 
     return (
-        <div className="hero blog">
+        <div className={styles.blog}>
 
             <video autoPlay={true} loop >
                 <source src="/images/video1.mp4" type="video/mp4" />
             </video>
-            <ErrorDiv err={{message}}/>
-            
-            <div className="content">
-                <div className="left" style={{ backgroundColor: comments.length > 0 ? 'transparent' : '#202834' }}>
-                    <CommentsList comments={comments} functions={{removeComment, addError}} />
+            <ErrorDiv err={{ message }} />
+
+            <div className={styles.content}>
+                <div className={styles.left} style={{ backgroundColor: comments.length > 0 ? 'transparent' : '#202834' }}>
+                    <CommentsList comments={comments} functions={{ removeComment, addError }} />
                 </div>
-                <div className="right" style={{ backgroundColor: user.email ? 'transparent' : '#202834' }}>
+                <div className={styles.right} style={{ backgroundColor: user.email ? 'transparent' : '#202834' }}>
                     {user.email
                         ? (
                             <form onSubmit={createHandler}>
-                                <div className="field top">
-                                    <FaPepperHot className='icon' />
+                                <div className={`${styles.field} ${styles.top}`}>
+                                    <FaPepperHot className={styles.icon} />
                                     <textarea type="text" name="text" placeholder="Write a comment"></textarea>
                                 </div>
-                                <div className="field bottom">
-                                    <FaBalanceScale className='icon' />
+                                <div className={`${styles.field} ${styles.bottom}`}>
+                                    <FaBalanceScale className={styles.icon} />
                                     <p>Rate us from 1 to 10</p>
                                     <input type="number" name="rating" placeholder="1-10" required min="1" max="10" />
                                 </div>
-                                <input type="submit" className="submit-btn" value="Add a comment" />
+                                <input type="submit" className={styles['submit-btn']} value="Add a comment" />
                             </form>
                         )
-                        : <p className="no-data">You have to login if you want to add a comment</p>
+                        : <p className={styles['no-data']}>You have to login if you want to add a comment</p>
                     }
                 </div>
 
