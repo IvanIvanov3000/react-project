@@ -7,11 +7,13 @@ import {
 } from "react-icons/fa";
 import { useHistory } from 'react-router-dom';
 
-import { useAuthContext } from '../contexts/AuthContext';
+import { useAuthContext } from '../../contexts/AuthContext';
 import { useState } from 'react';
 
-import * as authService from '../services/authService';
-import ErrorDiv from './Error/ErrorDiv';
+import * as authService from '../../services/authService';
+import ErrorDiv from '../Error/ErrorDiv';
+import styles from './SignIn.module.css';
+
 
 const SignIn = () => {
     const { login } = useAuthContext();
@@ -73,42 +75,41 @@ const SignIn = () => {
 
     return (
 
-        <div className="hero signin">
+        <div className={styles.singin}>
 
             <video autoPlay={true} loop>
                 <source src="/images/video3.mp4" type="video/mp4" />
             </video>
-            <ErrorDiv err={{ message, shouldShow : (message.length > 0 ? true : false) }} />
+            <ErrorDiv err={{ message, shouldShow: (message.length > 0 ? true : false) }} />
 
 
-            <div className={`form-container sign-in-form ${show === "show" ? "show" : "hide"}`}>
-                <div className="form-box sign-in-box">
+            <div className={`${styles['form-container']} ${styles['sign-in-form']} ${show === "show" ? styles.show : styles.hide}`}>
+                <div className={`${styles['form-box']} ${styles["sign-in-box"]}`}>
                     <h2>Sign in</h2>
-                    <form onSubmit={handleLoginSubmit}>
+                    <form onSubmit={handleLoginSubmit} className={styles.form}>
                         <div className="field">
-                            <FaUserTie className="icon" />
+                            <FaUserTie className={styles.icon} />
                             <input type="email" name="email" placeholder="Email ID" required />
                         </div>
 
-
                         <div className="field">
-                            <FaGlasses className="icon" />
+                            <FaGlasses className={styles.icon} />
 
                             <input className="password-input" name="password" type="password" placeholder="Password" required />
-                            <div className="eye-btn" onClick={handleEye}>
+                            <div className={styles['eye-btn']} onClick={handleEye}>
                                 {eye === true
-                                    ? <FaEye className="icon eye" />
-                                    : <FaEyeSlash className="icon eyeslash" />
+                                    ? <FaEye className={`${styles.icon} ${styles.eye}`} />
+                                    : <FaEyeSlash className={`${styles.icon} ${styles.eyeslash}`} />
                                 }
 
                             </div>
                         </div>
 
-                        <input type="submit" className="submit-btn" value="Sign in" />
+                        <input type="submit" className={styles.btn} value="Sign in" />
                     </form>
                 </div>
-                <div className="imgBox sign-in-imgBox">
-                    <div className="sliding-link">
+                <div className={`${styles.imgBox} ${styles["sign-in-imgBox"]}`}>
+                    <div className={styles['sliding-link']}>
                         <p>Don't have an account?</p>
                         <span className="sign-up-btn" onClick={() => setShow("hide")}>Sign up</span>
                     </div>
@@ -117,40 +118,40 @@ const SignIn = () => {
             </div>
 
 
-            <div className={`form-container sign-up-form  ${show === "show" ? "hide" : "show"}`}>
-                <div className="imgBox sign-up-imgBox">
-                    <div className="sliding-link">
+            <div className={`${styles['form-container']} ${styles['sign-up-form']}  ${show === "show" ? styles.hide : styles.show}`}>
+                <div className={`${styles.imgBox} ${styles["sign-up-imgBox"]}`}>
+                    <div className={styles['sliding-link']}>
                         <p>Already a member?</p>
                         <span className="sign-in-btn" onClick={() => setShow("show")}>Sign in</span>
                     </div>
                     <img src="/images/signup-img.png" alt="" />
                 </div>
-                <div className="form-box sign-up-box">
+                <div className={`${styles['form-box']} ${styles["sign-up-box"]}`}>
                     <h2>Sign up</h2>
 
-                    <form onSubmit={handleRegisterSubmit}>
+                    <form onSubmit={handleRegisterSubmit} className={styles.form}>
                         <div className="field">
-                            <FaUserTie className="icon" />
+                            <FaUserTie className={styles.icon} />
                             <input type="email" name="email" placeholder="Email ID" required />
                         </div>
                         <div className="field">
-                            <FaUserSecret className="icon" />
+                            <FaUserSecret className={styles.icon} />
                             <input type="text" name="username" placeholder="Username" required />
                         </div>
 
                         <div className="field">
-                            <FaGlasses className="icon" />
+                            <FaGlasses className={styles.icon} />
                             <input type="password" name="password" placeholder="Password" required />
 
                         </div>
                         <div className="field">
-                            <FaGlasses className="icon" />
+                            <FaGlasses className={styles.icon} />
 
                             <input className="password-input" name="repeatPassword" type="password" placeholder="Confirm Password" required />
 
                         </div>
 
-                        <input type="submit" className="submit-btn" value="Sign up" />
+                        <input type="submit" className={styles.btn} value="Sign up" />
 
 
                     </form>
