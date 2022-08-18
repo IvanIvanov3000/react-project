@@ -8,8 +8,8 @@ import { useAuthContext } from '../contexts/AuthContext';
 import ErrorDiv from './Error/ErrorDiv';
 
 
-const Edit = (props) => {
-    console.log(props);
+const Edit = ({match}) => {
+
     let historyHook = useHistory();
     const { user } = useAuthContext();
     const [movie, setMovie] = useState({
@@ -30,8 +30,12 @@ const Edit = (props) => {
         movieService.getOne(movieId)
             .then(result => {
                 setMovie(result);
+
                 console.log(user._id, "user");
                 console.log(result.author._id, "movie author");
+                if(user._id !== result.author._id){
+                    return historyHook.push(`/details/${result._id}`);
+                }
                 return;
             })
             .catch(err => {
