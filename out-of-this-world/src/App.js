@@ -3,6 +3,10 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 
 import { AuthProvider } from './contexts/AuthContext';
 
+import GuardedRoute from './components/Common/GuardRoute';
+import PublicRoute from './components/Common/PublicRoute';
+
+
 import Header from './components/Header';
 import Home from './components/Home/Home';
 import Catalog from './components/Catalog';
@@ -32,38 +36,32 @@ function App() {
     return (
         <div id="box">
             <AuthProvider>
-            <Header />
+                <Header />
 
-            
+
                 <ParallaxProvider>
                     <main id="main-content">
                         <Switch>
                             <Route path="/" exact component={Home} />
                             <Route path="/home" exact component={Home} />
                             <Route path="/catalog" exact component={Catalog} />
-                            <Route path="/blog" component={Blog} />
-                            <Route path="/login" component={SignIn} />
-
-
-                            <Route path="/create" component={Create} />
                             <Route path="/details/:movieId" component={Details} />
-                            <Route path="/edit/:movieId" component={EditMovie} />
+                            <Route path="/blog" component={Blog} />
+                            <PublicRoute path="/login" component={SignIn} />
 
-                            <Route path="/profile" exact component={Profile} />
-                            <Route path="/profile/:id/edit" component={ProfileEdit} />
+                            <GuardedRoute path='/create' component={Create} />
+                              
+                            <GuardedRoute path='/edit/:movieId' component={EditMovie} />
+
+                            {/* <Route path="/edit/:movieId" component={EditMovie} /> */}
+
+                            <GuardedRoute path="/profile" exact component={Profile} />
+                            <GuardedRoute path="/profile/edit" component={ProfileEdit} />
 
 
-                            <Route path="/logout" component={Logout} />
+                            <GuardedRoute path="/logout" component={Logout} />
 
-                            {/*<Route path="/custom">
-                        <h2>Custom Page</h2>
-                        <p>dasklfjasldf </p>
-                    </Route>
-                    <Route path="/logout" render={(props) => {
-                        console.log('Logged Out!!!');
 
-                        return <Redirect to="/" />
-                    }} /> */}
                         </Switch>
                     </main>
                 </ParallaxProvider>
