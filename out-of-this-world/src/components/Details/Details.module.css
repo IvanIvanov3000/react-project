@@ -1,5 +1,4 @@
-.hero.details div.left,
-.hero.details div.right {
+.left, .right {
     width: 48%;
     height: 80vh;
     background-color: #202834;
@@ -9,11 +8,13 @@
     position: relative;
     overflow: hidden;
 }
-.hero.details div.images{
+
+.images {
     position: relative;
     width: 100%;
 }
-.hero.details div.images::before{
+
+.images::before {
     content: "";
     width: 100%;
     height: 40px;
@@ -24,15 +25,27 @@
     z-index: 70;
 }
 
-.hero.details div.left img {
+.left img {
     width: 100%;
     object-fit: cover;
     height: 250px;
 }
 
+.left .imageLong {
+    background-color: #30303b;
+    object-fit: contain;
+    height: 60vh;
+}
+
+.left .imageShort {
+    background-color: #30303b;
+    object-fit: contain;
+    height: 50vh;
+}
 
 
-.hero.details div.left div.wrapper h3 {
+
+.wrapper h3 {
     margin-top: 10px;
     font-size: 2.5rem;
     text-align: center;
@@ -40,7 +53,7 @@
 
 }
 
-.hero.details div.left div.wrapper span {
+.wrapper span {
     padding: 2px 8px;
     border: 1px solid #2C2C34;
     border-radius: 5px;
@@ -52,7 +65,7 @@
     font-size: 19px;
 }
 
-.hero.details div.left div.wrapper .likes {
+.wrapper .likes {
     font-weight: normal;
     padding: 2px 8px;
     border: 1px solid #2C2C34;
@@ -63,23 +76,26 @@
 
     background-color: #2C2C34;
 }
-.hero.details div.left div.wrapper .likes.ordinary{
+
+.likes.ordinary {
     color: #fff;
     font-weight: 400;
     font-size: 21px;
 }
-.hero.details div.left div.wrapper .likes.interesting{
+
+.likes.interesting {
     color: #148214;
     font-weight: 500;
     font-size: 25px;
 }
-.hero.details div.left div.wrapper .likes.popular{
+
+.likes.popular {
     color: #d13636;
     font-weight: 600;
     font-size: 28px;
 }
 
-.hero.details div.left div.wrapper .details.btn {
+.btn {
     display: inline-block;
 
     margin: 15px 0;
@@ -94,26 +110,16 @@
     text-align: justify;
     transition: ease 0.3s;
 
-    /* display: inline-block;
-    margin: 15px 0;
-    padding: 5px 10px;
-    color: #2C2C34;
-    background-color: #fff;
-    border: 3px solid #2C2C34;
-    border-radius: 17px;
-    font-size: 20px;
-    text-align: justify;
-    transition: ease 0.3s; */
 }
 
-.hero.details div.left div.wrapper .details.btn:hover {
+.btn:hover {
     color: #fff;
     background-color: #2C2C34;
     border: 1px solid #fff;
 }
 
 
-.hero.details div.right {
+.right {
     padding: 10px;
     padding-top: 15px;
     overflow-y: scroll;
@@ -122,130 +128,25 @@
 
 }
 
-.hero.details div.right p {
+.right p {
     padding: 10px;
-    font-size: 18px;
+    font-size: 20px;
     text-align: justify;
     word-break: break-word;
 
 }
 
-.hero.details div.right::-webkit-scrollbar {
+.right::-webkit-scrollbar {
     width: 11.5px;
     background: #fff;
 }
-.hero.details div.right::-webkit-scrollbar-thumb {
+
+.right::-webkit-scrollbar-thumb {
     width: 100%;
     background: #282f4e;
     border-radius: 2em;
 }
 
-.hero.details div.right::-webkit-scrollbar-thumb:hover {
+.right::-webkit-scrollbar-thumb:hover {
     background: #454f6b;
-}
-
-
-@media (min-aspect-ratio: 16/9) {
-    .hero.details .back-video {
-        width: 100%;
-        height: auto;
-    }
-}
-
-@media (max-aspect-ratio: 16/9) {
-    .hero.details .back-video {
-        width: auto;
-        height: 100%;
-    }
-}
-
-@media screen and (max-width: 1700px) {
-    .hero.details .content {
-        width: 80%;
-    }
-}
-
-@media screen and (max-width: 1300px) {
-    .content {
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 1050px) {
-    .hero{
-        height: 170vh;
-
-    }
-    video {
-        height: 170vh;
-    }
-    .content {
-        height: 150vh;
-        top: 10%;
-        display: flex;
-        align-items: center;
-        gap: 30px;
-        justify-content: unset;
-        flex-flow: column wrap;
-    }
-
-    div.left {
-        height: 65vh;
-        width: 80%;
-    }
-
-    div.right {
-        width: 80%;
-        height: 55vh;
-        padding: 20px;
-        padding-top: 25px;
-    }
-
-   
-}
-@media screen and (max-width: 850px){
-    .content {
-        height: 150vh;
-
-    }
-    div.right {
-        height: 65vh;
-    }
-
-}
-@media screen and (max-width: 750px){
-    .content {
-        height: 150vh;
-
-    }
-    div.right {
-        height: 75vh;
-    }
-
-}
-@media screen and (max-width: 620px){
-    .hero{
-        padding: 0;
-    }
-    div.left, div.right {
-        width: 100%;
-    }
-
-}
-
-@media screen and (max-width: 500px){
-    .hero{
-        height: 200vh
-    }
-    video {
-        height: 200vh;
-    }
-    .content {
-        height: 180vh;
-
-    }
-    div.right {
-       height: 105vh;
-    }
-
 }

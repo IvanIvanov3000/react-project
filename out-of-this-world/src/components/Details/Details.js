@@ -4,6 +4,7 @@ import { useHistory, Link } from 'react-router-dom';
 import * as movieService from '../../services/movieService';
 import { useAuthContext } from '../../contexts/AuthContext';
 
+import styles from './Details.module.css';
 
 const Details = ({ match }) => {
     let historyHook = useHistory();
@@ -100,29 +101,29 @@ const Details = ({ match }) => {
         <>
             {/* <Link className="button" to={`/edit/${movie._id}`}>Edit</Link>
             <a className="button" href="#" onClick={deleteClickHandler}>Delete</a> */}
-            <Link to={`/edit/${movie._id}`}><button className="details btn"  >Edit</button></Link>
-            <button className="details btn" onClick={deleteHandler}>Delete</button>
+            <Link to={`/edit/${movie._id}`}><button className={styles.btn}  >Edit</button></Link>
+            <button className={styles.btn} onClick={deleteHandler}>Delete</button>
         </>
     );
     const userButtons = (
         <>
-            <button className="details btn" onClick={likeButtonClick} disabled={movie.likes.includes(user._id)}>Like</button>
-            <button className="details btn" onClick={dislikeButtonClick} disabled={!movie.likes.includes(user._id)}>Dislike</button>
+            <button className={styles.btn} onClick={likeButtonClick} disabled={movie.likes.includes(user._id)}>Like</button>
+            <button className={styles.btn} onClick={dislikeButtonClick} disabled={!movie.likes.includes(user._id)}>Dislike</button>
             {/* <Button onClick={likeButtonClick} disabled={movie.likes?.includes(user._id)}>Like</Button>; */}
         </>)
 
 
 
     return (
-        <div className="hero details">
+        <div className={`${styles.details} hero`}>
 
             <video loop autoPlay={true}>
                 <source src="/images/video3.mp4" type="video/mp4" />
             </video>
 
-            <div className="content">
-                <div className="left">
-                    <div className="images">
+            <div className='content'>
+                <div className={styles.left}>
+                    <div className={styles.images}>
 
                         {movie.image2
                             ? (
@@ -131,17 +132,17 @@ const Details = ({ match }) => {
                                     <img src={movie.image} alt="" />
                                 </>
                             )
-                            : <img src={movie.image} style={{ height: movie.title.length > 40 ? "50vh" : "60vh", background: "#30303b", objectFit: 'contain' }} alt="" />
+                            : <img src={movie.image} className={movie.title.length > 40 ? styles.imageShort : styles.imageLong} alt="" />
                         }
                     </div>
 
 
-                    <div className="wrapper">
+                    <div className={styles.wrapper}>
                         <h3>{movie.title}</h3>
-                        <b className={`likes 
+                        <b className={`${styles.likes} 
                         ${movie.likes.length > 3
-                                ? "popular"
-                                : movie.likes.length >= 1 ? "interesting" : "ordinary"}`
+                                ? styles.popular
+                                : movie.likes.length >= 1 ? styles.interesting : styles.ordinary}`
                         }>
                             {movie.likes.length}
                         </b>
@@ -149,7 +150,7 @@ const Details = ({ match }) => {
                         <span>{movie.year}</span>
                         <p>Tag: {movie.tag}</p>
 
-                        <div className="buttons">
+                        <div className={styles.buttons}>
 
                             {user._id && (user._id === movie.author._id
                                 ? ownerButtons
@@ -160,7 +161,7 @@ const Details = ({ match }) => {
                     </div>
                 </div>
 
-                <div className="right">
+                <div className={styles.right}>
                     <p>{movie.description}</p>
                 </div>
             </div>
