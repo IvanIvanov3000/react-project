@@ -3,9 +3,9 @@ import { useHistory } from 'react-router-dom';
 
 import { useEffect, useState } from 'react';
 
-import * as movieService from '../services/movieService';
-import { useAuthContext } from '../contexts/AuthContext';
-import ErrorDiv from './Error/ErrorDiv';
+import * as movieService from '../../services/movieService';
+import { useAuthContext } from '../../contexts/AuthContext';
+import ErrorDiv from '../Error/ErrorDiv';
 
 
 const Edit = ({match}) => {
