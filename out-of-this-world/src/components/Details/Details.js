@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useHistory, Link } from 'react-router-dom';
 
-import * as movieService from '../services/movieService';
-import { useAuthContext } from '../contexts/AuthContext';
+import * as movieService from '../../services/movieService';
+import { useAuthContext } from '../../contexts/AuthContext';
 
 
 const Details = ({ match }) => {
