@@ -3,8 +3,10 @@ import { useEffect, useState } from 'react';
 import { FaRocket, FaMagic, FaMoon } from "react-icons/fa";
 
 
-import * as authService from '../services/authService';
-import ErrorDiv from './Error/ErrorDiv';
+import * as authService from '../../services/authService';
+import ErrorDiv from '../Error/ErrorDiv';
+
+import styles from './ProfileEdit.module.css';
 
 const ProfileEdit = () => {
     const historyHook = useHistory();
@@ -52,7 +54,7 @@ const ProfileEdit = () => {
     }
 
     return (
-        <div className="hero profile-edit">
+        <div className={`hero ${styles['profile-edit']}`}>
 
             <video autoPlay={true} loop>
                 <source src="/images/video5.mp4" type="video/mp4" />
@@ -62,29 +64,29 @@ const ProfileEdit = () => {
             <div className="content">
 
 
-                <div class="center">
+                <div class={styles.center}>
 
 
                     <form onSubmit={handleEdit}>
                         <h2>Edit Profile</h2>
 
-                        <div className="field">
-                            <FaRocket className='icon' />
+                        <div className={styles.field}>
+                            <FaRocket className={styles.icon} />
                             <input type="text" name="username" placeholder="Username" required defaultValue={userData.username} />
                         </div>
 
-                        <div className="field">
-                            <FaMagic className='icon' />
+                        <div className={styles.field}>
+                            <FaMagic className={styles.icon} />
                             <input type="text" name="email" placeholder="Email" required defaultValue={userData.email} />
                         </div>
 
-                        <div className="field">
-                            <FaMoon className='icon' />
+                        <div className={styles.field}>
+                            <FaMoon className={styles.icon} />
                             <input type="text" name="image" placeholder="Image Url" defaultValue={userData.image} />
                         </div>
 
 
-                        <input type="submit" className="btn details" value=" Edit " />
+                        <input type="submit" className={styles.btn} value=" Edit " />
 
 
 

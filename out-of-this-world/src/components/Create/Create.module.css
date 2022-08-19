@@ -62,7 +62,7 @@ form {
     margin-bottom: 0px;
 }
 
-.form-box .field.active {
+.form-box .field:focus-within {
     border-bottom: 2px solid #0065ff;
     transition: 0.3s ease;
 }

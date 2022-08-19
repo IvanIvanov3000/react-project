@@ -1,0 +1,103 @@
+div.center{
+    width: 68%;
+    height: 80vh;
+    background-color: transparent;
+    border-radius: 23px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+div.center h2 {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    font-size: 3.5em;
+    font-weight: 700;
+    color: #fff;
+}
+div.center form {
+    width: 60%;
+    margin: 10px auto;
+    border: 1px solid #fefefe;
+    border-radius: 23px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.field {
+    background-color: #202834;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 80%;
+    height: 120px;
+    padding: 10px;
+    border-bottom: 2px solid #eee;
+    border-radius: 23px;
+    margin-bottom: 0px;
+}
+
+.field:focus-within {
+    border-bottom: 2px solid #0065ff;
+    transition: 0.3s ease;
+}
+
+
+.field input {
+    border: none;
+    outline: none;
+    background: none;
+    width: 70%;
+    font-size: 1.25em;
+    padding-bottom: 5px;
+    color: #fff;
+}
+
+.field .icon {
+    color: #fefefe;
+    font-size: 1.5em;
+    margin-right: 10px;
+    padding-bottom: 5px;
+}
+
+.field:focus-within .icon {
+    color: #0065ff;
+    transition: 0.3s ease;
+}
+
+.profile-edit ::placeholder {
+    color: #fff;
+    font-size: 0.85em;
+}
+
+
+
+.btn {
+    display: inline-block;
+    width: auto;
+    margin: 15px 0;
+    padding: 5px 10px;
+    color: #2C2C34;
+    background-color: #fff;
+    border: 3px solid #2C2C34;
+    border-radius: 17px;
+
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+    transition: ease 0.3s;
+
+}
+.btn:hover {
+    color: #fff;
+    background-color: #2C2C34;
+    border: 1px solid #fff;
+}
+
