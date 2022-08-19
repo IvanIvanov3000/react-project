@@ -7,6 +7,7 @@ import * as movieService from '../../services/movieService';
 import { useAuthContext } from '../../contexts/AuthContext';
 import ErrorDiv from '../Error/ErrorDiv';
 
+import styles from '../Create/Create.module.css'
 
 const Edit = ({match}) => {
 
@@ -76,7 +77,7 @@ const Edit = ({match}) => {
     }
 
     return (
-        <div className="hero create">
+        <div className={`${styles.create}`}>
 
             <video autoPlay={true} loop>
                 <source src="/images/video2.mp4" type="video/mp4" />
@@ -84,32 +85,32 @@ const Edit = ({match}) => {
             <ErrorDiv err={{ message }} />
 
 
-            <div className="form-box">
+            <div className={styles["form-box"]}>
                 <h2>EDIT FILM</h2>
 
                 <form onSubmit={handleEdit}>
-                    <div className="left">
-                        <div className="field">
-                            <FaRocket className='icon' />
+                    <div className={styles.left}>
+                        <div className={styles.field}>
+                            <FaRocket className={styles.icon} />
                             <input type="text" name="title" placeholder="Title" required defaultValue={movie.title} />
                         </div>
 
-                        <div className="field">
-                            <FaMagic className='icon' />
+                        <div className={styles.field}>
+                            <FaMagic className={styles.icon} />
                             <input type="number" name="year" placeholder="Year" required defaultValue={movie.year} />
                         </div>
-                        <div className="field">
-                            <FaMagic className='icon' />
+                        <div className={styles.field}>
+                            <FaMagic className={styles.icon} />
                             <input type="text" name="tag" placeholder="Tag" required defaultValue={movie.tag} />
                         </div>
-                        <div className="field">
-                            <FaRocket className='icon' />
+                        <div className={styles.field}>
+                            <FaRocket className={styles.icon} />
                             <input type="text" name="image" placeholder="Image Url" required defaultValue={movie.image} />
                         </div>
 
 
-                        <div className="field radio">
-                            <FaMoon className='icon' />
+                        <div className={`${styles.field} ${styles.radio}`}>
+                            <FaMoon className={styles.icon} />
                             <p>Public: </p>
                             <input type="radio" id="yes" name="isPublic" defaultValue="true" defaultChecked={movie.isPublic} />
                             <label htmlFor="yes">Yes</label><br />
@@ -118,13 +119,13 @@ const Edit = ({match}) => {
                         </div>
 
                     </div>
-                    <div className="right">
-                        <div className="field ">
-                            <FaPen className='icon' />
+                    <div className={styles.right}>
+                        <div className={styles.field}>
+                            <FaPen className={styles.icon} />
                             <textarea type="text" name="description" placeholder="Description..." defaultValue={movie.description}></textarea>
                         </div>
 
-                        <input type="submit" className="submit-btn" value=" Edit " />
+                        <input type="submit" className={styles.btn} value=" Edit " />
                     </div>
 
 
