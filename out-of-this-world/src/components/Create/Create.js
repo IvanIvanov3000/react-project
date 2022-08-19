@@ -2,8 +2,8 @@ import { FaRocket, FaMagic, FaMoon, FaPen } from "react-icons/fa";
 import { useHistory } from 'react-router-dom';
 import {useState} from 'react';
 
-import * as movieService from '../services/movieService';
-import ErrorDiv from './Error/ErrorDiv';
+import * as movieService from '../../services/movieService';
+import ErrorDiv from '../Error/ErrorDiv';
 
 
 const Create = () => {
