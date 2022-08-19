@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
-import * as authService from '../services/authService';
-import CardList from './Card/CardList';
+import * as authService from '../../services/authService';
+import CardList from '../Card/CardList';
+
+import styles from './Profile.module.css';
+
 
 const Profile = () => {
 
@@ -27,7 +30,7 @@ const Profile = () => {
     }, [])
 
     return (
-        <div className="hero profile">
+        <div className={`hero ${styles.profile}`}>
 
             <video autoPlay={true} loop>
                 <source src="/images/video2.mp4" type="video/mp4" />
@@ -35,37 +38,37 @@ const Profile = () => {
 
 
             <div className="content">
-                <div className="left">
+                <div className={styles.left}>
 
-                    <div className="images">
+                    <div className={styles.images}>
                         {userData.image
-                            ? <img src={userData.image} className="profile-img" alt="" />
+                            ? <img src={userData.image} className={styles["profile-img"]} alt="" />
 
-                            : <img src="/images/profile.png" className="profile-img" alt="" />
+                            : <img src="/images/profile.png" className={styles["profile-img"]} alt="" />
                         }
                     </div>
 
 
-                    <div className="wrapper">
+                    <div className={styles.wrapper}>
                         <h3>Username: {userData.username}</h3>
 
-                        <div className="email">Email: {userData.email}</div>
-                        <div className="buttons">
+                        <div className={styles.email}>Email: {userData.email}</div>
+                        <div className={styles.buttons}>
 
                             <Link to='/profile/edit'>
-                                <button className="profile btn">Edit User Credentials</button>
+                                <button className={styles.btn}>Edit User Credentials</button>
                             </Link>
                         </div>
 
                     </div>
                 </div>
 
-                <div className={`right  ${userData.movies.length > 0 ? "transparent" : ""}`}>
+                <div className={`${styles.right}  ${userData.movies.length > 0 ? styles.transparent : ""}`}>
                     {userData.movies.length > 0
-                        ? <CardList style={{overflow: 'visible'}} movies={userData.movies} />
-                        : (<div className="no-movies">
-                            <p className="no-movies">You have not created a movie yet. Why don't you create one?</p>
-                            <Link to="/create"><button className="profile btn">Create Movie</button></Link>
+                        ? <CardList movies={userData.movies} />
+                        : (<div className={styles["no-movies"]}>
+                            <p >You have not created a movie yet. Why don't you create one?</p>
+                            <Link to="/create"><button className={styles.btn}>Create Movie</button></Link>
                         </div>
                         )
                     }
