@@ -8,7 +8,7 @@ import 'swiper/css';
 
 import movies from './topMovies.js';
 import styles from './HomeHero.module.css';
-
+import './Hero.css';
 SwiperCore.use([Navigation, Pagination, Controller, Thumbs]);
 
 const HomeHero = () => {
@@ -19,11 +19,11 @@ const HomeHero = () => {
         slides.push(
             <SwiperSlide key={`slide-${i}`} tag="div" className="swiper-wrapper">
                 <div className="swiper-slide">
-                    <img src={movies[i].image} alt="" />
+                    <img src={movies[i].image} className={styles.backImg} alt="" />
                     <div className="text-content">
-                        <h2 className="title">{movies[i].title} <span>{movies[i].year}</span></h2>
-                        <p>{movies[i].description}</p>
-                        <a style={{ textDecoration: "none" }} href={movies[i].link}><button className="read-btn">Read More <FaArrowRight className='icon' /></button></a>
+                        <h2 className="title">{movies[i].title} <span className={styles.year}>{movies[i].year}</span></h2>
+                        <p className={styles.description}>{movies[i].description}</p>
+                        <a style={{ textDecoration: "none" }} href={movies[i].link}><button className="read-btn">Read More <FaArrowRight className={styles.icon} /></button></a>
                     </div>
                 </div>
             </SwiperSlide>
@@ -35,7 +35,7 @@ const HomeHero = () => {
     for (let i = 0; i < movies.length; i++) {
         let image = movies[i].image;
         thumbs.push(
-            <SwiperSlide key={i} style={{ backgroundImage: `url(${image})`}} />
+            <SwiperSlide key={i} style={{ backgroundImage: `url(${image})` }} className={styles.smallImg} />
         )
 
     }
@@ -45,11 +45,11 @@ const HomeHero = () => {
 
 
     return (
-        <div id='home-hero'>
-            <div className="media-icons">
-                <a href="https://www.facebook.com/"><FaFacebookF className='icon' /></a>
-                <a href="https://www.instagram.com/"><FaInstagram className='icon' /></a>
-                <a href="https://twitter.com/?lang=bg"><FaTwitter className='icon' /></a>
+        <div className={styles['home-hero']}>
+            <div className={styles['media-icons']}>
+                <a href="https://www.facebook.com/"><FaFacebookF className={styles.icon} /></a>
+                <a href="https://www.instagram.com/"><FaInstagram className={styles.icon} /></a>
+                <a href="https://twitter.com/?lang=bg"><FaTwitter className={styles.icon} /></a>
 
             </div>
 
