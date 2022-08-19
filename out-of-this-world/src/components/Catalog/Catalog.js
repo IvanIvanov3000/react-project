@@ -4,6 +4,9 @@ import { Parallax } from 'react-scroll-parallax';
 
 import * as movieService from '../../services/movieService';
 
+import waveBottom from '../../assets/images/wavebottom.png';
+import waveTop from '../../assets/images/wavetop.png';
+
 import moon from '../../assets/images/background-catalog/moon.png'; 
 import stars from '../../assets/images/background-catalog/stars.png';
 
@@ -51,8 +54,8 @@ const Catalog = () => {
             </section>
 
             <section className={styles.items}>
-                <img src="/images/wavebottom.png" alt="" className={styles["bottom-img"]} />
-                <img src="/images/wavetop.png" alt="" className={styles["top-img"]} />
+                <img src={waveBottom} alt="" className={styles["bottom-img"]} />
+                <img src={waveTop} alt="" className={styles["top-img"]} />
 
                 <h2 className={styles["floating-title"]}>Most liked</h2>
 
@@ -68,14 +71,14 @@ const Catalog = () => {
                 <h2 className={styles["floating-title"]}>All</h2>
 
                 <div className={styles.all}>
-                    <img src="/images/wavebottom.png" alt="" className={styles["bottom-img"]} />
+                    <img src={waveBottom} alt="" className={styles["bottom-img"]} />
 
                     {movies
                         ? <CardList movies={movies} />
                         : <p className={styles["floating-title"]}>There are no movies in the database.</p>
                     }
 
-                    <img src="/images/wavetop.png" alt="" className={styles["top-img"]} />
+                    <img src={waveTop} alt="" className={styles["top-img"]} />
                 </div>
 
 

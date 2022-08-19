@@ -5,8 +5,12 @@ import { Link } from 'react-router-dom';
 import { useAuthContext } from '../../contexts/AuthContext';
 import style from './Header.module.css'
 
+import logo from '../../assets/images/promaniq22.png'
+
 const Header = () => {
     const { user } = useAuthContext();
+
+  
 
     let guestNavigation = (
         <>
@@ -22,10 +26,11 @@ const Header = () => {
         </>
     );
 
+
     return (
         <header>
             <div className={style["nav-bar"]}>
-                <Link to='/home'><img src="/images/promaniq22.png" alt="logo" /></Link>
+                <Link to='/home'><img src={logo} alt="logo" /></Link>
                 <div className={style.navigation}>
                     <div className={style["nav-items"]}>
                         <Link to="/home"><FaHome className={style.icon} /> Home</Link>
