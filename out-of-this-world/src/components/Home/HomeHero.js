@@ -7,6 +7,7 @@ import React, { useState } from 'react';
 import 'swiper/css';
 
 import movies from './topMovies.js';
+import styles from './HomeHero.module.css';
 
 SwiperCore.use([Navigation, Pagination, Controller, Thumbs]);
 
