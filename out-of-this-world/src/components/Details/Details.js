@@ -6,6 +6,8 @@ import { useAuthContext } from '../../contexts/AuthContext';
 
 import styles from './Details.module.css';
 
+import video from '../../assets/images/video3.mp4'
+
 const Details = ({ match }) => {
     let historyHook = useHistory();
 
@@ -118,7 +120,7 @@ const Details = ({ match }) => {
         <div className={`${styles.details} hero`}>
 
             <video loop autoPlay={true}>
-                <source src="/images/video3.mp4" type="video/mp4" />
+                <source src={video} type="video/mp4" />
             </video>
 
             <div className='content'>

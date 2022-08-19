@@ -7,6 +7,7 @@ import * as blogService from '../../services/blogService';
 import ErrorDiv from '../Error/ErrorDiv';
 
 import styles from './Blog.module.css';
+import video from '../../assets/images/video1.mp4'
 
 const Blog = () => {
     const { user } = useAuthContext();
@@ -63,7 +64,7 @@ const Blog = () => {
         <div className={styles.blog}>
 
             <video autoPlay={true} loop >
-                <source src="/images/video1.mp4" type="video/mp4" />
+                <source src={video} type="video/mp4" />
             </video>
             <ErrorDiv err={{ message }} />
 

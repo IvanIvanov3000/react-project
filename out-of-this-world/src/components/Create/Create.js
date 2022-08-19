@@ -1,11 +1,13 @@
 import { FaRocket, FaMagic, FaMoon, FaPen } from "react-icons/fa";
 import { useHistory } from 'react-router-dom';
-import {useState} from 'react';
+import { useState } from 'react';
 
 import * as movieService from '../../services/movieService';
 import ErrorDiv from '../Error/ErrorDiv';
 
-import styles from './Create.module.css'
+import styles from './Create.module.css';
+
+import video from '../../assets/images/video2.mp4'
 
 const Create = () => {
 
@@ -48,7 +50,7 @@ const Create = () => {
         <div className={styles.create}>
 
             <video autoPlay={true} loop>
-                <source src="/images/video2.mp4" type="video/mp4" />
+                <source src={video} type="video/mp4" />
             </video>
             <ErrorDiv err={{ message }} />
 
@@ -80,9 +82,9 @@ const Create = () => {
                         <div className={`${styles.field} ${styles.radio}`}>
                             <FaMoon className={styles.icon} />
                             <p>Public: </p>
-                            <input type="radio" id="yes" name="isPublic" defaultValue="true" required/>
+                            <input type="radio" id="yes" name="isPublic" defaultValue="true" required />
                             <label htmlFor="yes">Yes</label><br />
-                            <input type="radio" id="no" name="isPublic" defaultValue="false" required/>
+                            <input type="radio" id="no" name="isPublic" defaultValue="false" required />
                             <label htmlFor="no">No</label><br />
                         </div>
 

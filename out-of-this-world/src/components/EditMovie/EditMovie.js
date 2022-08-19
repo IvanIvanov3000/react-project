@@ -7,7 +7,9 @@ import * as movieService from '../../services/movieService';
 import { useAuthContext } from '../../contexts/AuthContext';
 import ErrorDiv from '../Error/ErrorDiv';
 
-import styles from '../Create/Create.module.css'
+import styles from '../Create/Create.module.css';
+
+import video from '../../assets/images/video2.mp4'
 
 const Edit = ({match}) => {
 
@@ -80,7 +82,7 @@ const Edit = ({match}) => {
         <div className={`${styles.create}`}>
 
             <video autoPlay={true} loop>
-                <source src="/images/video2.mp4" type="video/mp4" />
+                <source src={video} type="video/mp4" />
             </video>
             <ErrorDiv err={{ message }} />
 

@@ -6,7 +6,8 @@ import CardList from '../Card/CardList';
 
 import styles from './Profile.module.css';
 
-
+import video from '../../assets/images/video2.mp4';
+import profileImg from '../../assets/images/profile.png'
 const Profile = () => {
 
     const [userData, setUserData] = useState(
@@ -33,7 +34,7 @@ const Profile = () => {
         <div className={`hero ${styles.profile}`}>
 
             <video autoPlay={true} loop>
-                <source src="/images/video2.mp4" type="video/mp4" />
+                <source src={video} type="video/mp4" />
             </video>
 
 
@@ -44,7 +45,7 @@ const Profile = () => {
                         {userData.image
                             ? <img src={userData.image} className={styles["profile-img"]} alt="" />
 
-                            : <img src="/images/profile.png" className={styles["profile-img"]} alt="" />
+                            : <img src={profileImg} className={styles["profile-img"]} alt="" />
                         }
                     </div>
 

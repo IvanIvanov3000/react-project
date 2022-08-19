@@ -14,6 +14,10 @@ import * as authService from '../../services/authService';
 import ErrorDiv from '../Error/ErrorDiv';
 import styles from './SignIn.module.css';
 
+import video from '../../assets/images/video3.mp4';
+import signInImg from '../../assets/images/signin-img.png';
+import signUpImg from '../../assets/images/signup-img.png';
+
 
 const SignIn = () => {
     const { login } = useAuthContext();
@@ -78,7 +82,7 @@ const SignIn = () => {
         <div className={styles.singin}>
 
             <video autoPlay={true} loop>
-                <source src="/images/video3.mp4" type="video/mp4" />
+                <source src={video} type="video/mp4" />
             </video>
             <ErrorDiv err={{ message, shouldShow: (message.length > 0 ? true : false) }} />
 
@@ -113,7 +117,7 @@ const SignIn = () => {
                         <p>Don't have an account?</p>
                         <span className="sign-up-btn" onClick={() => setShow("hide")}>Sign up</span>
                     </div>
-                    <img src="/images/signin-img.png" alt="" />
+                    <img src={signInImg} alt="" />
                 </div>
             </div>
 
@@ -124,7 +128,7 @@ const SignIn = () => {
                         <p>Already a member?</p>
                         <span className="sign-in-btn" onClick={() => setShow("show")}>Sign in</span>
                     </div>
-                    <img src="/images/signup-img.png" alt="" />
+                    <img src={signUpImg} alt="" />
                 </div>
                 <div className={`${styles['form-box']} ${styles["sign-up-box"]}`}>
                     <h2>Sign up</h2>

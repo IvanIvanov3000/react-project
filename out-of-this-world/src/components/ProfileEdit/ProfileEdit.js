@@ -7,6 +7,7 @@ import * as authService from '../../services/authService';
 import ErrorDiv from '../Error/ErrorDiv';
 
 import styles from './ProfileEdit.module.css';
+import video from '../../assets/images/video5.mp4';
 
 const ProfileEdit = () => {
     const historyHook = useHistory();
@@ -57,7 +58,7 @@ const ProfileEdit = () => {
         <div className={`hero ${styles['profile-edit']}`}>
 
             <video autoPlay={true} loop>
-                <source src="/images/video5.mp4" type="video/mp4" />
+                <source src={video} type="video/mp4" />
             </video>
             <ErrorDiv err={{ message }} />
 
