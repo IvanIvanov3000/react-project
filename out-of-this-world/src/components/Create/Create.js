@@ -5,6 +5,7 @@ import {useState} from 'react';
 import * as movieService from '../../services/movieService';
 import ErrorDiv from '../Error/ErrorDiv';
 
+import styles from './Create.module.css'
 
 const Create = () => {
 
@@ -44,7 +45,7 @@ const Create = () => {
     }
 
     return (
-        <div className="hero create">
+        <div className={styles.create}>
 
             <video autoPlay={true} loop>
                 <source src="/images/video2.mp4" type="video/mp4" />
@@ -52,32 +53,32 @@ const Create = () => {
             <ErrorDiv err={{ message }} />
 
 
-            <div className="form-box">
+            <div className={styles["form-box"]}>
                 <h2>ADD A FILM</h2>
 
                 <form onSubmit={handleCreate}>
-                    <div className="left">
-                        <div className="field">
-                            <FaRocket className='icon' />
+                    <div className={styles.left}>
+                        <div className={styles.field}>
+                            <FaRocket className={styles.icon} />
                             <input type="text" name="title" placeholder="Title" required />
                         </div>
 
-                        <div className="field">
-                            <FaMagic className='icon' />
+                        <div className={styles.field}>
+                            <FaMagic className={styles.icon} />
                             <input type="number" name="year" placeholder="Year" required />
                         </div>
-                        <div className="field">
-                            <FaMagic className='icon' />
+                        <div className={styles.field}>
+                            <FaMagic className={styles.icon} />
                             <input type="text" name="tag" placeholder="Tag" required />
                         </div>
-                        <div className="field">
-                            <FaRocket className='icon' />
+                        <div className={styles.field}>
+                            <FaRocket className={styles.icon} />
                             <input type="text" name="image" placeholder="Image Url" required />
                         </div>
 
 
-                        <div className="field radio">
-                            <FaMoon className='icon' />
+                        <div className={`${styles.field} ${styles.radio}`}>
+                            <FaMoon className={styles.icon} />
                             <p>Public: </p>
                             <input type="radio" id="yes" name="isPublic" defaultValue="true" required/>
                             <label htmlFor="yes">Yes</label><br />
@@ -86,13 +87,13 @@ const Create = () => {
                         </div>
 
                     </div>
-                    <div className="right">
-                        <div className="field ">
-                            <FaPen className='icon' />
-                            <textarea type="text" name="description"required placeholder="Description..."></textarea>
+                    <div className={styles.right}>
+                        <div className={styles.field}>
+                            <FaPen className={styles.icon} />
+                            <textarea type="text" name="description" required placeholder="Description..."></textarea>
                         </div>
 
-                        <input type="submit" className="submit-btn" value="Create" />
+                        <input type="submit" className={styles.btn} value="Create" />
                     </div>
 
 

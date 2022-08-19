@@ -1,6 +1,9 @@
-.hero.create .form-box {
+.form-box {
     z-index: 9;
     position: relative;
+    top: 50%;
+    left: 50%;
+    transform : translate(-50%, 15%);
     width: 80%;
     height: 80vh;
     border: 10px solid #202834;
@@ -8,7 +11,7 @@
     overflow: hidden;
 }
 
-.hero.create .form-box h2 {
+.form-box h2 {
     width: 100%;
     padding: 20px;
 
@@ -18,15 +21,15 @@
     color: #fff;
 }
 
-.hero.create form {
+form {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     color: #fff;
 }
 
-.hero.create div.left,
-.hero.create div.right {
+.left,
+.right {
     width: 40%;
     height: 60vh;
     position: unset;
@@ -39,14 +42,12 @@
     justify-content: center;
     gap: 20px;
 
-    /* border: 5px solid #202834;
-    border-radius: 5px; */
     border: unset;
     border-radius: unset;
 }
 
 
-.hero.create .form-box .field {
+.field {
     background-color: #202834;
 
     display: flex;
@@ -61,13 +62,13 @@
     margin-bottom: 0px;
 }
 
-.hero.create .form-box .field.active {
+.form-box .field.active {
     border-bottom: 2px solid #0065ff;
     transition: 0.3s ease;
 }
 
 
-.hero.create .form-box .field input {
+.form-box .field input {
     border: none;
     outline: none;
     background: none;
@@ -77,23 +78,23 @@
     color: #fff;
 }
 
-.hero.create .field .icon {
+.field .icon {
     color: #fefefe;
     font-size: 1.5em;
     margin-right: 10px;
     padding-bottom: 5px;
 }
 
-.hero.create .form-box .field:focus-within .icon {
+.field:focus-within .icon {
     color: #0065ff;
     transition: 0.3s ease;
 }
 
-.hero.create ::placeholder {
+::placeholder {
     color: #fff;
     font-size: 0.85em;
 }
-.hero.create div.radio.field input{
+.radio.field input{
     width: 15%;
     border-radius: 50%;
     width: 20px;
@@ -104,36 +105,36 @@
     margin-right: 5px;
   
 }
-.hero.create div.radio.field p{
+.radio.field p{
     margin-bottom: 0;
     margin-right: 15px;
     font-size: 20px;
 
 }
-.hero.create div.radio.field label{
+.radio.field label{
     font-size: 20px;
     margin-right: 10px;
 }
 
-.hero.create div.right .field{
+.right .field{
     height: calc(85% + 82px);
     width: 70%;
     
 }
 
-.hero.create div textarea{
+textarea{
     width: 80%;
     height: 100%;
     padding: 5px 20px;
     border-radius: 23px;
     resize: none;  
 }
-.hero.create div textarea::placeholder{
+textarea::placeholder{
     color: #2C2C34;
     font-size: 1em;
 }
 
-.hero.create .submit-btn {
+.btn {
     position: absolute;
     left: 50%;
     transform :translateX(-50%);
@@ -151,7 +152,7 @@
     transition: ease 0.3s;
 }
 
-.hero.create .submit-btn:hover{
+.btn:hover{
     color: #fff;
     background-color: #2C2C34;
     border: 1px solid #fff;
