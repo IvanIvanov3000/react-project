@@ -4,6 +4,13 @@ window.addEventListener('load', () => {
     header.classList.toggle("sticky", window.scrollY > 0);
   });
 
+  
+// header.sticky {
+//   height: calc(2.5rem + 1.5rem);
+//   background: rgba(255, 255, 255, 0.1);
+//   backdrop-filter: blur(20px);
+//   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+// }
   //responsive navigation menu
   // const menuBtn = document.querySelector(".nav-menu-btn");
   // const closeBtn = document.querySelector(".nav-close-btn");
