@@ -65,7 +65,7 @@ form .field:focus-within .icon {
     transition: 0.3s ease;
 }
 
-form::placeholder {
+input::placeholder {
     color: #828da0;
     font-size: 0.85em;
 }
