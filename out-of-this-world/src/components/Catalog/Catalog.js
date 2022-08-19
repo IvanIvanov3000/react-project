@@ -4,6 +4,9 @@ import { Parallax } from 'react-scroll-parallax';
 
 import * as movieService from '../../services/movieService';
 
+import moon from '../../assets/images/background-catalog/moon.png'; 
+import stars from '../../assets/images/background-catalog/stars.png';
+
 import CardList from '../Card/CardList';
 import styles from './Catalog.module.css';
 
@@ -39,11 +42,11 @@ const Catalog = () => {
                     <h2 className={styles.title} >Catalog</h2>
                 </Parallax>
                 <Parallax speed={10} translateX={['800px', '0px', 'easeOutQuint']} className={styles["star-div"]}>
-                    <img src="../images/background-catalog/stars.png" className={styles["star-div"]} alt="" />
+                    <img src={stars} className={styles["star-div"]} alt="" />
                 </Parallax>
 
                 <Parallax speed={-60} className={styles["moon-div"]}>
-                    <img src="../images/background-catalog/moon.png" className={styles["moon-div"]} alt="" />
+                    <img src={moon} className={styles["moon-div"]} alt="" />
                 </Parallax>
             </section>
 
