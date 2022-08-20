@@ -1,15 +1,19 @@
 # react-project
 
 **This is a very basic small application**
+
+
 This appllication runs on react front-end library
 
 This application is for posting movies
 -you can get,create, edit and delete a movie
 (all users)
 
+
 --you can get all movies
 
 --you can see movie details
+
 
 (only looged in users who aren't authors)
 
@@ -17,11 +21,13 @@ This application is for posting movies
 
 --you can displike the movie
 
+
 (author of movie only)
 
 --you can edit a movie you own
 
 --you can delete a movie
+
 
 The way to compare the movies is by their likes
 
@@ -31,7 +37,10 @@ The way to compare the movies is by their likes
 
 -If the movie has at least 4 or more likes it becomes 'popular'
 
+
 (they get different styling)
+
+
 
 Another thing a user can do is comment
 
@@ -41,11 +50,13 @@ Another thing a user can do is comment
 
 --can get top 2 movies
 
+
 (authorized)
 
 --can create a comment
 
 --can delete their comment
+
 
 To start the application you have to:
 
@@ -61,6 +72,6 @@ To start the application you have to:
 
 *6* wait for a few secend and then the application should open in the browser on port 3000
 
-**t is very important to run the application on port 3000(the server accepts requests only from application on port 3000)**
+**It is very important to run the application on port 3000(the server accepts requests only from application on port 3000)**
 
 
