@@ -1,8 +1,9 @@
 # react-project
 
 **This is a very basic small application**  
-  \
 
+  \
+ 
 This appllication runs on react front-end library  
   \
 **This application is for posting movies**
@@ -68,7 +69,9 @@ This appllication runs on react front-end library
 *5* open the 'Rest Api' folder in seperate terminal and write 'node .'
 
 *6* wait for a few secend and then the application should open in the browser on port 3000  
-   \  
+
+  \
+  
 **It is very important to run the application on port 3000(the server accepts requests only from application on port 3000)**
 
 
