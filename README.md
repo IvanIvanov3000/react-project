@@ -5,11 +5,12 @@
  
 This appllication runs on react front-end library  
 
-  
+  \
 **This application is for posting movies**
 
 -you can get,create, edit and delete a movie
 
+  \
 ***(all users)***
  
 --you can get all movies
