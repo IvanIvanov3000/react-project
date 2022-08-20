@@ -5,9 +5,14 @@
   \
  
 This appllication runs on react front-end library  
+
   \
+  
 **This application is for posting movies**
 -you can get,create, edit and delete a movie
+
+  \
+
 ***(all users)***
  
 --you can get all movies
@@ -71,7 +76,6 @@ This appllication runs on react front-end library
 *6* wait for a few secend and then the application should open in the browser on port 3000  
 
   \
-  
 **It is very important to run the application on port 3000(the server accepts requests only from application on port 3000)**
 
 
