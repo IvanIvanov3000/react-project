@@ -32,6 +32,7 @@ This appllication runs on react front-end library
 --you can delete a movie
   
   \
+  \
 **The way to compare the movies is by their likes**
 
 -the more likes it has the more interesting it is
@@ -43,6 +44,7 @@ This appllication runs on react front-end library
 (they get different styling)  
 
   
+  \
   \
 **Another thing a user can do is comment**
   \
@@ -60,6 +62,7 @@ This appllication runs on react front-end library
 --can delete their comment
   
   \
+  \
 **To start the application you have to:**
 
 *1* download all files
@@ -74,6 +77,7 @@ This appllication runs on react front-end library
 
 *6* wait for a few secend and then the application should open in the browser on port 3000  
 
+  \
   \
 **It is very important to run the application on port 3000(the server accepts requests only from application on port 3000)**
 
