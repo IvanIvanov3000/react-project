@@ -7,7 +7,7 @@ import * as movieService from '../../services/movieService';
 import waveBottom from '../../assets/images/wavebottom.png';
 import waveTop from '../../assets/images/wavetop.png';
 
-import moon from '../../assets/images/background-catalog/moon.png'; 
+import moon from '../../assets/images/background-catalog/moon.png';
 import stars from '../../assets/images/background-catalog/stars.png';
 
 import CardList from '../Card/CardList';
@@ -61,9 +61,9 @@ const Catalog = () => {
 
 
                 <div className={styles.top}>
-                    {topMovies
+                    {topMovies.length > 0
                         ? <CardList movies={topMovies} />
-                        : <p className={styles["floating-title"]}>There are popular movies yet.</p>
+                        : <p className={styles["no-data"]}>There are popular movies yet.</p>
                     }
 
                 </div>
@@ -73,9 +73,9 @@ const Catalog = () => {
                 <div className={styles.all}>
                     <img src={waveBottom} alt="" className={styles["bottom-img"]} />
 
-                    {movies
+                    {movies.length > 0
                         ? <CardList movies={movies} />
-                        : <p className={styles["floating-title"]}>There are no movies in the database.</p>
+                        : <p className={styles["no-data"]}>There are no movies in the database.</p>
                     }
 
                     <img src={waveTop} alt="" className={styles["top-img"]} />
