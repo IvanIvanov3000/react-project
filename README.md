@@ -2,16 +2,13 @@
 
 **This is a very basic small application**  
 
-  \
  
 This appllication runs on react front-end library  
 
-  \
   
 **This application is for posting movies**
--you can get,create, edit and delete a movie
 
-  \
+-you can get,create, edit and delete a movie
 
 ***(all users)***
  
