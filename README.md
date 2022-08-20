@@ -16,6 +16,7 @@ This appllication runs on react front-end library
 --you can get all movies
 
 --you can see movie details
+
   \
 ***(only logged in users who aren't authors)***
 
