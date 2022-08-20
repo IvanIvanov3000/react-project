@@ -1,10 +1,10 @@
 # react-project
 
 **This is a very basic small application**  
-   \
+  \
 
 This appllication runs on react front-end library  
-   \
+  \
 **This application is for posting movies**
 -you can get,create, edit and delete a movie
 ***(all users)***
@@ -19,14 +19,14 @@ This appllication runs on react front-end library
 
 --you can displike the movie
 
-   \
+  \
 ***(author of movie only)***
 
 --you can edit a movie you own
 
 --you can delete a movie
   
-   \
+  \
 **The way to compare the movies is by their likes**
 
 -the more likes it has the more interesting it is
@@ -38,7 +38,7 @@ This appllication runs on react front-end library
 (they get different styling)  
 
   
-    \
+  \
 **Another thing a user can do is comment**
   \
 ***(unauthorized user)***
@@ -54,7 +54,7 @@ This appllication runs on react front-end library
 
 --can delete their comment
   
-   \ 
+  \
 **To start the application you have to:**
 
 *1* download all files
