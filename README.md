@@ -65,17 +65,17 @@ This appllication runs on react front-end library
   \
 **To start the application you have to:**
 
-*1* download all files
+*1* Download all files
 
-*2* open them in visual studio code
+*2* Open them in visual studio code
 
-*3* open the 'out-of-this-world' folder in terminal and write 'npm start'
+*3* Open the 'out-of-this-world' folder in terminal and write 'npm start'
 
-*4* open the 'server folder' then folder 'Rest Api'
+*4* Open the 'server folder' then folder 'Rest Api'
 
-*5* open the 'Rest Api' folder in seperate terminal and write 'node .'
+*5* Open the 'Rest Api' folder in seperate terminal and write 'node .'
 
-*6* wait for a few secend and then the application should open in the browser on port 3000  
+*6* Wait for a few secend and then the application should open in the browser on port 3000  
 
   \
   \
