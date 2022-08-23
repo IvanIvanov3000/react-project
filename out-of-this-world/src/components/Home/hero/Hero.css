@@ -1,4 +1,4 @@
-.home {
+.home-hero {
     min-height: 100vh;
 }
 
@@ -9,7 +9,7 @@
     min-height: 100vh;
 }
 
-#home-hero::before {
+.bg-slider::before {
     content: "";
     position: absolute;
     width: 100%;

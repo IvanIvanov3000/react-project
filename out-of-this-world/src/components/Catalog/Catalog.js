@@ -63,7 +63,7 @@ const Catalog = () => {
                 <div className={styles.top}>
                     {topMovies.length > 0
                         ? <CardList movies={topMovies} />
-                        : <p className={styles["no-data"]}>There are popular movies yet.</p>
+                        : <p className={styles["no-data"]}>There are no popular movies yet.</p>
                     }
 
                 </div>
