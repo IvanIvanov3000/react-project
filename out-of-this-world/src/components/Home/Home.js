@@ -104,7 +104,7 @@ const Home = () => {
             </section>
             
             <section className={styles["about-us"]}>
-                <img src={waveTop} alt="" className={styles.waveTop} />
+                <img src={waveTop} alt="" className={styles.topWave} />
                 <div className="container">
                     <h1 className="title text-center">Why choose us?</h1>
                     <div className="row">
@@ -132,7 +132,7 @@ const Home = () => {
             <HomeComments />
             
             <section className={styles["social-media"]}>
-                <img src={waveTop} alt="" className={styles.waveTop} />
+                <img src={waveTop} alt="" className={styles.topWave} />
 
                 <div className="container text-center">
                     <p>Find us on social media</p>
